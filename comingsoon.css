@@ -10,6 +10,7 @@ background: #E5E5E5;
 body {
 font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 font-size: 140%;
+color: #999
 }
 
 article {
@@ -61,9 +62,9 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 article h1 {
-line-height: 2;
+line-height: 3;
 }
 
 article p {
-line-height: 2;
+line-height: 3;
 }
