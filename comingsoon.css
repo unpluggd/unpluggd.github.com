@@ -4,11 +4,11 @@ padding: 0;
 }
 
 html {
-background: #CCC;
+background: #E5E5E5;
 }
 
 body {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-family: "Hoefler Text", Constantia, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
 }
 
 article {
@@ -18,7 +18,7 @@ text-align: center;
 border: 1px solid #efefef;
 margin: 20px auto;
 width: 800px;
-min-height: 300px;
+min-height: 500px;
 background: #FFF;
 box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 60px rgba(0, 0, 0, 0.1) inset;
@@ -34,9 +34,9 @@ height: 55%;
 content: ''; 
 right: 10px; 
 bottom: 10px; 
-transform: skew(15deg) rotate(6deg);
+transform: skew(5deg) rotate(2deg);
 -webkit-transform: skew(5deg) rotate(2deg);
--moz-transform: skew(15deg) rotate(6deg);
+-moz-transform: skew(5deg) rotate(2deg);
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
@@ -51,9 +51,9 @@ height: 55%;
 content: ''; 
 left: 10px; 
 bottom: 10px; 
-transform: skew(-15deg) rotate(-6deg); 
+transform: skew(-5deg) rotate(-2deg); 
 -webkit-transform: skew(-5deg) rotate(-2deg); 
--moz-transform: skew(-15deg) rotate(-6deg); 
+-moz-transform: skew(-5deg) rotate(-2deg); 
 box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 -webkit-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
