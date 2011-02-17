@@ -1,7 +1,13 @@
 * { margin: 0; padding: 0; }
 
 body {
-color: #fafafa;
+color: #EEE;
+background: -webkit-gradient(
+  radial, 50% 50%, 0, 50% 50%, 350, from(#FFF), to(#EEE)
+);
+background: -moz-radial-gradient(
+  50% 50%, farthest-side, #FFF, #EEE
+);
 }
 
 h1 {
