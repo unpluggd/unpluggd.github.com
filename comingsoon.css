@@ -13,6 +13,7 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 article {
 display: block;
+border: 1px solid #efefef;
 margin: 20px auto;
 width: 800px;
 min-height: 300px;
