@@ -3,7 +3,7 @@
 body {
 color: #EEE;
 background: -webkit-gradient(
-  radial, 50% 50%, 0, 50% 50%, 350, from(#FFF), to(#CCC)
+  radial, 50% 50%, 0, 50% 50%, 350, from(#FFF), to(#000)
 );
 background: -moz-radial-gradient(
   50% 50%, farthest-side, #FFF, #CCC
@@ -14,7 +14,7 @@ h1 {
 color: transparent;
 text-shadow: 0 0 26px rgba(0,0,0,0.5);
 font-family: helvetica, arial, sans-serif;
-letter-spacing: -0.06pt;
+letter-spacing: -0.1pt;
 text-rendering: optimizelegibility;
 text-align: center;
 position: fixed;
