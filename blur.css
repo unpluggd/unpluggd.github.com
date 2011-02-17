@@ -1,17 +1,11 @@
 * { margin: 0; padding: 0; }
 
-html {height:100%; background:-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#f4fafe), to(#a2d2ed)) no-repeat #a2d2ed;}
-
-
-body {
-color: #EEE;
-background: -webkit-gradient(
-  radial, 50% 50%, 0, 50% 50%, 350, from(#FFF), to(#000)
-);
-background: -moz-radial-gradient(
-  50% 50%, farthest-side, #FFF, #CCC
-);
+html {
+height:100%; 
+background:-webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(#FFF), to(#EEE)) no-repeat #EEE;
+background:-moz-radial-gradient(center, #FFF, #EEE) no-repeat #EEE;
 }
+
 
 h1 {
 color: transparent;
