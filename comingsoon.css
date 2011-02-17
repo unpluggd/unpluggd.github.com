@@ -9,6 +9,10 @@ background: #EEE;
 
 body {
 font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+article {
+display: block;
 margin: 20px auto;
 width: 800px;
 background: #FFF;
@@ -17,7 +21,7 @@ box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
 }
 
-body:after { 
+article:after { 
 z-index: -1; 
 position: absolute; 
 background: transparent; 
@@ -34,7 +38,7 @@ box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 -moz-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
 }
 
-body:before { 
+article:before { 
 z-index: -2; 
 position: absolute; 
 background: transparent; 
