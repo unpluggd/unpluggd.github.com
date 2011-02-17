@@ -3,10 +3,10 @@
 body {
 color: #EEE;
 background: -webkit-gradient(
-  radial, 50% 50%, 0, 50% 50%, 350, from(#FFF), to(#EEE)
+  radial, 50% 50%, 0, 50% 50%, 350, from(#FFF), to(#CCC)
 );
 background: -moz-radial-gradient(
-  50% 50%, farthest-side, #FFF, #EEE
+  50% 50%, farthest-side, #FFF, #CCC
 );
 }
 
@@ -14,12 +14,13 @@ h1 {
 color: transparent;
 text-shadow: 0 0 26px rgba(0,0,0,0.5);
 font-family: helvetica, arial, sans-serif;
+letter-spacing: -0.06pt;
 text-rendering: optimizelegibility;
 text-align: center;
 position: fixed;
 top: 50%; height: 120px; margin-top: -90px;
 left: 50%; width: 800px; margin-left: -400px;
-font-size: 40px;
+font-size: 50px;
 -webkit-transition: text-shadow 1.9s; 
 -moz-transition: text-shadow 1.9s;
 }
