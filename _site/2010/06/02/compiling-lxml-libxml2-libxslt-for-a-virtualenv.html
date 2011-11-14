@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!--link rel="stylesheet" href="/fonts/junction-regular-fontfacekit/stylesheet.css" />
+    <link rel="stylesheet" href="/fonts/League-Gothic-fontfacekit/stylesheet.css" />
+    <link rel="stylesheet" href="/fonts/M-1m-fontfacekit/stylesheet.css" / -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pygments-native.css" />
+    <!-- link rel="stylesheet/less" type="text/css" href="/less/main.less" /-->
+    <!-- script src="/js/less-1.1.3.min.js" type="text/javascript"></script -->
+
+  </head>
+  <body>
+    <header>
+      <h1>unpluggd</h1> is the personal blog of Phillip Oldham, 
+      a Python developer living in Leeds, UK.
+    </header>
+    <article id="main">
+      <h2>Compiling lxml/libxml2/libxslt for a virtualenv</h2>
+      <p>Sometimes you need to ensure <code>lxml</code> is using the latest <code>libxml2</code> and <code>libxslt</code> libraries. The easiest way to do this is to set up a virtualenv (which you should be doing anyway!) for your Python project and then install <code>lxml</code> with static dependencies.</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>workon myproject
+<span class="nv">$ STATIC_DEPS</span><span class="o">=</span><span class="nb">true </span>easy_install lxml
+</code></pre>
+</div>
+
+
+<p>This doesn't always work. You may see an error such as:</p>
+
+<div class="highlight"><pre><code class="bash">...libexslt.a<span class="o">(</span>exslt.o<span class="o">)</span>: relocation R_X86_64_32 against <span class="sb">`</span>a <span class="nb">local </span>symbol<span class="s1">&#39; can not be used when making a shared object; recompile with -fPIC</span>
+<span class="s1">...libexslt.a: could not read symbols: Bad value</span>
+<span class="s1">collect2: ld returned 1 exit status</span>
+<span class="s1">error: Setup script exited with error: command &#39;</span>cc<span class="err">&#39;</span> failed with <span class="nb">exit </span>status 1
+</code></pre>
+</div>
+
+
+<p>... usually on a 64bit platform. To work around this, do the following:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>easy_install cython
+<span class="nv">$ CFLAGS</span><span class="o">=</span><span class="s2">&quot;$CFLAGS -fPIC&quot;</span> <span class="nv">STATIC_DEPS</span><span class="o">=</span><span class="nb">true </span>easy_install lxml
+</code></pre>
+</div>
+
+
+<p>If you see an error like "<code>lxml/etree.so: undefined symbol: gcry_check_version</code>" try the following command in place of the last:</p>
+
+<div class="highlight"><pre><code class="bash"><span class="nv">$ CFLAGS</span><span class="o">=</span><span class="s2">&quot;$CFLAGS -lgcrypt -fPIC&quot;</span> <span class="nv">STATIC_DEPS</span><span class="o">=</span><span class="nb">true </span>easy_install lxml
+</code></pre>
+</div>
+
+
+<p>This may disable some EXSLT functionality in <code>libxslt</code>, but there's a chance you didn't have that functionality anyway if you were working with an older <code>libxslt</code> binary.</p>
+
+    </article>
+    <footer>
+            <div id="posts">
+        <h3>Recent Posts</h3>
+        <div>
+          
+          <h4><a href="/2010/06/23/user-agent-string-for-ipad-s-media-player-app.html">User Agent String for iPad's Media Player app</a></h4>
+          <p></p>
+          
+          <h4><a href="/2010/06/02/compiling-lxml-libxml2-libxslt-for-a-virtualenv.html">Compiling lxml/libxml2/libxslt for a virtualenv</a></h4>
+          <p></p>
+          
+          <h4><a href="/2010/04/30/mysql-the-libtoolt-error-on-x86-64.html">MySQL & the libtoolT error on x86_64</a></h4>
+          <p></p>
+          
+        </div>
+        <p>View more <a href="/archive.html">posts</a>.</p>
+      </div>
+
+            <div id="projects">
+        <h3>Projects</h3>
+        <div>
+          <h4>FWRD</h4>
+          <p>FWRD is a Python Micro-Framework designed to GetOutOfTheWay.</p>
+          <p>
+            <a href="//github.com/unpluggd/FWRD">View this project on GitHub</a>
+            <a href="/FWRD">Documentation</a>
+          </p>
+        </div>
+        <div>
+          <h4>PySO8601</h4>
+          <p>A better ISO8601 module for Python.</p>
+          <p>
+            <a href="//github.com/unpluggd/PySO8601">View this project on GitHub</a>
+            <a href="/PySO8601">Documentation</a>
+          </p>
+        </div>
+        <div>
+          <h4>exemelopy</h4>
+          <p>A module for encoding Python data types as XML.</p>
+          <p>
+            <a href="//github.com/unpluggd/exemelopy">View this project on GitHub</a>
+            <a href="/exemelopy">Documentation</a>
+          </p>
+        </div>
+        <p>View my other <a href="//github.com/unpluggd" target="_blank">GitHub projects</a>.</p>
+      </div>
+
+    </footer>
+  </body>
+</html>

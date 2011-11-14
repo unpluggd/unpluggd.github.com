@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Colophon"
+excerpt: ""
+tags: 
+published: true
+---
+
+You're currently visiting the personal weblog of Phillip Oldham. It is powered by the [Python](http://python.org) blog engine [Zine](http://zine.pocoo.org) with the [SQLite](http://www.sqlite.org) database engine and is served by the [nginx](http://nginx.net) web-server. This setup runs atop a [CentOS5](http://centos.org) [virtual server](http://www.bytemark.co.uk/page/Live/hosting/virtualmachine/) provided by [Bytemark](http://www.bytemark.co.uk).
+
+Phillip is a web developer from Manchester (UK) currently living in Leeds and working in Harrogate as Lead Developer for a [leading](http://goballistic.co.uk) [activities](http://theactivitypeople.co.uk) and [events](http://stagzilla.co.uk) company.
+
+When Phill isn't glued to his PC at the office, or his Mac at home, he can be found taunting gravity by rock-climbing or weight-lifting, causing noise pollution practicing the guitar, or looking utterly ridiculous playing the ukulele.

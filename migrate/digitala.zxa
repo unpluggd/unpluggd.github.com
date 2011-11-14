@@ -1,0 +1,1757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+
+    This is a Zine eXtended Atom file.  It is a superset of the Atom
+    specification so every Atom-enabled application should be able to use at
+    least the Atom subset of the exported data.  You can use this file to
+    import your blog data in other blog software.
+
+    Developer Notice
+    ~~~~~~~~~~~~~~~~
+
+    Because we saw horrible export formats (wordpress' wxr *cough*) we want
+    to avoid problems with this file right away.  If you are an application
+    developer that wants to use this file to import blog posts you have to
+    to the following:
+
+    -   parse the file with a proper XML parser.  And proper means shout
+        on syntax and encoding errors.
+    -   handle namespaces!  The prefixes might and will change, so use the
+        goddamn fully qualified names with the namespaces when parsing.
+
+    User Notice
+    ~~~~~~~~~~~
+
+    This file contains a dump of your blog but probably excluding some details
+    if plugins did not provide ways to export the information.  It's not
+    intended as blog backup nor as preferred solution to migrate from one
+    machine to another.  The main purpose of this file is being a portable
+    file that can be read by other blog software if you want to switch to
+    something else.
+
+-->
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:zine="http://zine.pocoo.org/" xml:lang="en"><title>digitala</title><subtitle>stream.out(head)</subtitle><id>tag:digita.la,2011-01-27:/zxa_export;full</id><generator uri="http://zine.pocoo.org/" version="0.1.2">ZineXA Export</generator><link href="http://digita.la/"/><updated>2011-01-27T14:59:26Z</updated><zine:configuration xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom"><zine:item key="memcached_servers"></zine:item><zine:item key="vessel_theme/variation">dark_vessel_colorscheme::dark.css</zine:item><zine:item key="maintenance_mode">False</zine:item><zine:item key="admin_url_prefix">/~admin</zine:item><zine:item key="blog_email">phillip.oldham@gmail.com</zine:item><zine:item key="database_uri">sqlite://digitala.db</zine:item><zine:item key="plugins">akismet_spam_filter, dark_vessel_colorscheme, markdown_parser, miniblog_theme, myrtle_theme, pygments_support, vessel_theme</zine:item><zine:item key="timezone">Europe/London</zine:item><zine:item key="cache_timeout">300</zine:item><zine:item key="blog_title">digitala</zine:item><zine:item key="plugin_guard">True</zine:item><zine:item key="plugin_searchpath"></zine:item><zine:item key="default_parser">markdown</zine:item><zine:item key="smtp_port">25</zine:item><zine:item key="blog_url_prefix"></zine:item><zine:item key="show_page_children">True</zine:item><zine:item key="theme">vessel</zine:item><zine:item key="show_page_title">True</zine:item><zine:item key="comments_enabled">False</zine:item><zine:item key="tags_url_prefix">/tags</zine:item><zine:item key="profiles_url_prefix">/authors</zine:item><zine:item key="pygments_support/style">friendly</zine:item><zine:item key="moderate_comments">1</zine:item><zine:item key="category_url_prefix">/categories</zine:item><zine:item key="blog_tagline">stream.out(head)</zine:item><zine:item key="smtp_password"></zine:item><zine:item key="smtp_use_tls">False</zine:item><zine:item key="posts_per_page">3</zine:item><zine:item key="smtp_host">localhost</zine:item><zine:item key="akismet_spam_filter/apikey"></zine:item><zine:item key="iid">c33b256c3165485a8babd5d3a367a71e</zine:item><zine:item key="passthrough_errors">False</zine:item><zine:item key="log_level">warning</zine:item><zine:item key="filesystem_cache_path">cache</zine:item><zine:item key="dashboard_reddit">True</zine:item><zine:item key="secret_key">_njRJ/~Fu*%|riK&amp;E$R&amp;}(&gt;I!}^DHIQnF!#@~[%iS.2iaSm{`&gt;#AR*WTHJQc-G`u</zine:item><zine:item key="blogger_auth_token"></zine:item><zine:item key="cache_system">simple</zine:item><zine:item key="language">en</zine:item><zine:item key="index_content_types">entry</zine:item><zine:item key="comment_parser">markdown</zine:item><zine:item key="session_cookie_name">your_digitala_visit</zine:item><zine:item key="smtp_user"></zine:item><zine:item key="pings_enabled">False</zine:item><zine:item key="blog_url">http://digita.la/</zine:item><zine:item key="ascii_slugs">True</zine:item><zine:item key="enable_eager_caching">False</zine:item><zine:item key="log_file">zine.log</zine:item><zine:item key="use_flat_comments">False</zine:item></zine:configuration><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2011/1/27/installing-pyyaml-for-jython"><title type="text">Installing PyYAML for Jython</title><id>tag:digita.la,2011-01-27:/entry;2011/1/27/installing-pyyaml-for-jython</id><updated>2011-01-27T14:59:26Z</updated><published>2011-01-27T14:59:26Z</published><link href="http://digita.la/2011/1/27/installing-pyyaml-for-jython"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2011/1/27/installing-pyyaml-for-jython</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">PyYAML by default tries to create a C module against the libyaml library, and since Jython can't use C modules attempting to install PyYAML with Jython fails.&#13;
+&#13;
+...unless you disable the C module install, like this:&#13;
+&#13;
+    ~# wget http://pyyaml.org/download/pyyaml/PyYAML-3.09.tar.gz&#13;
+    ~# tar zxf PyYAML-3.09.tar.gz&#13;
+    ~# cd PyYAML-3.09&#13;
+    ~# jython setup.py --without-libyaml install</content><content type="html">&lt;p&gt;PyYAML by default tries to create a C module against the libyaml library, and since Jython can't use C modules attempting to install PyYAML with Jython fails.
+&lt;/p&gt;
+&lt;p&gt;...unless you disable the C module install, like this:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# wget http://pyyaml.org/download/pyyaml/PyYAML-3.09.tar.gz
+~# tar zxf PyYAML-3.09.tar.gz
+~# cd PyYAML-3.09
+~# jython setup.py --without-libyaml install
+&lt;/code&gt;&lt;/pre&gt;</content><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="jython" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAANFUwAAAAFwTAAATQAAUwAAAJ9QeVlBTUwgYnkgZGVmYXVs
+dCB0cmllcyB0byBjcmVhdGUgYSBDIG1vZHVsZSBhZ2FpbnN0IHRoZSBsaWJ5YW1sIGxpYnJhcnks
+IGFuZCBzaW5jZSBKeXRob24gY2FuJ3QgdXNlIEMgbW9kdWxlcyBhdHRlbXB0aW5nIHRvIGluc3Rh
+bGwgUHlZQU1MIHdpdGggSnl0aG9uIGZhaWxzLgpTAAAAAQpFUwAAAAFwTAAATQAAUwAAADcuLi51
+bmxlc3MgeW91IGRpc2FibGUgdGhlIEMgbW9kdWxlIGluc3RhbGwsIGxpa2UgdGhpczoKUwAAAAEK
+RVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAACafiMgd2dldCBodHRwOi8vcHl5YW1sLm9y
+Zy9kb3dubG9hZC9weXlhbWwvUHlZQU1MLTMuMDkudGFyLmd6Cn4jIHRhciB6eGYgUHlZQU1MLTMu
+MDkudGFyLmd6Cn4jIGNkIFB5WUFNTC0zLjA5Cn4jIGp5dGhvbiBzZXR1cC5weSAtLXdpdGhvdXQt
+bGlieWFtbCBpbnN0YWxsClMAAAAATQAAUwAAAABTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93
+blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/7/1/running-with-jython"><title type="text">Running with Jython</title><id>tag:digita.la,2009-07-01:/entry;2009/7/1/running-with-jython</id><updated>2011-01-26T20:26:08Z</updated><published>2009-07-01T15:36:00Z</published><link href="http://digita.la/2009/7/1/running-with-jython"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/7/1/running-with-jython</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">We've started using Jython for a project at the office which requires interoperability with a 3rd-party API. They provide a load of .java files (and a wad of docs) and that's about it. Since nobody's fluent in Java and its idiosyncrasies I decided it would be best to throw Jython into the mix to get things out quicker and help maintainability.&#13;
+&#13;
+Since Jython is now at 2.5 we'll probably start using it for more things; the 2.5 release brings decorators into the mix, which _should_ allow us to use it with the thrift libraries. Sure, using straight CPython would be better Jython doesn't allow installation of Python modules written in C, but sometimes you're stuck having to use a specific Java library because there's no comparable one in Python.&#13;
+&#13;
+One useful way to get pure-python modules compiled into Jython is by using the easy_install tool. Getting easy_install to work with Jython is pretty easy. Here's an example of installation and usage:&#13;
+&#13;
+    ~# wget http://peak.telecommunity.com/dist/ez_setup.py&#13;
+    ~# jython ez_setup.py&#13;
+    ~# ln -s $JYTHON_HOME/bin/easy_install \&#13;
+       /usr/local/bin/jython_easy_install&#13;
+    ~# jython_easy_install simplejson&#13;
+&#13;
+There's not much more to it. Just be reminded that this will only work with pure-python modules. For C-based modules you'll be better either looking for a pure-python counterpart or a comparable Java library.</content><content type="html">&lt;p&gt;We've started using Jython for a project at the office which requires interoperability with a 3rd-party API. They provide a load of .java files (and a wad of docs) and that's about it. Since nobody's fluent in Java and its idiosyncrasies I decided it would be best to throw Jython into the mix to get things out quicker and help maintainability.
+&lt;/p&gt;
+&lt;p&gt;Since Jython is now at 2.5 we'll probably start using it for more things; the 2.5 release brings decorators into the mix, which &lt;em&gt;should&lt;/em&gt; allow us to use it with the thrift libraries. Sure, using straight CPython would be better Jython doesn't allow installation of Python modules written in C, but sometimes you're stuck having to use a specific Java library because there's no comparable one in Python.
+&lt;/p&gt;
+&lt;p&gt;One useful way to get pure-python modules compiled into Jython is by using the easy_install tool. Getting easy_install to work with Jython is pretty easy. Here's an example of installation and usage:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# wget http://peak.telecommunity.com/dist/ez_setup.py
+~# jython ez_setup.py
+~# ln -s $JYTHON_HOME/bin/easy_install \
+   /usr/local/bin/jython_easy_install
+~# jython_easy_install simplejson
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There's not much more to it. Just be reminded that this will only work with pure-python modules. For C-based modules you'll be better either looking for a pure-python counterpart or a comparable Java library.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="jython-python-java" scheme="http://zine.pocoo.org/#tag-scheme" label="jython python java"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAVFUwAAAAFwTAAATQAAUwAAAVpXZSd2ZSBzdGFydGVkIHVz
+aW5nIEp5dGhvbiBmb3IgYSBwcm9qZWN0IGF0IHRoZSBvZmZpY2Ugd2hpY2ggcmVxdWlyZXMgaW50
+ZXJvcGVyYWJpbGl0eSB3aXRoIGEgM3JkLXBhcnR5IEFQSS4gVGhleSBwcm92aWRlIGEgbG9hZCBv
+ZiAuamF2YSBmaWxlcyAoYW5kIGEgd2FkIG9mIGRvY3MpIGFuZCB0aGF0J3MgYWJvdXQgaXQuIFNp
+bmNlIG5vYm9keSdzIGZsdWVudCBpbiBKYXZhIGFuZCBpdHMgaWRpb3N5bmNyYXNpZXMgSSBkZWNp
+ZGVkIGl0IHdvdWxkIGJlIGJlc3QgdG8gdGhyb3cgSnl0aG9uIGludG8gdGhlIG1peCB0byBnZXQg
+dGhpbmdzIG91dCBxdWlja2VyIGFuZCBoZWxwIG1haW50YWluYWJpbGl0eS4KUwAAAAEKRVMAAAAB
+cEwAAUVTAAAAAmVtTAAATQAAUwAAAAZzaG91bGRTAAABDCBhbGxvdyB1cyB0byB1c2UgaXQgd2l0
+aCB0aGUgdGhyaWZ0IGxpYnJhcmllcy4gU3VyZSwgdXNpbmcgc3RyYWlnaHQgQ1B5dGhvbiB3b3Vs
+ZCBiZSBiZXR0ZXIgSnl0aG9uIGRvZXNuJ3QgYWxsb3cgaW5zdGFsbGF0aW9uIG9mIFB5dGhvbiBt
+b2R1bGVzIHdyaXR0ZW4gaW4gQywgYnV0IHNvbWV0aW1lcyB5b3UncmUgc3R1Y2sgaGF2aW5nIHRv
+IHVzZSBhIHNwZWNpZmljIEphdmEgbGlicmFyeSBiZWNhdXNlIHRoZXJlJ3Mgbm8gY29tcGFyYWJs
+ZSBvbmUgaW4gUHl0aG9uLgpNAABTAAAAgFNpbmNlIEp5dGhvbiBpcyBub3cgYXQgMi41IHdlJ2xs
+IHByb2JhYmx5IHN0YXJ0IHVzaW5nIGl0IGZvciBtb3JlIHRoaW5nczsgdGhlIDIuNSByZWxlYXNl
+IGJyaW5ncyBkZWNvcmF0b3JzIGludG8gdGhlIG1peCwgd2hpY2ggUwAAAAEKRVMAAAABcEwAAE0A
+AFMAAADIT25lIHVzZWZ1bCB3YXkgdG8gZ2V0IHB1cmUtcHl0aG9uIG1vZHVsZXMgY29tcGlsZWQg
+aW50byBKeXRob24gaXMgYnkgdXNpbmcgdGhlIGVhc3lfaW5zdGFsbCB0b29sLiBHZXR0aW5nIGVh
+c3lfaW5zdGFsbCB0byB3b3JrIHdpdGggSnl0aG9uIGlzIHByZXR0eSBlYXN5LiBIZXJlJ3MgYW4g
+ZXhhbXBsZSBvZiBpbnN0YWxsYXRpb24gYW5kIHVzYWdlOgpTAAAAAQpFUwAAAANwcmVMAAFFUwAA
+AARjb2RlTAAATQAAUwAAAL5+IyB3Z2V0IGh0dHA6Ly9wZWFrLnRlbGVjb21tdW5pdHkuY29tL2Rp
+c3QvZXpfc2V0dXAucHkKfiMganl0aG9uIGV6X3NldHVwLnB5Cn4jIGxuIC1zICRKWVRIT05fSE9N
+RS9iaW4vZWFzeV9pbnN0YWxsIFwKICAgL3Vzci9sb2NhbC9iaW4vanl0aG9uX2Vhc3lfaW5zdGFs
+bAp+IyBqeXRob25fZWFzeV9pbnN0YWxsIHNpbXBsZWpzb24KUwAAAABNAABTAAAAAFMAAAAARVMA
+AAABcEwAAE0AAFMAAADRVGhlcmUncyBub3QgbXVjaCBtb3JlIHRvIGl0LiBKdXN0IGJlIHJlbWlu
+ZGVkIHRoYXQgdGhpcyB3aWxsIG9ubHkgd29yayB3aXRoIHB1cmUtcHl0aG9uIG1vZHVsZXMuIEZv
+ciBDLWJhc2VkIG1vZHVsZXMgeW91J2xsIGJlIGJldHRlciBlaXRoZXIgbG9va2luZyBmb3IgYSBw
+dXJlLXB5dGhvbiBjb3VudGVycGFydCBvciBhIGNvbXBhcmFibGUgSmF2YSBsaWJyYXJ5LgpTAAAA
+AFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/2/16/increasing-a-virtualbox-hard-disk"><title type="text">Increasing a VirtualBox hard-disk</title><id>tag:digita.la,2009-02-16:/entry;2009/2/16/increasing-a-virtualbox-hard-disk</id><updated>2010-08-11T19:18:14Z</updated><published>2009-02-16T15:45:00Z</published><link href="http://digita.la/2009/2/16/increasing-a-virtualbox-hard-disk"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/2/16/increasing-a-virtualbox-hard-disk</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">&lt;p&gt;Use &lt;a href="http://slax.org" target="_blank"&gt;slax&lt;/a&gt;, don't forget to create an iso with gparted as part of the bundle.&lt;/p&gt;&#13;
+&#13;
+&lt;blockquote&gt;&lt;pre&gt;&#13;
+dd -if= -of=&#13;
+&lt;/pre&gt;&lt;/blockquote&gt;&#13;
+&#13;
+&lt;p&gt;Use gparted to convert the unused disk space into a usable disk, formatted as ext3.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Use the LVM management commands to create a physical volume, link that to a volume group, then extend your logical volume over the new space.&lt;/p&gt;&#13;
+&#13;
+&lt;blockquote&gt;&lt;pre&gt;&#13;
+~# lvmdiskscan /dev/hda2&#13;
+  /dev/VolGroup00/LogVol00 [       3.97 GB]&#13;
+  /dev/hda1                [     101.94 MB]&#13;
+  /dev/VolGroup00/LogVol01 [     512.00 MB]&#13;
+  /dev/hda2                [       4.50 GB] LVM physical volume&#13;
+  &#13;
+~# umount /dev/hda3&#13;
+~# pvcreate /dev/hda3&#13;
+  Physical volume "/dev/hda3" successfully created&#13;
+~# vgextend VolGroup00 /dev/hda3&#13;
+  Volume group "VolGroup00" successfully extended&#13;
+~# lvextend -L+5GB /dev/VolGroup00/LogVol00 /dev/hda3&#13;
+  Extending logical volume LogVol00 to 8.97 GB&#13;
+  Logical volume LogVol00 successfully resized&#13;
+~# e2fsck -f /dev/VolGroup00/LogVol00&#13;
+e2fsck 1.41.3&#13;
+&#13;
+Do you really want to continue (y/n)? yes&#13;
+&#13;
+Adding dirhash hint to filesystem.&#13;
+&#13;
+Pass 1: Checking inodes, blocks, and sizes&#13;
+Pass 2: Checking directory structure&#13;
+Pass 3: Checking directory connectivity&#13;
+Pass 4: Checking reference counts&#13;
+Pass 5: Checking group summary information&#13;
+&#13;
+/dev/VolGroup00/LogVol00: ***** FILE SYSTEM WAS MODIFIED *****&#13;
+/dev/VolGroup00/LogVol00: 159006/1040384 files (2.0% non-contiguous), 952672/1040384 blocks&#13;
+~# resize2fs /dev/VolGroup00/LogVol00&#13;
+resize2fs 1.41.3&#13;
+Resizing the filesystem on /dev/VolGroup00/LogVol00 to 2351104 (4k) blocks.&#13;
+The filesystem on /dev/VolGroup00/LogVol00 is now 2351104 blocks long.&#13;
+&#13;
+&lt;/pre&gt;&lt;/blockquote&gt;&#13;
+&#13;
+&lt;p&gt;Reboot, and you're done.&lt;/p&gt;</content><content type="html">&lt;p&gt;Use &lt;a href="http://slax.org" target="_blank"&gt;slax&lt;/a&gt;, don't forget to create an iso with gparted as part of the bundle.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;dd -if= -of=
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Use gparted to convert the unused disk space into a usable disk, formatted as ext3.&lt;/p&gt;
+
+&lt;p&gt;Use the LVM management commands to create a physical volume, link that to a volume group, then extend your logical volume over the new space.&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;pre&gt;~# lvmdiskscan /dev/hda2
+  /dev/VolGroup00/LogVol00 [       3.97 GB]
+  /dev/hda1                [     101.94 MB]
+  /dev/VolGroup00/LogVol01 [     512.00 MB]
+  /dev/hda2                [       4.50 GB] LVM physical volume
+  
+~# umount /dev/hda3
+~# pvcreate /dev/hda3
+  Physical volume "/dev/hda3" successfully created
+~# vgextend VolGroup00 /dev/hda3
+  Volume group "VolGroup00" successfully extended
+~# lvextend -L+5GB /dev/VolGroup00/LogVol00 /dev/hda3
+  Extending logical volume LogVol00 to 8.97 GB
+  Logical volume LogVol00 successfully resized
+~# e2fsck -f /dev/VolGroup00/LogVol00
+e2fsck 1.41.3
+
+Do you really want to continue (y/n)? yes
+
+Adding dirhash hint to filesystem.
+
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+/dev/VolGroup00/LogVol00: ***** FILE SYSTEM WAS MODIFIED *****
+/dev/VolGroup00/LogVol00: 159006/1040384 files (2.0% non-contiguous), 952672/1040384 blocks
+~# resize2fs /dev/VolGroup00/LogVol00
+resize2fs 1.41.3
+Resizing the filesystem on /dev/VolGroup00/LogVol00 to 2351104 (4k) blocks.
+The filesystem on /dev/VolGroup00/LogVol00 is now 2351104 blocks long.
+
+&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Reboot, and you're done.&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="virtualbox" scheme="http://zine.pocoo.org/#tag-scheme" label="VirtualBox"/><category term="linux" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAZFUwAAAAFwTAABRVMAAAABYUwAAE0AAlMAAAAEaHJlZlMA
+AAAPaHR0cDovL3NsYXgub3JnUwAAAAZ0YXJnZXRTAAAABl9ibGFua1MAAAAEc2xheFMAAABDLCBk
+b24ndCBmb3JnZXQgdG8gY3JlYXRlIGFuIGlzbyB3aXRoIGdwYXJ0ZWQgYXMgcGFydCBvZiB0aGUg
+YnVuZGxlLk0AAFMAAAAEVXNlIFMAAAACCgpFUwAAAApibG9ja3F1b3RlTAABRVMAAAADcHJlTAAA
+TQAAUwAAAA1kZCAtaWY9IC1vZj0KUwAAAABNAABTAAAAAFMAAAACCgpFUwAAAAFwTAAATQAAUwAA
+AFNVc2UgZ3BhcnRlZCB0byBjb252ZXJ0IHRoZSB1bnVzZWQgZGlzayBzcGFjZSBpbnRvIGEgdXNh
+YmxlIGRpc2ssIGZvcm1hdHRlZCBhcyBleHQzLlMAAAACCgpFUwAAAAFwTAAATQAAUwAAAI1Vc2Ug
+dGhlIExWTSBtYW5hZ2VtZW50IGNvbW1hbmRzIHRvIGNyZWF0ZSBhIHBoeXNpY2FsIHZvbHVtZSwg
+bGluayB0aGF0IHRvIGEgdm9sdW1lIGdyb3VwLCB0aGVuIGV4dGVuZCB5b3VyIGxvZ2ljYWwgdm9s
+dW1lIG92ZXIgdGhlIG5ldyBzcGFjZS5TAAAAAgoKRVMAAAAKYmxvY2txdW90ZUwAAUVTAAAAA3By
+ZUwAAE0AAFMAAATUfiMgbHZtZGlza3NjYW4gL2Rldi9oZGEyCiAgL2Rldi9Wb2xHcm91cDAwL0xv
+Z1ZvbDAwIFsgICAgICAgMy45NyBHQl0KICAvZGV2L2hkYTEgICAgICAgICAgICAgICAgWyAgICAg
+MTAxLjk0IE1CXQogIC9kZXYvVm9sR3JvdXAwMC9Mb2dWb2wwMSBbICAgICA1MTIuMDAgTUJdCiAg
+L2Rldi9oZGEyICAgICAgICAgICAgICAgIFsgICAgICAgNC41MCBHQl0gTFZNIHBoeXNpY2FsIHZv
+bHVtZQogIAp+IyB1bW91bnQgL2Rldi9oZGEzCn4jIHB2Y3JlYXRlIC9kZXYvaGRhMwogIFBoeXNp
+Y2FsIHZvbHVtZSAiL2Rldi9oZGEzIiBzdWNjZXNzZnVsbHkgY3JlYXRlZAp+IyB2Z2V4dGVuZCBW
+b2xHcm91cDAwIC9kZXYvaGRhMwogIFZvbHVtZSBncm91cCAiVm9sR3JvdXAwMCIgc3VjY2Vzc2Z1
+bGx5IGV4dGVuZGVkCn4jIGx2ZXh0ZW5kIC1MKzVHQiAvZGV2L1ZvbEdyb3VwMDAvTG9nVm9sMDAg
+L2Rldi9oZGEzCiAgRXh0ZW5kaW5nIGxvZ2ljYWwgdm9sdW1lIExvZ1ZvbDAwIHRvIDguOTcgR0IK
+ICBMb2dpY2FsIHZvbHVtZSBMb2dWb2wwMCBzdWNjZXNzZnVsbHkgcmVzaXplZAp+IyBlMmZzY2sg
+LWYgL2Rldi9Wb2xHcm91cDAwL0xvZ1ZvbDAwCmUyZnNjayAxLjQxLjMKCkRvIHlvdSByZWFsbHkg
+d2FudCB0byBjb250aW51ZSAoeS9uKT8geWVzCgpBZGRpbmcgZGlyaGFzaCBoaW50IHRvIGZpbGVz
+eXN0ZW0uCgpQYXNzIDE6IENoZWNraW5nIGlub2RlcywgYmxvY2tzLCBhbmQgc2l6ZXMKUGFzcyAy
+OiBDaGVja2luZyBkaXJlY3Rvcnkgc3RydWN0dXJlClBhc3MgMzogQ2hlY2tpbmcgZGlyZWN0b3J5
+IGNvbm5lY3Rpdml0eQpQYXNzIDQ6IENoZWNraW5nIHJlZmVyZW5jZSBjb3VudHMKUGFzcyA1OiBD
+aGVja2luZyBncm91cCBzdW1tYXJ5IGluZm9ybWF0aW9uCgovZGV2L1ZvbEdyb3VwMDAvTG9nVm9s
+MDA6ICoqKioqIEZJTEUgU1lTVEVNIFdBUyBNT0RJRklFRCAqKioqKgovZGV2L1ZvbEdyb3VwMDAv
+TG9nVm9sMDA6IDE1OTAwNi8xMDQwMzg0IGZpbGVzICgyLjAlIG5vbi1jb250aWd1b3VzKSwgOTUy
+NjcyLzEwNDAzODQgYmxvY2tzCn4jIHJlc2l6ZTJmcyAvZGV2L1ZvbEdyb3VwMDAvTG9nVm9sMDAK
+cmVzaXplMmZzIDEuNDEuMwpSZXNpemluZyB0aGUgZmlsZXN5c3RlbSBvbiAvZGV2L1ZvbEdyb3Vw
+MDAvTG9nVm9sMDAgdG8gMjM1MTEwNCAoNGspIGJsb2Nrcy4KVGhlIGZpbGVzeXN0ZW0gb24gL2Rl
+di9Wb2xHcm91cDAwL0xvZ1ZvbDAwIGlzIG5vdyAyMzUxMTA0IGJsb2NrcyBsb25nLgoKUwAAAABN
+AABTAAAAAFMAAAACCgpFUwAAAAFwTAAATQAAUwAAABhSZWJvb3QsIGFuZCB5b3UncmUgZG9uZS5T
+AAAAAFMAAAAGcGFyc2VyUwAAAARodG1sUwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/6/23/user-agent-string-for-ipad-s-media-player-app"><title type="text">User Agent String for iPad's Media Player app</title><id>tag:digita.la,2010-06-23:/entry;2010/6/23/user-agent-string-for-ipad-s-media-player-app</id><updated>2010-06-23T15:30:58Z</updated><published>2010-06-23T15:30:58Z</published><link href="http://digita.la/2010/6/23/user-agent-string-for-ipad-s-media-player-app"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/6/23/user-agent-string-for-ipad-s-media-player-app</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Just in case you were wondering what the user-agent string is for the media/video player app on the Apple iPad, here it is:&#13;
+&#13;
+    AppleCoreMedia/1.0.0.7B367 (iPad; U; CPU OS 3_2 like Mac OS X)&#13;
+&#13;
+If you're testing/working with HTML video on/with the iPad, knowing the above can be rather handy!</content><content type="html">&lt;p&gt;Just in case you were wondering what the user-agent string is for the media/video player app on the Apple iPad, here it is:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AppleCoreMedia/1.0.0.7B367 (iPad; U; CPU OS 3_2 like Mac OS X)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you're testing/working with HTML video on/with the iPad, knowing the above can be rather handy!
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="ipad" scheme="http://zine.pocoo.org/#tag-scheme" label="iPad"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAANFUwAAAAFwTAAATQAAUwAAAHxKdXN0IGluIGNhc2UgeW91
+IHdlcmUgd29uZGVyaW5nIHdoYXQgdGhlIHVzZXItYWdlbnQgc3RyaW5nIGlzIGZvciB0aGUgbWVk
+aWEvdmlkZW8gcGxheWVyIGFwcCBvbiB0aGUgQXBwbGUgaVBhZCwgaGVyZSBpdCBpczoKUwAAAAEK
+RVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAAA/QXBwbGVDb3JlTWVkaWEvMS4wLjAuN0Iz
+NjcgKGlQYWQ7IFU7IENQVSBPUyAzXzIgbGlrZSBNYWMgT1MgWCkKUwAAAABNAABTAAAAAFMAAAAA
+RVMAAAABcEwAAE0AAFMAAABjSWYgeW91J3JlIHRlc3Rpbmcvd29ya2luZyB3aXRoIEhUTUwgdmlk
+ZW8gb24vd2l0aCB0aGUgaVBhZCwga25vd2luZyB0aGUgYWJvdmUgY2FuIGJlIHJhdGhlciBoYW5k
+eSEKUwAAAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/6/2/compiling-lxml-libxml2-libxslt-for-a-virtualenv"><title type="text">Compiling lxml/libxml2/libxslt for a virtualenv</title><id>tag:digita.la,2010-06-02:/entry;2010/6/2/compiling-lxml-libxml2-libxslt-for-a-virtualenv</id><updated>2010-06-02T13:09:46Z</updated><published>2010-06-02T12:42:00Z</published><link href="http://digita.la/2010/6/2/compiling-lxml-libxml2-libxslt-for-a-virtualenv"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/6/2/compiling-lxml-libxml2-libxslt-for-a-virtualenv</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Sometimes you need to ensure `lxml` is using the latest `libxml2` and `libxslt` libraries. The easiest way to do this is to set up a virtualenv (which you should be doing anyway!) for your Python project and then install `lxml` with static dependencies.&#13;
+&#13;
+    # workon myproject&#13;
+    # STATIC_DEPS=true easy_install lxml&#13;
+&#13;
+This doesn't always work. You may see an error such as:&#13;
+&#13;
+    ...libexslt.a(exslt.o): relocation R_X86_64_32 against `a local symbol' can not be used when making a shared object; recompile with -fPIC&#13;
+    ...libexslt.a: could not read symbols: Bad value&#13;
+    collect2: ld returned 1 exit status&#13;
+    error: Setup script exited with error: command 'cc' failed with exit status 1&#13;
+&#13;
+... usually on a 64bit platform. To work around this, do the following:&#13;
+&#13;
+    # easy_install cython&#13;
+    # CFLAGS="$CFLAGS -fPIC" STATIC_DEPS=true easy_install lxml&#13;
+&#13;
+If you see an error like "`lxml/etree.so: undefined symbol: gcry_check_version`" try the following command in place of the last:&#13;
+&#13;
+    # CFLAGS="$CFLAGS -lgcrypt -fPIC" STATIC_DEPS=true easy_install lxml&#13;
+&#13;
+This may disable some EXSLT functionality in `libxslt`, but there's a chance you didn't have that functionality anyway if you were working with an older `libxslt` binary.</content><content type="html">&lt;p&gt;Sometimes you need to ensure &lt;code&gt;lxml&lt;/code&gt; is using the latest &lt;code&gt;libxml2&lt;/code&gt; and &lt;code&gt;libxslt&lt;/code&gt; libraries. The easiest way to do this is to set up a virtualenv (which you should be doing anyway!) for your Python project and then install &lt;code&gt;lxml&lt;/code&gt; with static dependencies.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# workon myproject
+# STATIC_DEPS=true easy_install lxml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This doesn't always work. You may see an error such as:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;...libexslt.a(exslt.o): relocation R_X86_64_32 against `a local symbol' can not be used when making a shared object; recompile with -fPIC
+...libexslt.a: could not read symbols: Bad value
+collect2: ld returned 1 exit status
+error: Setup script exited with error: command 'cc' failed with exit status 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;... usually on a 64bit platform. To work around this, do the following:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# easy_install cython
+# CFLAGS="$CFLAGS -fPIC" STATIC_DEPS=true easy_install lxml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you see an error like "&lt;code&gt;lxml/etree.so: undefined symbol: gcry_check_version&lt;/code&gt;" try the following command in place of the last:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# CFLAGS="$CFLAGS -lgcrypt -fPIC" STATIC_DEPS=true easy_install lxml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This may disable some EXSLT functionality in &lt;code&gt;libxslt&lt;/code&gt;, but there's a chance you didn't have that functionality anyway if you were working with an older &lt;code&gt;libxslt&lt;/code&gt; binary.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="lxml" scheme="http://zine.pocoo.org/#tag-scheme"/><category term="python" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAlFUwAAAAFwTAAERVMAAAAEY29kZUwAAE0AAFMAAAAEbHht
+bFMAAAAVIGlzIHVzaW5nIHRoZSBsYXRlc3QgRVMAAAAEY29kZUwAAE0AAFMAAAAHbGlieG1sMlMA
+AAAFIGFuZCBFUwAAAARjb2RlTAAATQAAUwAAAAdsaWJ4c2x0UwAAAI4gbGlicmFyaWVzLiBUaGUg
+ZWFzaWVzdCB3YXkgdG8gZG8gdGhpcyBpcyB0byBzZXQgdXAgYSB2aXJ0dWFsZW52ICh3aGljaCB5
+b3Ugc2hvdWxkIGJlIGRvaW5nIGFueXdheSEpIGZvciB5b3VyIFB5dGhvbiBwcm9qZWN0IGFuZCB0
+aGVuIGluc3RhbGwgRVMAAAAEY29kZUwAAE0AAFMAAAAEbHhtbFMAAAAbIHdpdGggc3RhdGljIGRl
+cGVuZGVuY2llcy4KTQAAUwAAAB1Tb21ldGltZXMgeW91IG5lZWQgdG8gZW5zdXJlIFMAAAABCkVT
+AAAAA3ByZUwAAUVTAAAABGNvZGVMAABNAABTAAAAOCMgd29ya29uIG15cHJvamVjdAojIFNUQVRJ
+Q19ERVBTPXRydWUgZWFzeV9pbnN0YWxsIGx4bWwKUwAAAABNAABTAAAAAFMAAAAARVMAAAABcEwA
+AE0AAFMAAAA4VGhpcyBkb2Vzbid0IGFsd2F5cyB3b3JrLiBZb3UgbWF5IHNlZSBhbiBlcnJvciBz
+dWNoIGFzOgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAAS0uLi5saWJleHNs
+dC5hKGV4c2x0Lm8pOiByZWxvY2F0aW9uIFJfWDg2XzY0XzMyIGFnYWluc3QgYGEgbG9jYWwgc3lt
+Ym9sJyBjYW4gbm90IGJlIHVzZWQgd2hlbiBtYWtpbmcgYSBzaGFyZWQgb2JqZWN0OyByZWNvbXBp
+bGUgd2l0aCAtZlBJQwouLi5saWJleHNsdC5hOiBjb3VsZCBub3QgcmVhZCBzeW1ib2xzOiBCYWQg
+dmFsdWUKY29sbGVjdDI6IGxkIHJldHVybmVkIDEgZXhpdCBzdGF0dXMKZXJyb3I6IFNldHVwIHNj
+cmlwdCBleGl0ZWQgd2l0aCBlcnJvcjogY29tbWFuZCAnY2MnIGZhaWxlZCB3aXRoIGV4aXQgc3Rh
+dHVzIDEKUwAAAABNAABTAAAAAFMAAAAARVMAAAABcEwAAE0AAFMAAABILi4uIHVzdWFsbHkgb24g
+YSA2NGJpdCBwbGF0Zm9ybS4gVG8gd29yayBhcm91bmQgdGhpcywgZG8gdGhlIGZvbGxvd2luZzoK
+UwAAAAEKRVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAABSIyBlYXN5X2luc3RhbGwgY3l0
+aG9uCiMgQ0ZMQUdTPSIkQ0ZMQUdTIC1mUElDIiBTVEFUSUNfREVQUz10cnVlIGVhc3lfaW5zdGFs
+bCBseG1sClMAAAAATQAAUwAAAABTAAAAAEVTAAAAAXBMAAFFUwAAAARjb2RlTAAATQAAUwAAADNs
+eG1sL2V0cmVlLnNvOiB1bmRlZmluZWQgc3ltYm9sOiBnY3J5X2NoZWNrX3ZlcnNpb25TAAAAMiIg
+dHJ5IHRoZSBmb2xsb3dpbmcgY29tbWFuZCBpbiBwbGFjZSBvZiB0aGUgbGFzdDoKTQAAUwAAABpJ
+ZiB5b3Ugc2VlIGFuIGVycm9yIGxpa2UgIlMAAAABCkVTAAAAA3ByZUwAAUVTAAAABGNvZGVMAABN
+AABTAAAARSMgQ0ZMQUdTPSIkQ0ZMQUdTIC1sZ2NyeXB0IC1mUElDIiBTVEFUSUNfREVQUz10cnVl
+IGVhc3lfaW5zdGFsbCBseG1sClMAAAAATQAAUwAAAABTAAAAAEVTAAAAAXBMAAJFUwAAAARjb2Rl
+TAAATQAAUwAAAAdsaWJ4c2x0UwAAAGMsIGJ1dCB0aGVyZSdzIGEgY2hhbmNlIHlvdSBkaWRuJ3Qg
+aGF2ZSB0aGF0IGZ1bmN0aW9uYWxpdHkgYW55d2F5IGlmIHlvdSB3ZXJlIHdvcmtpbmcgd2l0aCBh
+biBvbGRlciBFUwAAAARjb2RlTAAATQAAUwAAAAdsaWJ4c2x0UwAAAAkgYmluYXJ5LgpNAABTAAAA
+LVRoaXMgbWF5IGRpc2FibGUgc29tZSBFWFNMVCBmdW5jdGlvbmFsaXR5IGluIFMAAAAAUwAAAAZw
+YXJzZXJTAAAACG1hcmtkb3duUwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/4/30/mysql-the-libtoolt-error-on-x86-64"><title type="text">MySQL &amp; the libtoolT error on x86_64</title><id>tag:digita.la,2010-04-30:/entry;2010/4/30/mysql-the-libtoolt-error-on-x86-64</id><updated>2010-04-30T17:09:10Z</updated><published>2010-04-30T16:57:00Z</published><link href="http://digita.la/2010/4/30/mysql-the-libtoolt-error-on-x86-64"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/4/30/mysql-the-libtoolt-error-on-x86-64</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Quick fix for the `cannot remove 'libtoolT': No such file or directory` error that can raise when trying to compile MySQL on x86_64.&#13;
+&#13;
+After downloading, unpacking, and changing directory...&#13;
+&#13;
+    [mysql-x.x.x]# libtoolize --force&#13;
+    Using `AC_PROG_RANLIB' is rendered obsolete by `AC_PROG_LIBTOOL'&#13;
+    You should update your `aclocal.m4' by running aclocal.&#13;
+    [mysql-x.x.x]# aclocal&#13;
+    [mysql-x.x.x]# cp BUILD/compile-pentium64 ./compile&#13;
+    [mysql-x.x.x]# autoreconf&#13;
+&#13;
+...then proceed as usual.</content><content type="html">&lt;p&gt;Quick fix for the &lt;code&gt;cannot remove 'libtoolT': No such file or directory&lt;/code&gt; error that can raise when trying to compile MySQL on x86_64.
+&lt;/p&gt;
+&lt;p&gt;After downloading, unpacking, and changing directory...
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[mysql-x.x.x]# libtoolize --force
+Using `AC_PROG_RANLIB' is rendered obsolete by `AC_PROG_LIBTOOL'
+You should update your `aclocal.m4' by running aclocal.
+[mysql-x.x.x]# aclocal
+[mysql-x.x.x]# cp BUILD/compile-pentium64 ./compile
+[mysql-x.x.x]# autoreconf
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;...then proceed as usual.
+&lt;/p&gt;</content><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="mysql" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAARFUwAAAAFwTAABRVMAAAAEY29kZUwAAE0AAFMAAAAzY2Fu
+bm90IHJlbW92ZSAnbGlidG9vbFQnOiBObyBzdWNoIGZpbGUgb3IgZGlyZWN0b3J5UwAAAD4gZXJy
+b3IgdGhhdCBjYW4gcmFpc2Ugd2hlbiB0cnlpbmcgdG8gY29tcGlsZSBNeVNRTCBvbiB4ODZfNjQu
+Ck0AAFMAAAASUXVpY2sgZml4IGZvciB0aGUgUwAAAAEKRVMAAAABcEwAAE0AAFMAAAA4QWZ0ZXIg
+ZG93bmxvYWRpbmcsIHVucGFja2luZywgYW5kIGNoYW5naW5nIGRpcmVjdG9yeS4uLgpTAAAAAQpF
+UwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAAQBbbXlzcWwteC54LnhdIyBsaWJ0b29saXpl
+IC0tZm9yY2UKVXNpbmcgYEFDX1BST0dfUkFOTElCJyBpcyByZW5kZXJlZCBvYnNvbGV0ZSBieSBg
+QUNfUFJPR19MSUJUT09MJwpZb3Ugc2hvdWxkIHVwZGF0ZSB5b3VyIGBhY2xvY2FsLm00JyBieSBy
+dW5uaW5nIGFjbG9jYWwuCltteXNxbC14LngueF0jIGFjbG9jYWwKW215c3FsLXgueC54XSMgY3Ag
+QlVJTEQvY29tcGlsZS1wZW50aXVtNjQgLi9jb21waWxlCltteXNxbC14LngueF0jIGF1dG9yZWNv
+bmYKUwAAAABNAABTAAAAAFMAAAAARVMAAAABcEwAAE0AAFMAAAAaLi4udGhlbiBwcm9jZWVkIGFz
+IHVzdWFsLgpTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/3/25/installing-thrift-on-opensolaris"><title type="text">Installing Thrift on OpenSolaris</title><id>tag:digita.la,2010-03-25:/entry;2010/3/25/installing-thrift-on-opensolaris</id><updated>2010-03-25T14:52:51Z</updated><published>2010-03-25T14:52:51Z</published><link href="http://digita.la/2010/3/25/installing-thrift-on-opensolaris"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/3/25/installing-thrift-on-opensolaris</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">...is truly a nightmare. Following the standard install instructions, albeit with some tweaks, will get you nowhere on the OpenSolaris platform. There are many, many obstacles to overcome, and my unix-foo isn't nearly strong enough.&#13;
+&#13;
+Thankfully, others have happened across the same problems. The [HyperTable][1] project, a very admirable NoSQL database, have available a [version of thrift][2] which has been tweaked to run on OpenSolaris. Using this, and a take on their [installation script][3], we can get a working version of thrift.&#13;
+&#13;
+Here's a script with all the commands to get you started:&#13;
+&#13;
+    #!/bin/bash&#13;
+&#13;
+    # Common Packages&#13;
+    pkg install SUNWgcc&#13;
+    pkg install SUNWgmake&#13;
+    pkg install SUNWcmake&#13;
+    pkg install SUNWlibevent&#13;
+    pkg install java-dev&#13;
+&#13;
+    # SLF4J&#13;
+    cd /usr/src&#13;
+    wget http://www.slf4j.org/dist/slf4j-1.5.11.tar.gz -O- | tar zx&#13;
+    mv slf4j-1.5.11 /usr/share/lib/slf4j&#13;
+&#13;
+    # Apache Commons&#13;
+    cd /usr/src&#13;
+    mkdir /usr/share/lib/apache-commons&#13;
+    wget http://mirror.fubra.com/ftp.apache.org/commons/lang/binaries/commons-lang-2.5-bin.tar.gz -O- | tar zx&#13;
+    mv commons-lang-2.5/ /usr/share/lib/apache-commons/lang&#13;
+&#13;
+    # Boost&#13;
+    cd /usr/src&#13;
+    wget http://downloads.sourceforge.net/boost/boost_1_40_0.tar.bz2 -O- | tar jx&#13;
+    cd boost_1_40_0&#13;
+    ./bootstrap.sh --with-libraries=filesystem,iostreams,program_options,system,thread,graph&#13;
+    ./bjam install&#13;
+&#13;
+    # Thrift&#13;
+    cd /usr/src&#13;
+    wget wget http://www.hypertable.org/pub/thrift-r820857-solaris.tgz -O- | tar zx&#13;
+    cd thrift&#13;
+    export CLASSPATH=.:/usr/share/lib/slf4j/slf4j-api-1.5.11.jar:/usr/share/lib/slf4j/slf4j-simple-1.5.11.jar:/usr/share/lib/slf4j/log4j-over-slf4j-1.5.11.jar:/usr/share/lib/slf4j/slf4j-ext-1.5.11.jar:/usr/share/lib/slf4j/slf4j-migrator-1.5.11.jar:/usr/share/lib/apache-commons/lang/commons-lang-2.5.jar&#13;
+    ./configure --prefix=/usr CPPFLAGS='-D__BYTE_ORDER=__BIG_ENDIAN -DAF_LOCAL=AF_UNIX' LIBS='-lsocket'&#13;
+&#13;
+&#13;
+  [1]: http://code.google.com/p/hypertable&#13;
+  [2]: http://www.hypertable.org/pub/thrift-r820857-solaris.tgz&#13;
+  [3]: http://code.google.com/p/hypertable/wiki/HowToBuildSolaris</content><content type="html">&lt;p&gt;...is truly a nightmare. Following the standard install instructions, albeit with some tweaks, will get you nowhere on the OpenSolaris platform. There are many, many obstacles to overcome, and my unix-foo isn't nearly strong enough.
+&lt;/p&gt;
+&lt;p&gt;Thankfully, others have happened across the same problems. The &lt;a href="http://code.google.com/p/hypertable"&gt;HyperTable&lt;/a&gt; project, a very admirable NoSQL database, have available a &lt;a href="http://www.hypertable.org/pub/thrift-r820857-solaris.tgz"&gt;version of thrift&lt;/a&gt; which has been tweaked to run on OpenSolaris. Using this, and a take on their &lt;a href="http://code.google.com/p/hypertable/wiki/HowToBuildSolaris"&gt;installation script&lt;/a&gt;, we can get a working version of thrift.
+&lt;/p&gt;
+&lt;p&gt;Here's a script with all the commands to get you started:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+
+# Common Packages
+pkg install SUNWgcc
+pkg install SUNWgmake
+pkg install SUNWcmake
+pkg install SUNWlibevent
+pkg install java-dev
+
+# SLF4J
+cd /usr/src
+wget http://www.slf4j.org/dist/slf4j-1.5.11.tar.gz -O- | tar zx
+mv slf4j-1.5.11 /usr/share/lib/slf4j
+
+# Apache Commons
+cd /usr/src
+mkdir /usr/share/lib/apache-commons
+wget http://mirror.fubra.com/ftp.apache.org/commons/lang/binaries/commons-lang-2.5-bin.tar.gz -O- | tar zx
+mv commons-lang-2.5/ /usr/share/lib/apache-commons/lang
+
+# Boost
+cd /usr/src
+wget http://downloads.sourceforge.net/boost/boost_1_40_0.tar.bz2 -O- | tar jx
+cd boost_1_40_0
+./bootstrap.sh --with-libraries=filesystem,iostreams,program_options,system,thread,graph
+./bjam install
+
+# Thrift
+cd /usr/src
+wget wget http://www.hypertable.org/pub/thrift-r820857-solaris.tgz -O- | tar zx
+cd thrift
+export CLASSPATH=.:/usr/share/lib/slf4j/slf4j-api-1.5.11.jar:/usr/share/lib/slf4j/slf4j-simple-1.5.11.jar:/usr/share/lib/slf4j/log4j-over-slf4j-1.5.11.jar:/usr/share/lib/slf4j/slf4j-ext-1.5.11.jar:/usr/share/lib/slf4j/slf4j-migrator-1.5.11.jar:/usr/share/lib/apache-commons/lang/commons-lang-2.5.jar
+./configure --prefix=/usr CPPFLAGS='-D__BYTE_ORDER=__BIG_ENDIAN -DAF_LOCAL=AF_UNIX' LIBS='-lsocket'
+&lt;/code&gt;&lt;/pre&gt;</content><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="open-solaris" scheme="http://zine.pocoo.org/#tag-scheme"/><category term="thrift" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAARFUwAAAAFwTAAATQAAUwAAAOkuLi5pcyB0cnVseSBhIG5p
+Z2h0bWFyZS4gRm9sbG93aW5nIHRoZSBzdGFuZGFyZCBpbnN0YWxsIGluc3RydWN0aW9ucywgYWxi
+ZWl0IHdpdGggc29tZSB0d2Vha3MsIHdpbGwgZ2V0IHlvdSBub3doZXJlIG9uIHRoZSBPcGVuU29s
+YXJpcyBwbGF0Zm9ybS4gVGhlcmUgYXJlIG1hbnksIG1hbnkgb2JzdGFjbGVzIHRvIG92ZXJjb21l
+LCBhbmQgbXkgdW5peC1mb28gaXNuJ3QgbmVhcmx5IHN0cm9uZyBlbm91Z2guClMAAAABCkVTAAAA
+AXBMAANFUwAAAAFhTAAATQABUwAAAARocmVmUwAAACNodHRwOi8vY29kZS5nb29nbGUuY29tL3Av
+aHlwZXJ0YWJsZVMAAAAKSHlwZXJUYWJsZVMAAAA8IHByb2plY3QsIGEgdmVyeSBhZG1pcmFibGUg
+Tm9TUUwgZGF0YWJhc2UsIGhhdmUgYXZhaWxhYmxlIGEgRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMA
+AAA4aHR0cDovL3d3dy5oeXBlcnRhYmxlLm9yZy9wdWIvdGhyaWZ0LXI4MjA4NTctc29sYXJpcy50
+Z3pTAAAAEXZlcnNpb24gb2YgdGhyaWZ0UwAAAE8gd2hpY2ggaGFzIGJlZW4gdHdlYWtlZCB0byBy
+dW4gb24gT3BlblNvbGFyaXMuIFVzaW5nIHRoaXMsIGFuZCBhIHRha2Ugb24gdGhlaXIgRVMAAAAB
+YUwAAE0AAVMAAAAEaHJlZlMAAAA6aHR0cDovL2NvZGUuZ29vZ2xlLmNvbS9wL2h5cGVydGFibGUv
+d2lraS9Ib3dUb0J1aWxkU29sYXJpc1MAAAATaW5zdGFsbGF0aW9uIHNjcmlwdFMAAAAqLCB3ZSBj
+YW4gZ2V0IGEgd29ya2luZyB2ZXJzaW9uIG9mIHRocmlmdC4KTQAAUwAAAD9UaGFua2Z1bGx5LCBv
+dGhlcnMgaGF2ZSBoYXBwZW5lZCBhY3Jvc3MgdGhlIHNhbWUgcHJvYmxlbXMuIFRoZSBTAAAAAQpF
+UwAAAAFwTAAATQAAUwAAADpIZXJlJ3MgYSBzY3JpcHQgd2l0aCBhbGwgdGhlIGNvbW1hbmRzIHRv
+IGdldCB5b3Ugc3RhcnRlZDoKUwAAAAEKRVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAATH
+IyEvYmluL2Jhc2gKCiMgQ29tbW9uIFBhY2thZ2VzCnBrZyBpbnN0YWxsIFNVTldnY2MKcGtnIGlu
+c3RhbGwgU1VOV2dtYWtlCnBrZyBpbnN0YWxsIFNVTldjbWFrZQpwa2cgaW5zdGFsbCBTVU5XbGli
+ZXZlbnQKcGtnIGluc3RhbGwgamF2YS1kZXYKCiMgU0xGNEoKY2QgL3Vzci9zcmMKd2dldCBodHRw
+Oi8vd3d3LnNsZjRqLm9yZy9kaXN0L3NsZjRqLTEuNS4xMS50YXIuZ3ogLU8tIHwgdGFyIHp4Cm12
+IHNsZjRqLTEuNS4xMSAvdXNyL3NoYXJlL2xpYi9zbGY0agoKIyBBcGFjaGUgQ29tbW9ucwpjZCAv
+dXNyL3NyYwpta2RpciAvdXNyL3NoYXJlL2xpYi9hcGFjaGUtY29tbW9ucwp3Z2V0IGh0dHA6Ly9t
+aXJyb3IuZnVicmEuY29tL2Z0cC5hcGFjaGUub3JnL2NvbW1vbnMvbGFuZy9iaW5hcmllcy9jb21t
+b25zLWxhbmctMi41LWJpbi50YXIuZ3ogLU8tIHwgdGFyIHp4Cm12IGNvbW1vbnMtbGFuZy0yLjUv
+IC91c3Ivc2hhcmUvbGliL2FwYWNoZS1jb21tb25zL2xhbmcKCiMgQm9vc3QKY2QgL3Vzci9zcmMK
+d2dldCBodHRwOi8vZG93bmxvYWRzLnNvdXJjZWZvcmdlLm5ldC9ib29zdC9ib29zdF8xXzQwXzAu
+dGFyLmJ6MiAtTy0gfCB0YXIgangKY2QgYm9vc3RfMV80MF8wCi4vYm9vdHN0cmFwLnNoIC0td2l0
+aC1saWJyYXJpZXM9ZmlsZXN5c3RlbSxpb3N0cmVhbXMscHJvZ3JhbV9vcHRpb25zLHN5c3RlbSx0
+aHJlYWQsZ3JhcGgKLi9iamFtIGluc3RhbGwKCiMgVGhyaWZ0CmNkIC91c3Ivc3JjCndnZXQgd2dl
+dCBodHRwOi8vd3d3Lmh5cGVydGFibGUub3JnL3B1Yi90aHJpZnQtcjgyMDg1Ny1zb2xhcmlzLnRn
+eiAtTy0gfCB0YXIgengKY2QgdGhyaWZ0CmV4cG9ydCBDTEFTU1BBVEg9LjovdXNyL3NoYXJlL2xp
+Yi9zbGY0ai9zbGY0ai1hcGktMS41LjExLmphcjovdXNyL3NoYXJlL2xpYi9zbGY0ai9zbGY0ai1z
+aW1wbGUtMS41LjExLmphcjovdXNyL3NoYXJlL2xpYi9zbGY0ai9sb2c0ai1vdmVyLXNsZjRqLTEu
+NS4xMS5qYXI6L3Vzci9zaGFyZS9saWIvc2xmNGovc2xmNGotZXh0LTEuNS4xMS5qYXI6L3Vzci9z
+aGFyZS9saWIvc2xmNGovc2xmNGotbWlncmF0b3ItMS41LjExLmphcjovdXNyL3NoYXJlL2xpYi9h
+cGFjaGUtY29tbW9ucy9sYW5nL2NvbW1vbnMtbGFuZy0yLjUuamFyCi4vY29uZmlndXJlIC0tcHJl
+Zml4PS91c3IgQ1BQRkxBR1M9Jy1EX19CWVRFX09SREVSPV9fQklHX0VORElBTiAtREFGX0xPQ0FM
+PUFGX1VOSVgnIExJQlM9Jy1sc29ja2V0JwpTAAAAAE0AAFMAAAAAUwAAAABTAAAABnBhcnNlclMA
+AAAIbWFya2Rvd25TAAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/3/1/virtualbox-on-os-x:-custom-kernel"><title type="text">VirtualBox on OS X: Custom kernel</title><id>tag:digita.la,2010-03-01:/entry;2010/3/1/virtualbox-on-os-x:-custom-kernel</id><updated>2010-03-03T02:58:33Z</updated><published>2010-03-01T20:37:00Z</published><link href="http://digita.la/2010/3/1/virtualbox-on-os-x:-custom-kernel"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/3/1/virtualbox-on-os-x:-custom-kernel</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text">    yum install -y gcc rpm-build ncurses-devel&#13;
+    cd /usr/src&#13;
+    wget ftp://ftp.kernel.org/[path/to/latest/kernel].tar.bz2 -O- | tar jx&#13;
+    cd linux-[version]/&#13;
+    cp /boot/config-`uname -r` ./.config&#13;
+    make menuconfig&#13;
+&#13;
+1. load the config file.&#13;
+1. enable "tickless system" if available&#13;
+1. set the cpu timing frequency to 100hz&#13;
+1. change the Preemption Model to "No Forced Preemption (Server)"&#13;
+1. set the i/o scheduler to "no-op"&#13;
+&#13;
+Then...&#13;
+&#13;
+    make rpm</content><content type="html">&lt;pre&gt;&lt;code&gt;yum install -y gcc rpm-build ncurses-devel
+cd /usr/src
+wget ftp://ftp.kernel.org/[path/to/latest/kernel].tar.bz2 -O- | tar jx
+cd linux-[version]/
+cp /boot/config-`uname -r` ./.config
+make menuconfig
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+ &lt;li&gt;
+     load the config file.
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     enable "tickless system" if available
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     set the cpu timing frequency to 100hz
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     change the Preemption Model to "No Forced Preemption (Server)"
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     set the i/o scheduler to "no-op"
+ &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Then...
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;make rpm
+&lt;/code&gt;&lt;/pre&gt;</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAARFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAAMd5
+dW0gaW5zdGFsbCAteSBnY2MgcnBtLWJ1aWxkIG5jdXJzZXMtZGV2ZWwKY2QgL3Vzci9zcmMKd2dl
+dCBmdHA6Ly9mdHAua2VybmVsLm9yZy9bcGF0aC90by9sYXRlc3Qva2VybmVsXS50YXIuYnoyIC1P
+LSB8IHRhciBqeApjZCBsaW51eC1bdmVyc2lvbl0vCmNwIC9ib290L2NvbmZpZy1gdW5hbWUgLXJg
+IC4vLmNvbmZpZwptYWtlIG1lbnVjb25maWcKUwAAAABNAABTAAAAAFMAAAAARVMAAAACb2xMAAVF
+UwAAAAJsaUwAAE0AAFMAAAAdCiAgICAgbG9hZCB0aGUgY29uZmlnIGZpbGUuCiBTAAAAAwoKIEVT
+AAAAAmxpTAAATQAAUwAAAC0KICAgICBlbmFibGUgInRpY2tsZXNzIHN5c3RlbSIgaWYgYXZhaWxh
+YmxlCiBTAAAAAwoKIEVTAAAAAmxpTAAATQAAUwAAAC0KICAgICBzZXQgdGhlIGNwdSB0aW1pbmcg
+ZnJlcXVlbmN5IHRvIDEwMGh6CiBTAAAAAwoKIEVTAAAAAmxpTAAATQAAUwAAAEYKICAgICBjaGFu
+Z2UgdGhlIFByZWVtcHRpb24gTW9kZWwgdG8gIk5vIEZvcmNlZCBQcmVlbXB0aW9uIChTZXJ2ZXIp
+IgogUwAAAAMKCiBFUwAAAAJsaUwAAE0AAFMAAAAoCiAgICAgc2V0IHRoZSBpL28gc2NoZWR1bGVy
+IHRvICJuby1vcCIKIFMAAAABCk0AAFMAAAACCiBTAAAAAQpFUwAAAAFwTAAATQAAUwAAAAhUaGVu
+Li4uClMAAAABCkVTAAAAA3ByZUwAAUVTAAAABGNvZGVMAABNAABTAAAACW1ha2UgcnBtClMAAAAA
+TQAAUwAAAABTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/3/1/virtualbox-on-os-x:-networking"><title type="text">VirtualBox on OS X: Networking</title><id>tag:digita.la,2010-03-01:/entry;2010/3/1/virtualbox-on-os-x:-networking</id><updated>2010-03-01T17:50:22Z</updated><published>2010-03-01T17:50:22Z</published><link href="http://digita.la/2010/3/1/virtualbox-on-os-x:-networking"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/3/1/virtualbox-on-os-x:-networking</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text">Remember: "Host-only" networking is not designed for accessing the internet - it is purely for access to the guest OS from the host OS.</content><content type="html">&lt;p&gt;Remember: "Host-only" networking is not designed for accessing the internet - it is purely for access to the guest OS from the host OS.
+&lt;/p&gt;</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAFFUwAAAAFwTAAATQAAUwAAAIhSZW1lbWJlcjogIkhvc3Qt
+b25seSIgbmV0d29ya2luZyBpcyBub3QgZGVzaWduZWQgZm9yIGFjY2Vzc2luZyB0aGUgaW50ZXJu
+ZXQgLSBpdCBpcyBwdXJlbHkgZm9yIGFjY2VzcyB0byB0aGUgZ3Vlc3QgT1MgZnJvbSB0aGUgaG9z
+dCBPUy4KUwAAAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/2/17/openoffice-feeds-and-google-local-business-center"><title type="text">Google Local Business Center, bulk feed uploads, and OpenOffice</title><id>tag:digita.la,2010-02-17:/entry;2010/2/17/openoffice-feeds-and-google-local-business-center</id><updated>2010-02-17T16:51:46Z</updated><published>2010-02-17T16:47:00Z</published><link href="http://digita.la/2010/2/17/openoffice-feeds-and-google-local-business-center"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/2/17/openoffice-feeds-and-google-local-business-center</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Google Local Business Center is a great tool but their instructions on using uploading Bulk Business Feeds is a little lacking for people who don't have Microsoft Excel. If you're using the OpenOffice.org[1] suite you can still upload feeds though the procedure is a little different.&#13;
+&#13;
+Create your spreadsheet as per Google's instructions, then when you're ready choose `Save As`, change the type to `Text CSV` and hit `Save`. &#13;
+&#13;
+You'll be presented with an Export window where you need to:&#13;
+&#13;
+1. change the `Character set` to `Unicode (UTF-8)`&#13;
+2. change the `Field delimiter` to `{Tab}`&#13;
+3. clear the `Text delimieter` field of any values -- this is very important!&#13;
+&#13;
+Click `OK`, then find the file in your filesystem and change the extension from `.csv` to `.txt`. &#13;
+&#13;
+You should now be able to upload your file successfully!&#13;
+&#13;
+&#13;
+  [1]:http://www.openoffice.org</content><content type="html">&lt;p&gt;Google Local Business Center is a great tool but their instructions on using uploading Bulk Business Feeds is a little lacking for people who don't have Microsoft Excel. If you're using the OpenOffice.org[1] suite you can still upload feeds though the procedure is a little different.
+&lt;/p&gt;
+&lt;p&gt;Create your spreadsheet as per Google's instructions, then when you're ready choose &lt;code&gt;Save As&lt;/code&gt;, change the type to &lt;code&gt;Text CSV&lt;/code&gt; and hit &lt;code&gt;Save&lt;/code&gt;. 
+&lt;/p&gt;
+&lt;p&gt;You'll be presented with an Export window where you need to:
+&lt;/p&gt;
+&lt;ol&gt;
+ &lt;li&gt;
+     change the &lt;code&gt;Character set&lt;/code&gt; to &lt;code&gt;Unicode (UTF-8)&lt;/code&gt;
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     change the &lt;code&gt;Field delimiter&lt;/code&gt; to &lt;code&gt;{Tab}&lt;/code&gt;
+ &lt;/li&gt;
+
+ &lt;li&gt;
+     clear the &lt;code&gt;Text delimieter&lt;/code&gt; field of any values -- this is very important!
+ &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Click &lt;code&gt;OK&lt;/code&gt;, then find the file in your filesystem and change the extension from &lt;code&gt;.csv&lt;/code&gt; to &lt;code&gt;.txt&lt;/code&gt;. 
+&lt;/p&gt;
+&lt;p&gt;You should now be able to upload your file successfully!
+&lt;/p&gt;</content><category term="google" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAZFUwAAAAFwTAAATQAAUwAAAR1Hb29nbGUgTG9jYWwgQnVz
+aW5lc3MgQ2VudGVyIGlzIGEgZ3JlYXQgdG9vbCBidXQgdGhlaXIgaW5zdHJ1Y3Rpb25zIG9uIHVz
+aW5nIHVwbG9hZGluZyBCdWxrIEJ1c2luZXNzIEZlZWRzIGlzIGEgbGl0dGxlIGxhY2tpbmcgZm9y
+IHBlb3BsZSB3aG8gZG9uJ3QgaGF2ZSBNaWNyb3NvZnQgRXhjZWwuIElmIHlvdSdyZSB1c2luZyB0
+aGUgT3Blbk9mZmljZS5vcmdbMV0gc3VpdGUgeW91IGNhbiBzdGlsbCB1cGxvYWQgZmVlZHMgdGhv
+dWdoIHRoZSBwcm9jZWR1cmUgaXMgYSBsaXR0bGUgZGlmZmVyZW50LgpTAAAAAQpFUwAAAAFwTAAD
+RVMAAAAEY29kZUwAAE0AAFMAAAAHU2F2ZSBBc1MAAAAVLCBjaGFuZ2UgdGhlIHR5cGUgdG8gRVMA
+AAAEY29kZUwAAE0AAFMAAAAIVGV4dCBDU1ZTAAAACSBhbmQgaGl0IEVTAAAABGNvZGVMAABNAABT
+AAAABFNhdmVTAAAAAy4gCk0AAFMAAABUQ3JlYXRlIHlvdXIgc3ByZWFkc2hlZXQgYXMgcGVyIEdv
+b2dsZSdzIGluc3RydWN0aW9ucywgdGhlbiB3aGVuIHlvdSdyZSByZWFkeSBjaG9vc2UgUwAAAAEK
+RVMAAAABcEwAAE0AAFMAAAA9WW91J2xsIGJlIHByZXNlbnRlZCB3aXRoIGFuIEV4cG9ydCB3aW5k
+b3cgd2hlcmUgeW91IG5lZWQgdG86ClMAAAABCkVTAAAAAm9sTAADRVMAAAACbGlMAAJFUwAAAARj
+b2RlTAAATQAAUwAAAA1DaGFyYWN0ZXIgc2V0UwAAAAQgdG8gRVMAAAAEY29kZUwAAE0AAFMAAAAP
+VW5pY29kZSAoVVRGLTgpUwAAAAIKIE0AAFMAAAARCiAgICAgY2hhbmdlIHRoZSBTAAAAAwoKIEVT
+AAAAAmxpTAACRVMAAAAEY29kZUwAAE0AAFMAAAAPRmllbGQgZGVsaW1pdGVyUwAAAAQgdG8gRVMA
+AAAEY29kZUwAAE0AAFMAAAAFe1RhYn1TAAAAAgogTQAAUwAAABEKICAgICBjaGFuZ2UgdGhlIFMA
+AAADCgogRVMAAAACbGlMAAFFUwAAAARjb2RlTAAATQAAUwAAAA9UZXh0IGRlbGltaWV0ZXJTAAAA
+MSBmaWVsZCBvZiBhbnkgdmFsdWVzIC0tIHRoaXMgaXMgdmVyeSBpbXBvcnRhbnQhCiBNAABTAAAA
+EAogICAgIGNsZWFyIHRoZSBTAAAAAQpNAABTAAAAAgogUwAAAAEKRVMAAAABcEwAA0VTAAAABGNv
+ZGVMAABNAABTAAAAAk9LUwAAAEYsIHRoZW4gZmluZCB0aGUgZmlsZSBpbiB5b3VyIGZpbGVzeXN0
+ZW0gYW5kIGNoYW5nZSB0aGUgZXh0ZW5zaW9uIGZyb20gRVMAAAAEY29kZUwAAE0AAFMAAAAELmNz
+dlMAAAAEIHRvIEVTAAAABGNvZGVMAABNAABTAAAABC50eHRTAAAAAy4gCk0AAFMAAAAGQ2xpY2sg
+UwAAAAEKRVMAAAABcEwAAE0AAFMAAAA5WW91IHNob3VsZCBub3cgYmUgYWJsZSB0byB1cGxvYWQg
+eW91ciBmaWxlIHN1Y2Nlc3NmdWxseSEKUwAAAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAA
+BWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/2/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors"><title type="text">EC2, Elasticfox, Get Administrator Password, and “Invalid EC2 private key” errors</title><id>tag:digita.la,2010-02-16:/entry;2010/2/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors</id><updated>2010-02-16T12:54:33Z</updated><published>2010-02-16T12:54:33Z</published><link href="http://digita.la/2010/2/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/2/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">If you're using Elasticfox to manage your instances, and get an "Invalid EC2 private key" error when trying to "Get [the] Administrator Password" you need to change the path to your "EC2 Private Key Template" (under tools) to the correct .pem or .ppk file you were issued when you created the instance.</content><content type="html">&lt;p&gt;If you're using Elasticfox to manage your instances, and get an "Invalid EC2 private key" error when trying to "Get [the] Administrator Password" you need to change the path to your "EC2 Private Key Template" (under tools) to the correct .pem or .ppk file you were issued when you created the instance.
+&lt;/p&gt;</content><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="ec2" scheme="http://zine.pocoo.org/#tag-scheme" label="EC2"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAFFUwAAAAFwTAAATQAAUwAAAS9JZiB5b3UncmUgdXNpbmcg
+RWxhc3RpY2ZveCB0byBtYW5hZ2UgeW91ciBpbnN0YW5jZXMsIGFuZCBnZXQgYW4gIkludmFsaWQg
+RUMyIHByaXZhdGUga2V5IiBlcnJvciB3aGVuIHRyeWluZyB0byAiR2V0IFt0aGVdIEFkbWluaXN0
+cmF0b3IgUGFzc3dvcmQiIHlvdSBuZWVkIHRvIGNoYW5nZSB0aGUgcGF0aCB0byB5b3VyICJFQzIg
+UHJpdmF0ZSBLZXkgVGVtcGxhdGUiICh1bmRlciB0b29scykgdG8gdGhlIGNvcnJlY3QgLnBlbSBv
+ciAucHBrIGZpbGUgeW91IHdlcmUgaXNzdWVkIHdoZW4geW91IGNyZWF0ZWQgdGhlIGluc3RhbmNl
+LgpTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/2/10/opensolaris"><title type="text">OpenSolaris Cheat Sheet</title><id>tag:digita.la,2010-02-10:/entry;2010/2/10/opensolaris</id><updated>2010-02-11T13:35:02Z</updated><published>2010-02-10T13:07:00Z</published><link href="http://digita.la/2010/2/10/opensolaris"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/2/10/opensolaris</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Some very useful commands for working with OpenSolaris:&#13;
+&#13;
+`pfexec` - `sudo`&#13;
+&#13;
+`prstat` - `top`&#13;
+&#13;
+`pgrep` - find the PID of process: `pgrep cron`&#13;
+&#13;
+`pstack` - view the call stack of a process&#13;
+&#13;
+`pfiles` - find the files opened by a process; similar to `lsof`&#13;
+&#13;
+`psig` - list signal actions and handlers&#13;
+&#13;
+`man N proc` - get more information on the process *N*&#13;
+&#13;
+&#13;
+`dtrace` - dynamic tracing compiler and tracing utility&#13;
+&#13;
+`vmstat` - virtual memory statistics; use in place of `free`&#13;
+&#13;
+`mpstat` - show running information per processor; `vmstat`-like output&#13;
+&#13;
+`iostat` - show system/device input/output&#13;
+&#13;
+`netstat` - show network input/output, bound ports, etc.&#13;
+&#13;
+&#13;
+`modinfo` - like `lsmod`&#13;
+&#13;
+`modload` - like `modprobe`&#13;
+&#13;
+`modunload` - like `rmmod`&#13;
+&#13;
+`scanpci` - scan for PCI devices&#13;
+&#13;
+`psrinfo -v` - show info on cpus; `cat /proc/cpuinfo`&#13;
+&#13;
+`prtconf` - show hardware info; similar to `lshw`&#13;
+&#13;
+&#13;
+`beadm` - manage boot environments&#13;
+&#13;
+`pkg` - install/remove packages (similar to `apt`, `yum`)&#13;
+&#13;
+&#13;
+`svcs` - view services; like redhat's `chkconfig --list`&#13;
+&#13;
+`svcadm` - administer services; `service S start|stop` &gt; `svcadm enable|disable S`&#13;
+&#13;
+`svccfg` - add or change services; like redhat's `chkconfig --add|--remove` but more powerful</content><content type="html">&lt;p&gt;Some very useful commands for working with OpenSolaris:
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pfexec&lt;/code&gt; - &lt;code&gt;sudo&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;prstat&lt;/code&gt; - &lt;code&gt;top&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pgrep&lt;/code&gt; - find the PID of process: &lt;code&gt;pgrep cron&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pstack&lt;/code&gt; - view the call stack of a process
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pfiles&lt;/code&gt; - find the files opened by a process; similar to &lt;code&gt;lsof&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;psig&lt;/code&gt; - list signal actions and handlers
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;man N proc&lt;/code&gt; - get more information on the process &lt;em&gt;N&lt;/em&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;dtrace&lt;/code&gt; - dynamic tracing compiler and tracing utility
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vmstat&lt;/code&gt; - virtual memory statistics; use in place of &lt;code&gt;free&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;mpstat&lt;/code&gt; - show running information per processor; &lt;code&gt;vmstat&lt;/code&gt;-like output
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;iostat&lt;/code&gt; - show system/device input/output
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;netstat&lt;/code&gt; - show network input/output, bound ports, etc.
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;modinfo&lt;/code&gt; - like &lt;code&gt;lsmod&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;modload&lt;/code&gt; - like &lt;code&gt;modprobe&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;modunload&lt;/code&gt; - like &lt;code&gt;rmmod&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;scanpci&lt;/code&gt; - scan for PCI devices
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;psrinfo -v&lt;/code&gt; - show info on cpus; &lt;code&gt;cat /proc/cpuinfo&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;prtconf&lt;/code&gt; - show hardware info; similar to &lt;code&gt;lshw&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;beadm&lt;/code&gt; - manage boot environments
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;pkg&lt;/code&gt; - install/remove packages (similar to &lt;code&gt;apt&lt;/code&gt;, &lt;code&gt;yum&lt;/code&gt;)
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svcs&lt;/code&gt; - view services; like redhat's &lt;code&gt;chkconfig --list&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svcadm&lt;/code&gt; - administer services; &lt;code&gt;service S start|stop&lt;/code&gt; &amp;gt; &lt;code&gt;svcadm enable|disable S&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;svccfg&lt;/code&gt; - add or change services; like redhat's &lt;code&gt;chkconfig --add|--remove&lt;/code&gt; but more powerful
+&lt;/p&gt;</content><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="opensolaris" scheme="http://zine.pocoo.org/#tag-scheme" label="OpenSolaris"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMABhFUwAAAAFwTAAATQAAUwAAADhTb21lIHZlcnkgdXNlZnVs
+IGNvbW1hbmRzIGZvciB3b3JraW5nIHdpdGggT3BlblNvbGFyaXM6ClMAAAABCkVTAAAAAXBMAAJF
+UwAAAARjb2RlTAAATQAAUwAAAAZwZmV4ZWNTAAAAAyAtIEVTAAAABGNvZGVMAABNAABTAAAABHN1
+ZG9TAAAAAQpNAABTAAAAAFMAAAABCkVTAAAAAXBMAAJFUwAAAARjb2RlTAAATQAAUwAAAAZwcnN0
+YXRTAAAAAyAtIEVTAAAABGNvZGVMAABNAABTAAAAA3RvcFMAAAABCk0AAFMAAAAAUwAAAAEKRVMA
+AAABcEwAAkVTAAAABGNvZGVMAABNAABTAAAABXBncmVwUwAAABwgLSBmaW5kIHRoZSBQSUQgb2Yg
+cHJvY2VzczogRVMAAAAEY29kZUwAAE0AAFMAAAAKcGdyZXAgY3JvblMAAAABCk0AAFMAAAAAUwAA
+AAEKRVMAAAABcEwAAUVTAAAABGNvZGVMAABNAABTAAAABnBzdGFja1MAAAAkIC0gdmlldyB0aGUg
+Y2FsbCBzdGFjayBvZiBhIHByb2Nlc3MKTQAAUwAAAABTAAAAAQpFUwAAAAFwTAACRVMAAAAEY29k
+ZUwAAE0AAFMAAAAGcGZpbGVzUwAAADIgLSBmaW5kIHRoZSBmaWxlcyBvcGVuZWQgYnkgYSBwcm9j
+ZXNzOyBzaW1pbGFyIHRvIEVTAAAABGNvZGVMAABNAABTAAAABGxzb2ZTAAAAAQpNAABTAAAAAFMA
+AAABCkVTAAAAAXBMAAFFUwAAAARjb2RlTAAATQAAUwAAAARwc2lnUwAAACQgLSBsaXN0IHNpZ25h
+bCBhY3Rpb25zIGFuZCBoYW5kbGVycwpNAABTAAAAAFMAAAABCkVTAAAAAXBMAAJFUwAAAARjb2Rl
+TAAATQAAUwAAAAptYW4gTiBwcm9jUwAAACcgLSBnZXQgbW9yZSBpbmZvcm1hdGlvbiBvbiB0aGUg
+cHJvY2VzcyBFUwAAAAJlbUwAAE0AAFMAAAABTlMAAAABCk0AAFMAAAAAUwAAAAEKRVMAAAABcEwA
+AUVTAAAABGNvZGVMAABNAABTAAAABmR0cmFjZVMAAAAwIC0gZHluYW1pYyB0cmFjaW5nIGNvbXBp
+bGVyIGFuZCB0cmFjaW5nIHV0aWxpdHkKTQAAUwAAAABTAAAAAQpFUwAAAAFwTAACRVMAAAAEY29k
+ZUwAAE0AAFMAAAAGdm1zdGF0UwAAAC4gLSB2aXJ0dWFsIG1lbW9yeSBzdGF0aXN0aWNzOyB1c2Ug
+aW4gcGxhY2Ugb2YgRVMAAAAEY29kZUwAAE0AAFMAAAAEZnJlZVMAAAABCk0AAFMAAAAAUwAAAAEK
+RVMAAAABcEwAAkVTAAAABGNvZGVMAABNAABTAAAABm1wc3RhdFMAAAArIC0gc2hvdyBydW5uaW5n
+IGluZm9ybWF0aW9uIHBlciBwcm9jZXNzb3I7IEVTAAAABGNvZGVMAABNAABTAAAABnZtc3RhdFMA
+AAANLWxpa2Ugb3V0cHV0Ck0AAFMAAAAAUwAAAAEKRVMAAAABcEwAAUVTAAAABGNvZGVMAABNAABT
+AAAABmlvc3RhdFMAAAAjIC0gc2hvdyBzeXN0ZW0vZGV2aWNlIGlucHV0L291dHB1dApNAABTAAAA
+AFMAAAABCkVTAAAAAXBMAAFFUwAAAARjb2RlTAAATQAAUwAAAAduZXRzdGF0UwAAADAgLSBzaG93
+IG5ldHdvcmsgaW5wdXQvb3V0cHV0LCBib3VuZCBwb3J0cywgZXRjLgpNAABTAAAAAFMAAAABCkVT
+AAAAAXBMAAJFUwAAAARjb2RlTAAATQAAUwAAAAdtb2RpbmZvUwAAAAggLSBsaWtlIEVTAAAABGNv
+ZGVMAABNAABTAAAABWxzbW9kUwAAAAEKTQAAUwAAAABTAAAAAQpFUwAAAAFwTAACRVMAAAAEY29k
+ZUwAAE0AAFMAAAAHbW9kbG9hZFMAAAAIIC0gbGlrZSBFUwAAAARjb2RlTAAATQAAUwAAAAhtb2Rw
+cm9iZVMAAAABCk0AAFMAAAAAUwAAAAEKRVMAAAABcEwAAkVTAAAABGNvZGVMAABNAABTAAAACW1v
+ZHVubG9hZFMAAAAIIC0gbGlrZSBFUwAAAARjb2RlTAAATQAAUwAAAAVybW1vZFMAAAABCk0AAFMA
+AAAAUwAAAAEKRVMAAAABcEwAAUVTAAAABGNvZGVMAABNAABTAAAAB3NjYW5wY2lTAAAAGCAtIHNj
+YW4gZm9yIFBDSSBkZXZpY2VzCk0AAFMAAAAAUwAAAAEKRVMAAAABcEwAAkVTAAAABGNvZGVMAABN
+AABTAAAACnBzcmluZm8gLXZTAAAAFiAtIHNob3cgaW5mbyBvbiBjcHVzOyBFUwAAAARjb2RlTAAA
+TQAAUwAAABFjYXQgL3Byb2MvY3B1aW5mb1MAAAABCk0AAFMAAAAAUwAAAAEKRVMAAAABcEwAAkVT
+AAAABGNvZGVMAABNAABTAAAAB3BydGNvbmZTAAAAIiAtIHNob3cgaGFyZHdhcmUgaW5mbzsgc2lt
+aWxhciB0byBFUwAAAARjb2RlTAAATQAAUwAAAARsc2h3UwAAAAEKTQAAUwAAAABTAAAAAQpFUwAA
+AAFwTAABRVMAAAAEY29kZUwAAE0AAFMAAAAFYmVhZG1TAAAAHCAtIG1hbmFnZSBib290IGVudmly
+b25tZW50cwpNAABTAAAAAFMAAAABCkVTAAAAAXBMAANFUwAAAARjb2RlTAAATQAAUwAAAANwa2dT
+AAAAJyAtIGluc3RhbGwvcmVtb3ZlIHBhY2thZ2VzIChzaW1pbGFyIHRvIEVTAAAABGNvZGVMAABN
+AABTAAAAA2FwdFMAAAACLCBFUwAAAARjb2RlTAAATQAAUwAAAAN5dW1TAAAAAikKTQAAUwAAAABT
+AAAAAQpFUwAAAAFwTAACRVMAAAAEY29kZUwAAE0AAFMAAAAEc3Zjc1MAAAAgIC0gdmlldyBzZXJ2
+aWNlczsgbGlrZSByZWRoYXQncyBFUwAAAARjb2RlTAAATQAAUwAAABBjaGtjb25maWcgLS1saXN0
+UwAAAAEKTQAAUwAAAABTAAAAAQpFUwAAAAFwTAADRVMAAAAEY29kZUwAAE0AAFMAAAAGc3ZjYWRt
+UwAAABggLSBhZG1pbmlzdGVyIHNlcnZpY2VzOyBFUwAAAARjb2RlTAAATQAAUwAAABRzZXJ2aWNl
+IFMgc3RhcnR8c3RvcFMAAAADID4gRVMAAAAEY29kZUwAAE0AAFMAAAAXc3ZjYWRtIGVuYWJsZXxk
+aXNhYmxlIFNTAAAAAQpNAABTAAAAAFMAAAABCkVTAAAAAXBMAAJFUwAAAARjb2RlTAAATQAAUwAA
+AAZzdmNjZmdTAAAAKSAtIGFkZCBvciBjaGFuZ2Ugc2VydmljZXM7IGxpa2UgcmVkaGF0J3MgRVMA
+AAAEY29kZUwAAE0AAFMAAAAYY2hrY29uZmlnIC0tYWRkfC0tcmVtb3ZlUwAAABMgYnV0IG1vcmUg
+cG93ZXJmdWwKTQAAUwAAAABTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9S
+UwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2010/2/11/changing-mysqls-datadir-on-opensolaris"><title type="text">Changing MySQL’s datadir on OpenSolaris</title><id>tag:digita.la,2010-02-11:/entry;2010/2/11/changing-mysqls-datadir-on-opensolaris</id><updated>2010-02-11T13:04:37Z</updated><published>2010-02-11T13:04:37Z</published><link href="http://digita.la/2010/2/11/changing-mysqls-datadir-on-opensolaris"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2010/2/11/changing-mysqls-datadir-on-opensolaris</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Create the new data dir, and change ownership to the `mysql` user.&#13;
+&#13;
+    ~# mkdir /mysqldatadir&#13;
+    ~# chown -Rf mysql:mysql /mysqldatadir&#13;
+&#13;
+Edited the file “/var/svc/manifest/application/database/mysql_51.xml”, changing the value of the 'data' node.&#13;
+&#13;
+Stop the service then delete and reimport the manifest file using svccfg.&#13;
+&#13;
+    ~# svcadm disable mysql&#13;
+    ~# svccfg delete mysql&#13;
+    ~# svccfg import /var/svc/manifest/application/database/mysql_51.xml&#13;
+&#13;
+Restart the service.&#13;
+&#13;
+    ~# svcadm enable mysql&#13;
+&#13;
+Test everything's working.&#13;
+&#13;
+    ~# mysql -e "show variables" | grep datadir</content><content type="html">&lt;p&gt;Create the new data dir, and change ownership to the &lt;code&gt;mysql&lt;/code&gt; user.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# mkdir /mysqldatadir
+~# chown -Rf mysql:mysql /mysqldatadir
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Edited the file “/var/svc/manifest/application/database/mysql_51.xml”, changing the value of the 'data' node.
+&lt;/p&gt;
+&lt;p&gt;Stop the service then delete and reimport the manifest file using svccfg.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# svcadm disable mysql
+~# svccfg delete mysql
+~# svccfg import /var/svc/manifest/application/database/mysql_51.xml
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Restart the service.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# svcadm enable mysql
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Test everything's working.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# mysql -e "show variables" | grep datadir
+&lt;/code&gt;&lt;/pre&gt;</content><category term="server" scheme="http://zine.pocoo.org/#category-scheme" label="Server"/><category term="opensolaris" scheme="http://zine.pocoo.org/#tag-scheme" label="OpenSolaris"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAlFUwAAAAFwTAABRVMAAAAEY29kZUwAAE0AAFMAAAAFbXlz
+cWxTAAAAByB1c2VyLgpNAABTAAAANUNyZWF0ZSB0aGUgbmV3IGRhdGEgZGlyLCBhbmQgY2hhbmdl
+IG93bmVyc2hpcCB0byB0aGUgUwAAAAEKRVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAAA+
+fiMgbWtkaXIgL215c3FsZGF0YWRpcgp+IyBjaG93biAtUmYgbXlzcWw6bXlzcWwgL215c3FsZGF0
+YWRpcgpTAAAAAE0AAFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAAHJFZGl0ZWQgdGhlIGZpbGUg
+4oCcL3Zhci9zdmMvbWFuaWZlc3QvYXBwbGljYXRpb24vZGF0YWJhc2UvbXlzcWxfNTEueG1s4oCd
+LCBjaGFuZ2luZyB0aGUgdmFsdWUgb2YgdGhlICdkYXRhJyBub2RlLgpTAAAAAQpFUwAAAAFwTAAA
+TQAAUwAAAEpTdG9wIHRoZSBzZXJ2aWNlIHRoZW4gZGVsZXRlIGFuZCByZWltcG9ydCB0aGUgbWFu
+aWZlc3QgZmlsZSB1c2luZyBzdmNjZmcuClMAAAABCkVTAAAAA3ByZUwAAUVTAAAABGNvZGVMAABN
+AABTAAAAdH4jIHN2Y2FkbSBkaXNhYmxlIG15c3FsCn4jIHN2Y2NmZyBkZWxldGUgbXlzcWwKfiMg
+c3ZjY2ZnIGltcG9ydCAvdmFyL3N2Yy9tYW5pZmVzdC9hcHBsaWNhdGlvbi9kYXRhYmFzZS9teXNx
+bF81MS54bWwKUwAAAABNAABTAAAAAFMAAAAARVMAAAABcEwAAE0AAFMAAAAVUmVzdGFydCB0aGUg
+c2VydmljZS4KUwAAAAEKRVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAAAXfiMgc3ZjYWRt
+IGVuYWJsZSBteXNxbApTAAAAAE0AAFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAABtUZXN0IGV2
+ZXJ5dGhpbmcncyB3b3JraW5nLgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAA
+ACx+IyBteXNxbCAtZSAic2hvdyB2YXJpYWJsZXMiIHwgZ3JlcCBkYXRhZGlyClMAAAAATQAAUwAA
+AABTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/7/6/log4j-errors-with-thrift+java"><title type="text">Log4j errors with thrift+java</title><id>tag:digita.la,2009-07-06:/entry;2009/7/6/log4j-errors-with-thrift%2Bjava</id><updated>2010-02-05T14:34:28Z</updated><published>2009-07-06T14:54:00Z</published><link href="http://digita.la/2009/7/6/log4j-errors-with-thrift+java"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/7/6/log4j-errors-with-thrift+java</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Updated thrift recently, and found that afterwards some Java code borked. Turns out that the latest thrift release/head requires log4j but _doesn't_ complain about it.&#13;
+&#13;
+This fixed things for me:&#13;
+&#13;
+Log4J can be obtained from: http://logging.apache.org/log4j/1.2/&#13;
+&#13;
+    ~# curl {LOG4J_MIRROR}/apache-log4j-1.2.15.tar.gz | tar zx&#13;
+    ~# mv apache-log4j-1.2.15 $JAVA_LIBS_DIR&#13;
+    ~# ln $JAVA_LIBS_DIR/apache-log4j-1.2.15 \&#13;
+       $JAVA_LIBS_DIR/apache-log4j-latest&#13;
+    ~# ln $JAVA_LIBS_DIR/apache-log4j-latest/log4j-1.2.15.jar \&#13;
+       $JAVA_LIBS_DIR/apache-log4j-latest/log4j.jar&#13;
+&#13;
+Then set $LOG4J_HOME to the above folder and add the $LOG4J_HOME/log4j.jar to your CLASSPATH.&#13;
+&#13;
+    ~# cd ~/thrift&#13;
+    ~# echo "thrift.extra.cpath = $JAVA_LIBS_DIR/apache-log4j-latest/log4j.jar" \&#13;
+       &gt; ~/.thrift-build.properties&#13;
+    ~# ./bootstrap&#13;
+    ~# ./configure&#13;
+    ~# make &amp;&amp; make install&#13;
+&#13;
+&lt;code&gt;$JAVA_LIBS_DIR&lt;/code&gt; is where I keep all my java libraries (/opt/java/{pkg}).&#13;
+&#13;
+&lt;del&gt;&lt;strong&gt;Update:&lt;/strong&gt;&#13;
+The latest release doesn't look to have this issue. An &lt;code&gt;svn up&lt;/code&gt; might fix any issues you're having also.&lt;/del&gt;&#13;
+&#13;
+**Important:**&#13;
+They have ***not*** removed the dependency, but *changed* it. I'll write up a new post soon with the changed routine, but in the meantime be warned that your java+thrift code will not work.</content><content type="html">&lt;p&gt;Updated thrift recently, and found that afterwards some Java code borked. Turns out that the latest thrift release/head requires log4j but &lt;em&gt;doesn't&lt;/em&gt; complain about it.
+&lt;/p&gt;
+&lt;p&gt;This fixed things for me:
+&lt;/p&gt;
+&lt;p&gt;Log4J can be obtained from: http://logging.apache.org/log4j/1.2/
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# curl {LOG4J_MIRROR}/apache-log4j-1.2.15.tar.gz | tar zx
+~# mv apache-log4j-1.2.15 $JAVA_LIBS_DIR
+~# ln $JAVA_LIBS_DIR/apache-log4j-1.2.15 \
+   $JAVA_LIBS_DIR/apache-log4j-latest
+~# ln $JAVA_LIBS_DIR/apache-log4j-latest/log4j-1.2.15.jar \
+   $JAVA_LIBS_DIR/apache-log4j-latest/log4j.jar
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then set $LOG4J_HOME to the above folder and add the $LOG4J_HOME/log4j.jar to your CLASSPATH.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# cd ~/thrift
+~# echo "thrift.extra.cpath = $JAVA_LIBS_DIR/apache-log4j-latest/log4j.jar" \
+   &amp;gt; ~/.thrift-build.properties
+~# ./bootstrap
+~# ./configure
+~# make &amp;amp;&amp;amp; make install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;$JAVA_LIBS_DIR&lt;/code&gt; is where I keep all my java libraries (/opt/java/{pkg}).
+&lt;/p&gt;
+&lt;del&gt;&lt;strong&gt;Update:&lt;/strong&gt;
+The latest release doesn't look to have this issue. An &lt;code&gt;svn up&lt;/code&gt; might fix any issues you're having also.&lt;/del&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt;
+   They have &lt;strong&gt;&lt;em&gt;not&lt;/em&gt;&lt;/strong&gt; removed the dependency, but &lt;em&gt;changed&lt;/em&gt; it. I'll write up a new post soon with the changed routine, but in the meantime be warned that your java+thrift code will not work.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="java-thrift" scheme="http://zine.pocoo.org/#tag-scheme" label="java thrift"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAlFUwAAAAFwTAABRVMAAAACZW1MAABNAABTAAAAB2RvZXNu
+J3RTAAAAFCBjb21wbGFpbiBhYm91dCBpdC4KTQAAUwAAAItVcGRhdGVkIHRocmlmdCByZWNlbnRs
+eSwgYW5kIGZvdW5kIHRoYXQgYWZ0ZXJ3YXJkcyBzb21lIEphdmEgY29kZSBib3JrZWQuIFR1cm5z
+IG91dCB0aGF0IHRoZSBsYXRlc3QgdGhyaWZ0IHJlbGVhc2UvaGVhZCByZXF1aXJlcyBsb2c0aiBi
+dXQgUwAAAAEKRVMAAAABcEwAAE0AAFMAAAAaVGhpcyBmaXhlZCB0aGluZ3MgZm9yIG1lOgpTAAAA
+AQpFUwAAAAFwTAAATQAAUwAAAEFMb2c0SiBjYW4gYmUgb2J0YWluZWQgZnJvbTogaHR0cDovL2xv
+Z2dpbmcuYXBhY2hlLm9yZy9sb2c0ai8xLjIvClMAAAABCkVTAAAAA3ByZUwAAUVTAAAABGNvZGVM
+AABNAABTAAABIX4jIGN1cmwge0xPRzRKX01JUlJPUn0vYXBhY2hlLWxvZzRqLTEuMi4xNS50YXIu
+Z3ogfCB0YXIgengKfiMgbXYgYXBhY2hlLWxvZzRqLTEuMi4xNSAkSkFWQV9MSUJTX0RJUgp+IyBs
+biAkSkFWQV9MSUJTX0RJUi9hcGFjaGUtbG9nNGotMS4yLjE1IFwKICAgJEpBVkFfTElCU19ESVIv
+YXBhY2hlLWxvZzRqLWxhdGVzdAp+IyBsbiAkSkFWQV9MSUJTX0RJUi9hcGFjaGUtbG9nNGotbGF0
+ZXN0L2xvZzRqLTEuMi4xNS5qYXIgXAogICAkSkFWQV9MSUJTX0RJUi9hcGFjaGUtbG9nNGotbGF0
+ZXN0L2xvZzRqLmphcgpTAAAAAE0AAFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAAF5UaGVuIHNl
+dCAkTE9HNEpfSE9NRSB0byB0aGUgYWJvdmUgZm9sZGVyIGFuZCBhZGQgdGhlICRMT0c0Sl9IT01F
+L2xvZzRqLmphciB0byB5b3VyIENMQVNTUEFUSC4KUwAAAAEKRVMAAAADcHJlTAABRVMAAAAEY29k
+ZUwAAE0AAFMAAACzfiMgY2Qgfi90aHJpZnQKfiMgZWNobyAidGhyaWZ0LmV4dHJhLmNwYXRoID0g
+JEpBVkFfTElCU19ESVIvYXBhY2hlLWxvZzRqLWxhdGVzdC9sb2c0ai5qYXIiIFwKICAgPiB+Ly50
+aHJpZnQtYnVpbGQucHJvcGVydGllcwp+IyAuL2Jvb3RzdHJhcAp+IyAuL2NvbmZpZ3VyZQp+IyBt
+YWtlICYmIG1ha2UgaW5zdGFsbApTAAAAAE0AAFMAAAAAUwAAAABFUwAAAAFwTAABRVMAAAAEY29k
+ZUwAAE0AAFMAAAAOJEpBVkFfTElCU19ESVJTAAAAOiBpcyB3aGVyZSBJIGtlZXAgYWxsIG15IGph
+dmEgbGlicmFyaWVzICgvb3B0L2phdmEve3BrZ30pLgpNAABTAAAAAFMAAAABCkVTAAAAA2RlbEwA
+AkVTAAAABnN0cm9uZ0wAAE0AAFMAAAAHVXBkYXRlOlMAAAA4ClRoZSBsYXRlc3QgcmVsZWFzZSBk
+b2Vzbid0IGxvb2sgdG8gaGF2ZSB0aGlzIGlzc3VlLiBBbiBFUwAAAARjb2RlTAAATQAAUwAAAAZz
+dm4gdXBTAAAAKSBtaWdodCBmaXggYW55IGlzc3VlcyB5b3UncmUgaGF2aW5nIGFsc28uTQAAUwAA
+AABTAAAAAgoKRVMAAAABcEwAA0VTAAAABnN0cm9uZ0wAAE0AAFMAAAAKSW1wb3J0YW50OlMAAAAO
+CiAgIFRoZXkgaGF2ZSBFUwAAAAZzdHJvbmdMAAFFUwAAAAJlbUwAAE0AAFMAAAADbm90UwAAAABN
+AABTAAAAAFMAAAAdIHJlbW92ZWQgdGhlIGRlcGVuZGVuY3ksIGJ1dCBFUwAAAAJlbUwAAE0AAFMA
+AAAHY2hhbmdlZFMAAACFIGl0LiBJJ2xsIHdyaXRlIHVwIGEgbmV3IHBvc3Qgc29vbiB3aXRoIHRo
+ZSBjaGFuZ2VkIHJvdXRpbmUsIGJ1dCBpbiB0aGUgbWVhbnRpbWUgYmUgd2FybmVkIHRoYXQgeW91
+ciBqYXZhK3RocmlmdCBjb2RlIHdpbGwgbm90IHdvcmsuCk0AAFMAAAAAUwAAAABTAAAABnBhcnNl
+clMAAAAIbWFya2Rvd25TAAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/20/firefox-safari-chrome-all-broken"><title type="text">Firefox, Safari, Chrome are broken.</title><id>tag:digita.la,2009-04-20:/entry;2009/4/20/firefox-safari-chrome-all-broken</id><updated>2009-09-18T11:24:05Z</updated><published>2009-04-20T11:19:00Z</published><link href="http://digita.la/2009/4/20/firefox-safari-chrome-all-broken"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/20/firefox-safari-chrome-all-broken</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text">They don't send the authenticate header when credentials are passed in the address bar. Opera does this correctly.</content><content type="html">&lt;p&gt;They don't send the authenticate header when credentials are passed in the address bar. Opera does this correctly.
+&lt;/p&gt;</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAFFUwAAAAFwTAAATQAAUwAAAHNUaGV5IGRvbid0IHNlbmQg
+dGhlIGF1dGhlbnRpY2F0ZSBoZWFkZXIgd2hlbiBjcmVkZW50aWFscyBhcmUgcGFzc2VkIGluIHRo
+ZSBhZGRyZXNzIGJhci4gT3BlcmEgZG9lcyB0aGlzIGNvcnJlY3RseS4KUwAAAABTAAAABnBhcnNl
+clMAAAAIbWFya2Rvd25TAAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/20/for-else-in-python-is-just-wrong"><title type="text">for...else in Python is wrong</title><id>tag:digita.la,2009-04-20:/entry;2009/4/20/for-else-in-python-is-just-wrong</id><updated>2009-09-18T11:23:22Z</updated><published>2009-04-20T11:04:00Z</published><link href="http://digita.la/2009/4/20/for-else-in-python-is-just-wrong"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/20/for-else-in-python-is-just-wrong</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text">Big statement: The &lt;code&gt;else&lt;/code&gt; keyword which comes after a &lt;code&gt;for&lt;/code&gt; in Python is just wrong. &#13;
+&#13;
+Or rather, its very misleading. When starting out in any new language having a background in another, you look for the keywords which make sense to you to get a "handle" on things[1]. My first thoughts when seeing the &lt;code&gt;else&lt;/code&gt; keyword after a &lt;code&gt;for&lt;/code&gt; was "so, if there aren't any items to iterate over, it drops to the else so you don't get an error message."&#13;
+&#13;
+No.&#13;
+&#13;
+From the docs:&#13;
+&#13;
+It would make _much_ more sense for it to look like the following:&#13;
+&#13;
+    for x in range(10):&#13;
+      print(x)&#13;
+    then:&#13;
+      print("success!")&#13;
+&#13;
+[1]: which is why I still haven't grok'd erlang!</content><content type="html">&lt;p&gt;Big statement: The &lt;code&gt;else&lt;/code&gt; keyword which comes after a &lt;code&gt;for&lt;/code&gt; in Python is just wrong. 
+&lt;/p&gt;
+&lt;p&gt;Or rather, its very misleading. When starting out in any new language having a background in another, you look for the keywords which make sense to you to get a "handle" on things[1]. My first thoughts when seeing the &lt;code&gt;else&lt;/code&gt; keyword after a &lt;code&gt;for&lt;/code&gt; was "so, if there aren't any items to iterate over, it drops to the else so you don't get an error message."
+&lt;/p&gt;
+&lt;p&gt;No.
+&lt;/p&gt;
+&lt;p&gt;From the docs:
+&lt;/p&gt;
+&lt;p&gt;It would make &lt;em&gt;much&lt;/em&gt; more sense for it to look like the following:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;for x in range(10):
+  print(x)
+then:
+  print("success!")
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;[1]: which is why I still haven't grok'd erlang!
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="python" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAdFUwAAAAFwTAACRVMAAAAEY29kZUwAAE0AAFMAAAAEZWxz
+ZVMAAAAdIGtleXdvcmQgd2hpY2ggY29tZXMgYWZ0ZXIgYSBFUwAAAARjb2RlTAAATQAAUwAAAANm
+b3JTAAAAGyBpbiBQeXRob24gaXMganVzdCB3cm9uZy4gCk0AAFMAAAATQmlnIHN0YXRlbWVudDog
+VGhlIFMAAAABCkVTAAAAAXBMAAJFUwAAAARjb2RlTAAATQAAUwAAAARlbHNlUwAAABEga2V5d29y
+ZCBhZnRlciBhIEVTAAAABGNvZGVMAABNAABTAAAAA2ZvclMAAABuIHdhcyAic28sIGlmIHRoZXJl
+IGFyZW4ndCBhbnkgaXRlbXMgdG8gaXRlcmF0ZSBvdmVyLCBpdCBkcm9wcyB0byB0aGUgZWxzZSBz
+byB5b3UgZG9uJ3QgZ2V0IGFuIGVycm9yIG1lc3NhZ2UuIgpNAABTAAAA2k9yIHJhdGhlciwgaXRz
+IHZlcnkgbWlzbGVhZGluZy4gV2hlbiBzdGFydGluZyBvdXQgaW4gYW55IG5ldyBsYW5ndWFnZSBo
+YXZpbmcgYSBiYWNrZ3JvdW5kIGluIGFub3RoZXIsIHlvdSBsb29rIGZvciB0aGUga2V5d29yZHMg
+d2hpY2ggbWFrZSBzZW5zZSB0byB5b3UgdG8gZ2V0IGEgImhhbmRsZSIgb24gdGhpbmdzWzFdLiBN
+eSBmaXJzdCB0aG91Z2h0cyB3aGVuIHNlZWluZyB0aGUgUwAAAAEKRVMAAAABcEwAAE0AAFMAAAAE
+Tm8uClMAAAABCkVTAAAAAXBMAABNAABTAAAAD0Zyb20gdGhlIGRvY3M6ClMAAAABCkVTAAAAAXBM
+AAFFUwAAAAJlbUwAAE0AAFMAAAAEbXVjaFMAAAAvIG1vcmUgc2Vuc2UgZm9yIGl0IHRvIGxvb2sg
+bGlrZSB0aGUgZm9sbG93aW5nOgpNAABTAAAADkl0IHdvdWxkIG1ha2UgUwAAAAEKRVMAAAADcHJl
+TAABRVMAAAAEY29kZUwAAE0AAFMAAAA5Zm9yIHggaW4gcmFuZ2UoMTApOgogIHByaW50KHgpCnRo
+ZW46CiAgcHJpbnQoInN1Y2Nlc3MhIikKUwAAAABNAABTAAAAAFMAAAAARVMAAAABcEwAAE0AAFMA
+AAAxWzFdOiB3aGljaCBpcyB3aHkgSSBzdGlsbCBoYXZlbid0IGdyb2snZCBlcmxhbmchClMAAAAA
+UwAAAAZwYXJzZXJTAAAACG1hcmtkb3duUwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/9/11/wordpress-pretty-url-rewriting-in-iis"><title type="text">Wordpress Pretty-URL Rewriting in IIS</title><id>tag:digita.la,2009-09-11:/entry;2009/9/11/wordpress-pretty-url-rewriting-in-iis</id><updated>2009-09-11T11:57:55Z</updated><published>2009-09-11T11:51:00Z</published><link href="http://digita.la/2009/9/11/wordpress-pretty-url-rewriting-in-iis"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/9/11/wordpress-pretty-url-rewriting-in-iis</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">&lt;p&gt;The quickest, and in my opinion the safest&lt;sup&gt;&lt;a href="#footnote-1" style="text-decoration: none; font-weight: bold;"&gt;&amp;#8224;&lt;/a&gt;&lt;/sup&gt;, way to get pretty-URLs working in IIS is to create a custom 404 handler. This "&lt;code&gt;wp-404-handler.php&lt;/code&gt;" file is here:&lt;/p&gt; &#13;
+&#13;
+&lt;p&gt;&lt;pre&gt;&#13;
+&amp;lt;?php&#13;
+$qs = $_SERVER['QUERY_STRING'];&#13;
+$pos = strrpos($qs, '://');&#13;
+$pos = strpos($qs, '/', $pos + 4);&#13;
+$_SERVER['REQUEST_URI'] = substr($qs, $pos);&#13;
+$_SERVER['PATH_INFO'] = $_SERVER['REQUEST_URI'];&#13;
+include('index.php');&#13;
+&lt;/pre&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;It's a simple thing, but it works very, very well. Just add this file to your wp root directory and point IIS's 404 handler to that file (URL, not File). A free, 2 minute fix to a problem &lt;strong&gt;that shouldn't exist&lt;sup&gt;&lt;a href="#footnote-2" style="text-decoration: none; font-weight: bold;"&gt;&amp;#8225;&lt;/a&gt;&lt;/sup&gt;&lt;/strong&gt;.&lt;/p&gt;&#13;
+&#13;
+&lt;p style="font-size: .7em;" id="footnote-1"&gt;&lt;strong&gt;&amp;#8224;&lt;/strong&gt; &amp;#8213; My own experience has been that installing any third-party extension for IIS is time-consuming, costly, and breaks IIS immediately and in very unexpected ways which &amp;#8212; even after an uninstall &amp;#8212; is a nightmare to fix. YMMV.&lt;/p&gt;&#13;
+&#13;
+&lt;p style="font-size: .7em;" id="footnote-2"&gt;&lt;strong&gt;&amp;#8225;&lt;/strong&gt; &amp;#8213; IIS should've had rewrites bundled as-of IIS4. AFAIK they're still not available even in IIS7!&lt;/p&gt;</content><content type="html">&lt;p&gt;The quickest, and in my opinion the safest&lt;sup&gt;&lt;a style="text-decoration: none; font-weight: bold;" href="#footnote-1"&gt;†&lt;/a&gt;&lt;/sup&gt;, way to get pretty-URLs working in IIS is to create a custom 404 handler. This "&lt;code&gt;wp-404-handler.php&lt;/code&gt;" file is here:&lt;/p&gt; 
+
+&lt;p&gt;&lt;/p&gt;&lt;pre&gt;&amp;lt;?php
+$qs = $_SERVER['QUERY_STRING'];
+$pos = strrpos($qs, '://');
+$pos = strpos($qs, '/', $pos + 4);
+$_SERVER['REQUEST_URI'] = substr($qs, $pos);
+$_SERVER['PATH_INFO'] = $_SERVER['REQUEST_URI'];
+include('index.php');
+&lt;/pre&gt;&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;It's a simple thing, but it works very, very well. Just add this file to your wp root directory and point IIS's 404 handler to that file (URL, not File). A free, 2 minute fix to a problem &lt;strong&gt;that shouldn't exist&lt;sup&gt;&lt;a style="text-decoration: none; font-weight: bold;" href="#footnote-2"&gt;‡&lt;/a&gt;&lt;/sup&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p style="font-size: .7em;" id="footnote-1"&gt;&lt;strong&gt;†&lt;/strong&gt; ― My own experience has been that installing any third-party extension for IIS is time-consuming, costly, and breaks IIS immediately and in very unexpected ways which — even after an uninstall — is a nightmare to fix. YMMV.&lt;/p&gt;
+
+&lt;p style="font-size: .7em;" id="footnote-2"&gt;&lt;strong&gt;‡&lt;/strong&gt; ― IIS should've had rewrites bundled as-of IIS4. AFAIK they're still not available even in IIS7!&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="iis" scheme="http://zine.pocoo.org/#tag-scheme" label="IIS"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAdFUwAAAAFwTAACRVMAAAADc3VwTAABRVMAAAABYUwAAE0A
+AlMAAAAFc3R5bGVTAAAAKXRleHQtZGVjb3JhdGlvbjogbm9uZTsgZm9udC13ZWlnaHQ6IGJvbGQ7
+UwAAAARocmVmUwAAAAsjZm9vdG5vdGUtMVMAAAAD4oCgUwAAAABNAABTAAAAAFMAAABRLCB3YXkg
+dG8gZ2V0IHByZXR0eS1VUkxzIHdvcmtpbmcgaW4gSUlTIGlzIHRvIGNyZWF0ZSBhIGN1c3RvbSA0
+MDQgaGFuZGxlci4gVGhpcyAiRVMAAAAEY29kZUwAAE0AAFMAAAASd3AtNDA0LWhhbmRsZXIucGhw
+UwAAAA8iIGZpbGUgaXMgaGVyZTpNAABTAAAAKlRoZSBxdWlja2VzdCwgYW5kIGluIG15IG9waW5p
+b24gdGhlIHNhZmVzdFMAAAADIAoKRVMAAAABcEwAAE0AAFMAAAAAUwAAAABFUwAAAANwcmVMAABN
+AABTAAAA2Tw/cGhwCiRxcyA9ICRfU0VSVkVSWydRVUVSWV9TVFJJTkcnXTsKJHBvcyA9IHN0cnJw
+b3MoJHFzLCAnOi8vJyk7CiRwb3MgPSBzdHJwb3MoJHFzLCAnLycsICRwb3MgKyA0KTsKJF9TRVJW
+RVJbJ1JFUVVFU1RfVVJJJ10gPSBzdWJzdHIoJHFzLCAkcG9zKTsKJF9TRVJWRVJbJ1BBVEhfSU5G
+TyddID0gJF9TRVJWRVJbJ1JFUVVFU1RfVVJJJ107CmluY2x1ZGUoJ2luZGV4LnBocCcpOwpTAAAA
+AEVTAAAAAXBMAABNAABTAAAAAFMAAAACCgpFUwAAAAFwTAABRVMAAAAGc3Ryb25nTAABRVMAAAAD
+c3VwTAABRVMAAAABYUwAAE0AAlMAAAAFc3R5bGVTAAAAKXRleHQtZGVjb3JhdGlvbjogbm9uZTsg
+Zm9udC13ZWlnaHQ6IGJvbGQ7UwAAAARocmVmUwAAAAsjZm9vdG5vdGUtMlMAAAAD4oChUwAAAABN
+AABTAAAAAFMAAAAATQAAUwAAABR0aGF0IHNob3VsZG4ndCBleGlzdFMAAAABLk0AAFMAAAC8SXQn
+cyBhIHNpbXBsZSB0aGluZywgYnV0IGl0IHdvcmtzIHZlcnksIHZlcnkgd2VsbC4gSnVzdCBhZGQg
+dGhpcyBmaWxlIHRvIHlvdXIgd3Agcm9vdCBkaXJlY3RvcnkgYW5kIHBvaW50IElJUydzIDQwNCBo
+YW5kbGVyIHRvIHRoYXQgZmlsZSAoVVJMLCBub3QgRmlsZSkuIEEgZnJlZSwgMiBtaW51dGUgZml4
+IHRvIGEgcHJvYmxlbSBTAAAAAgoKRVMAAAABcEwAAUVTAAAABnN0cm9uZ0wAAE0AAFMAAAAD4oCg
+UwAAAOYg4oCVIE15IG93biBleHBlcmllbmNlIGhhcyBiZWVuIHRoYXQgaW5zdGFsbGluZyBhbnkg
+dGhpcmQtcGFydHkgZXh0ZW5zaW9uIGZvciBJSVMgaXMgdGltZS1jb25zdW1pbmcsIGNvc3RseSwg
+YW5kIGJyZWFrcyBJSVMgaW1tZWRpYXRlbHkgYW5kIGluIHZlcnkgdW5leHBlY3RlZCB3YXlzIHdo
+aWNoIOKAlCBldmVuIGFmdGVyIGFuIHVuaW5zdGFsbCDigJQgaXMgYSBuaWdodG1hcmUgdG8gZml4
+LiBZTU1WLk0AAlMAAAAFc3R5bGVTAAAAEGZvbnQtc2l6ZTogLjdlbTtTAAAAAmlkUwAAAApmb290
+bm90ZS0xUwAAAABTAAAAAgoKRVMAAAABcEwAAUVTAAAABnN0cm9uZ0wAAE0AAFMAAAAD4oChUwAA
+AGMg4oCVIElJUyBzaG91bGQndmUgaGFkIHJld3JpdGVzIGJ1bmRsZWQgYXMtb2YgSUlTNC4gQUZB
+SUsgdGhleSdyZSBzdGlsbCBub3QgYXZhaWxhYmxlIGV2ZW4gaW4gSUlTNyFNAAJTAAAABXN0eWxl
+UwAAABBmb250LXNpemU6IC43ZW07UwAAAAJpZFMAAAAKZm9vdG5vdGUtMlMAAAAAUwAAAABTAAAA
+BnBhcnNlclMAAAAEaHRtbFMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/2/16/fixing-innodb-is-in-the-future-errors"><title type="text">Fixing "InnoDB is in the future!" errors</title><id>tag:digita.la,2009-02-16:/entry;2009/2/16/fixing-innodb-is-in-the-future-errors</id><updated>2009-09-08T16:45:49Z</updated><published>2009-09-08T14:25:00Z</published><link href="http://digita.la/2009/2/16/fixing-innodb-is-in-the-future-errors"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/2/16/fixing-innodb-is-in-the-future-errors</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Often, when the MySQL server crashes, the InnoDB log and tables loose their synchronisation and start issuing lines similar to the following to the error log:&#13;
+&#13;
+    090216  7:01:04  InnoDB: Error: page 51 log sequence number 1209237857&#13;
+    InnoDB: is in the future! Current system log sequence number 1209236508.&#13;
+    InnoDB: Your database may be corrupt or you may have copied the InnoDB&#13;
+    InnoDB: tablespace but not the InnoDB log files. See&#13;
+    InnoDB: http://dev.mysql.com/doc/refman/5.1/en/forcing-recovery.html&#13;
+    InnoDB: for more information.&#13;
+&#13;
+I've found the quickest way to fix this is to use mysqldump to get a snapshot of your DB, drop the DB, and recreate it using the dump. As a manual process (using tools such as phpMyAdmin or Navicat) this can be quite slow, but from the unix commandline you can issue the instructions in a couple of lines:&#13;
+&#13;
+    # mysql -e "CREATE DATABASE tmp_db;" &amp;&amp; mysqldump -Ccq old_db | mysql tmp_db&#13;
+    # mysql -e "DROP DATABASE old_db;" &#13;
+    # mysql -e "CREATE DATABASE new_db;" &amp;&amp; mysqldump -Ccq tmp_db | mysql new_db&#13;
+&#13;
+You'll need to remember to include other options, but the main guts are there.</content><content type="html">&lt;p&gt;Often, when the MySQL server crashes, the InnoDB log and tables loose their synchronisation and start issuing lines similar to the following to the error log:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;090216  7:01:04  InnoDB: Error: page 51 log sequence number 1209237857
+InnoDB: is in the future! Current system log sequence number 1209236508.
+InnoDB: Your database may be corrupt or you may have copied the InnoDB
+InnoDB: tablespace but not the InnoDB log files. See
+InnoDB: http://dev.mysql.com/doc/refman/5.1/en/forcing-recovery.html
+InnoDB: for more information.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I've found the quickest way to fix this is to use mysqldump to get a snapshot of your DB, drop the DB, and recreate it using the dump. As a manual process (using tools such as phpMyAdmin or Navicat) this can be quite slow, but from the unix commandline you can issue the instructions in a couple of lines:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# mysql -e "CREATE DATABASE tmp_db;" &amp;amp;&amp;amp; mysqldump -Ccq old_db | mysql tmp_db
+# mysql -e "DROP DATABASE old_db;" 
+# mysql -e "CREATE DATABASE new_db;" &amp;amp;&amp;amp; mysqldump -Ccq tmp_db | mysql new_db
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You'll need to remember to include other options, but the main guts are there.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="mysql" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAVFUwAAAAFwTAAATQAAUwAAAJ9PZnRlbiwgd2hlbiB0aGUg
+TXlTUUwgc2VydmVyIGNyYXNoZXMsIHRoZSBJbm5vREIgbG9nIGFuZCB0YWJsZXMgbG9vc2UgdGhl
+aXIgc3luY2hyb25pc2F0aW9uIGFuZCBzdGFydCBpc3N1aW5nIGxpbmVzIHNpbWlsYXIgdG8gdGhl
+IGZvbGxvd2luZyB0byB0aGUgZXJyb3IgbG9nOgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2Rl
+TAAATQAAUwAAAW8wOTAyMTYgIDc6MDE6MDQgIElubm9EQjogRXJyb3I6IHBhZ2UgNTEgbG9nIHNl
+cXVlbmNlIG51bWJlciAxMjA5MjM3ODU3Cklubm9EQjogaXMgaW4gdGhlIGZ1dHVyZSEgQ3VycmVu
+dCBzeXN0ZW0gbG9nIHNlcXVlbmNlIG51bWJlciAxMjA5MjM2NTA4LgpJbm5vREI6IFlvdXIgZGF0
+YWJhc2UgbWF5IGJlIGNvcnJ1cHQgb3IgeW91IG1heSBoYXZlIGNvcGllZCB0aGUgSW5ub0RCCklu
+bm9EQjogdGFibGVzcGFjZSBidXQgbm90IHRoZSBJbm5vREIgbG9nIGZpbGVzLiBTZWUKSW5ub0RC
+OiBodHRwOi8vZGV2Lm15c3FsLmNvbS9kb2MvcmVmbWFuLzUuMS9lbi9mb3JjaW5nLXJlY292ZXJ5
+Lmh0bWwKSW5ub0RCOiBmb3IgbW9yZSBpbmZvcm1hdGlvbi4KUwAAAABNAABTAAAAAFMAAAAARVMA
+AAABcEwAAE0AAFMAAAEySSd2ZSBmb3VuZCB0aGUgcXVpY2tlc3Qgd2F5IHRvIGZpeCB0aGlzIGlz
+IHRvIHVzZSBteXNxbGR1bXAgdG8gZ2V0IGEgc25hcHNob3Qgb2YgeW91ciBEQiwgZHJvcCB0aGUg
+REIsIGFuZCByZWNyZWF0ZSBpdCB1c2luZyB0aGUgZHVtcC4gQXMgYSBtYW51YWwgcHJvY2VzcyAo
+dXNpbmcgdG9vbHMgc3VjaCBhcyBwaHBNeUFkbWluIG9yIE5hdmljYXQpIHRoaXMgY2FuIGJlIHF1
+aXRlIHNsb3csIGJ1dCBmcm9tIHRoZSB1bml4IGNvbW1hbmRsaW5lIHlvdSBjYW4gaXNzdWUgdGhl
+IGluc3RydWN0aW9ucyBpbiBhIGNvdXBsZSBvZiBsaW5lczoKUwAAAAEKRVMAAAADcHJlTAABRVMA
+AAAEY29kZUwAAE0AAFMAAAC+IyBteXNxbCAtZSAiQ1JFQVRFIERBVEFCQVNFIHRtcF9kYjsiICYm
+IG15c3FsZHVtcCAtQ2NxIG9sZF9kYiB8IG15c3FsIHRtcF9kYgojIG15c3FsIC1lICJEUk9QIERB
+VEFCQVNFIG9sZF9kYjsiIAojIG15c3FsIC1lICJDUkVBVEUgREFUQUJBU0UgbmV3X2RiOyIgJiYg
+bXlzcWxkdW1wIC1DY3EgdG1wX2RiIHwgbXlzcWwgbmV3X2RiClMAAAAATQAAUwAAAABTAAAAAEVT
+AAAAAXBMAABNAABTAAAAT1lvdSdsbCBuZWVkIHRvIHJlbWVtYmVyIHRvIGluY2x1ZGUgb3RoZXIg
+b3B0aW9ucywgYnV0IHRoZSBtYWluIGd1dHMgYXJlIHRoZXJlLgpTAAAAAFMAAAAGcGFyc2VyUwAA
+AAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/resume"><title type="text">Résumé</title><id>tag:digita.la,2009-05-23:/page;resume</id><updated>2009-07-01T15:46:41Z</updated><published>2009-05-23T13:00:00Z</published><link href="http://digita.la/resume"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>resume</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>page</zine:content_type><content type="text">&lt;p&gt;Throughout my career I have demonstrated a thorough practical understanding of:&lt;/p&gt;&#13;
+&lt;dl&gt;&#13;
+&lt;dt&gt; "Web" technologies, including: &lt;/dt&gt;&#13;
+&lt;dd&gt; Semantic, standards-based markup with HTML and CSS &lt;/dd&gt;&#13;
+&lt;dt&gt; XML and its many related technologies, including:&lt;/dt&gt;&#13;
+&lt;dd&gt; Native XML Databases; specifically eXist-DB&lt;/dd&gt;&#13;
+&lt;dd&gt; XSL for translation and templating&lt;/dd&gt;&#13;
+&lt;dd&gt; XSL:FO for PDF and RTF generation&lt;/dd&gt;&#13;
+&lt;/dl&gt;&#13;
+&#13;
+&#13;
+Python running in a number of environments (CPython, Jython, Unladen-Swallow)&#13;
+PHP (versions 3, 4 and 5)&#13;
+MySQL (versions 3, 4 and 5)</content><content type="html">&lt;p&gt;Throughout my career I have demonstrated a thorough practical understanding of:&lt;/p&gt;
+&lt;dl&gt;
+&lt;dt&gt; "Web" technologies, including: &lt;/dt&gt;
+&lt;dd&gt; Semantic, standards-based markup with HTML and CSS &lt;/dd&gt;
+&lt;dt&gt; XML and its many related technologies, including:&lt;/dt&gt;
+&lt;dd&gt; Native XML Databases; specifically eXist-DB&lt;/dd&gt;
+&lt;dd&gt; XSL for translation and templating&lt;/dd&gt;
+&lt;dd&gt; XSL:FO for PDF and RTF generation&lt;/dd&gt;
+&lt;/dl&gt;
+
+
+Python running in a number of environments (CPython, Jython, Unladen-Swallow)
+PHP (versions 3, 4 and 5)
+MySQL (versions 3, 4 and 5)</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAJFUwAAAAFwTAAATQAAUwAAAE9UaHJvdWdob3V0IG15IGNh
+cmVlciBJIGhhdmUgZGVtb25zdHJhdGVkIGEgdGhvcm91Z2ggcHJhY3RpY2FsIHVuZGVyc3RhbmRp
+bmcgb2Y6UwAAAAEKRVMAAAACZGxMAAZFUwAAAAJkdEwAAE0AAFMAAAAgICJXZWIiIHRlY2hub2xv
+Z2llcywgaW5jbHVkaW5nOiBTAAAAAQpFUwAAAAJkZEwAAE0AAFMAAAA0IFNlbWFudGljLCBzdGFu
+ZGFyZHMtYmFzZWQgbWFya3VwIHdpdGggSFRNTCBhbmQgQ1NTIFMAAAABCkVTAAAAAmR0TAAATQAA
+UwAAADIgWE1MIGFuZCBpdHMgbWFueSByZWxhdGVkIHRlY2hub2xvZ2llcywgaW5jbHVkaW5nOlMA
+AAABCkVTAAAAAmRkTAAATQAAUwAAACwgTmF0aXZlIFhNTCBEYXRhYmFzZXM7IHNwZWNpZmljYWxs
+eSBlWGlzdC1EQlMAAAABCkVTAAAAAmRkTAAATQAAUwAAACMgWFNMIGZvciB0cmFuc2xhdGlvbiBh
+bmQgdGVtcGxhdGluZ1MAAAABCkVTAAAAAmRkTAAATQAAUwAAACIgWFNMOkZPIGZvciBQREYgYW5k
+IFJURiBnZW5lcmF0aW9uUwAAAAEKTQAAUwAAAAEKUwAAAIYKCgpQeXRob24gcnVubmluZyBpbiBh
+IG51bWJlciBvZiBlbnZpcm9ubWVudHMgKENQeXRob24sIEp5dGhvbiwgVW5sYWRlbi1Td2FsbG93
+KQpQSFAgKHZlcnNpb25zIDMsIDQgYW5kIDUpCk15U1FMICh2ZXJzaW9ucyAzLCA0IGFuZCA1KVMA
+AAAGcGFyc2VyUwAAAARodG1sUwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/5/19/grrr-at-foss"><title type="text">Response to a grumble regarding FOSS</title><id>tag:digita.la,2009-05-19:/entry;2009/5/19/response-to-a-grumble-regarding-foss</id><updated>2009-05-19T01:19:50Z</updated><published>2009-05-19T00:45:00Z</published><link href="http://digita.la/2009/5/19/grrr-at-foss"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/5/19/grrr-at-foss</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">&lt;p&gt;Virtual Dedicated Servers are wonderful things; they're cheap, fill a gap, can be recycled or upgraded, and when no longer needed can be cancelled. I've been using them for years with various providers including &lt;a href="//mediatemple.com"&gt;media temple&lt;/a&gt; and &lt;a href="//bytemark.co.uk"&gt;bytemark&lt;/a&gt;. However, they usually suffer from the same problem as hardware servers - they have one location, and when the connectivity goes down for that location, your box is not only virtual but virtually useless. This bit hard recently at the office &amp;#8213; and worse it bit twice in the same month; with one provider the load-balancer to two hardware servers had its plug pulled, and another provider lost connectivity to their datacenter due to some routing issues. These are just two of the 6 downtime events in the last year, all out of our control, with providers who are asking a lot of money for "guaranteed" up-time.&lt;/p&gt; &#13;
+&#13;
+&lt;p&gt;The recent advances in cloud-computing from Amazon tout solutions to the problems we've experienced, so I spent a little time getting-to-grips with Amazon's EC2. As with all these excursions into the unfamiliar parts of the internet and it's technologies I soon became perplexed by the amount of semi-ambiguous buzz-words.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;As far as I understood EC2 before reading the docs it was a cloud in which your virtual server/servers lived, with advanced options for storage and routing domains, and that's still my understanding having played with the service, but the Amazon docs served only to confuse me.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;After reviewing the Wikipedia article in search of a higher-level explanation, the flow of information pulled me to this screen: &lt;a href="//open.eucalyptus.com/"&gt;http://open.eucalyptus.com/&lt;/a&gt;&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Here is the opening paragraph:&lt;/p&gt;&#13;
+&lt;blockquote&gt;Eucalyptus - Elastic Utility Computing Architecture for Linking Your Programs To Useful Systems - is an open-source software infrastructure for implementing "cloud computing" on clusters. The current interface to Eucalyptus is compatible with Amazon's EC2, S3, and EBS interfaces, but the infrastructure is designed to support multiple client-side interfaces. Eucalyptus is implemented using commonly available Linux tools and basic Web-service technologies making it easy to install and maintain.&lt;/blockquote&gt;&#13;
+&#13;
+&lt;p&gt;From that paragraph all I could glean was that it was called "Eucalyptus", which was an acronym, and that it is compatible with EC2. I've been using open-source tech for 10 years, I've been using virtual servers for 5 years, and I'd just set up an EC2 instance, but for the life of me I couldn't grok what Eucalyptus is. That's probably due to my poor grip of the terms they use than my understanding of the technologies they build upon or the techniques they employ.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;I've seen it a lot with open-source projects; the very clever guys who design and build these libraries obviously have years on me and my peers in terms of development, and it shows in the descriptions they write for these projects. They're developers - they're used to writing terse copy to describe what they're doing for other developers. There's nothing wrong with that.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Except that they often forget not everyone who would like to be use their code is at their level.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;The Eucalyptus website annoyed me as I couldn't at a glance grep whether the project was going to be useful to me. And what does any self-respecting geek do when they're annoyed?&lt;/p&gt;&#13;
+&#13;
+&lt;a href="//twitter.com/digitala/status/1835091159"&gt;&lt;img style="border: 0" src="//static.digita.la/2009/05/19/Tweet.png" alt="Original Tweet: All opensource projects should treat visitors to their homepage as though they've never heard of the project, or even computers, before." /&gt;&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;Frustration satiated, I moved on to breaking my amazon instance via incorrectly formed iptable rules, and thought nothing more of the subject.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Twitter is a remarkable thing. You post a random thought and happy with it out in the world you forget that other people can see them. And respond.&lt;/p&gt;&#13;
+&#13;
+&lt;a href="//twitter.com/kamaelian/status/1835997226"&gt;&lt;img style="border: 0" src="//static.digita.la/2009/05/19/TweetResponse.png" alt="Response tweet: @digitala Concrete suggestions as to how to apply that maxim to the kamaeila website very welcome :-)" /&gt;&lt;/a&gt;&#13;
+&#13;
+&lt;p&gt;The &lt;a href="//www.kamaelia.org/"&gt;kamaelia project&lt;/a&gt; is a great example of the &lt;em&gt;correct&lt;/em&gt; way to do it. The intro paragraph gives me a basic understanding of what it is, and the code examples help to illustrate the ease with which it can be used.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Sticking to the concept of my tweet, however, there could be some changes made:&lt;/p&gt;&#13;
+&lt;blockquote&gt;In Kamaelia you build systems from simple &lt;del&gt;components&lt;/del&gt; &lt;ins&gt;chunks of code&lt;/ins&gt; that talk to each other. This speeds development, massively aids maintenance and also means you build &lt;del&gt;naturally concurrent software&lt;/del&gt; &lt;ins&gt;software which naturally follows some of the more advanced programming techniques, such as concurrency (or running multiple tasks simultaneously)&lt;/ins&gt;. It's intended to be accessible by any developer, including novices. It also makes it fun!&lt;/blockquote&gt;&#13;
+&#13;
+&lt;p&gt;I'm not a copywriter, and I'm sure they'd be able to enhance it further, but I just want to illustrate the point - sometimes the words you use when describing a technology are just too ambiguous for the people reading it.&lt;/p&gt;&#13;
+&#13;
+&lt;p&gt;Thankfully the fix is simple: &lt;strong&gt;Imagine all your visitors are on the first day of a CS course, and that english is their second language.&lt;/strong&gt;&lt;/p&gt;</content><content type="html">&lt;p&gt;Virtual Dedicated Servers are wonderful things; they're cheap, fill a gap, can be recycled or upgraded, and when no longer needed can be cancelled. I've been using them for years with various providers including &lt;a href="//mediatemple.com"&gt;media temple&lt;/a&gt; and &lt;a href="//bytemark.co.uk"&gt;bytemark&lt;/a&gt;. However, they usually suffer from the same problem as hardware servers - they have one location, and when the connectivity goes down for that location, your box is not only virtual but virtually useless. This bit hard recently at the office ― and worse it bit twice in the same month; with one provider the load-balancer to two hardware servers had its plug pulled, and another provider lost connectivity to their datacenter due to some routing issues. These are just two of the 6 downtime events in the last year, all out of our control, with providers who are asking a lot of money for "guaranteed" up-time.&lt;/p&gt; 
+
+&lt;p&gt;The recent advances in cloud-computing from Amazon tout solutions to the problems we've experienced, so I spent a little time getting-to-grips with Amazon's EC2. As with all these excursions into the unfamiliar parts of the internet and it's technologies I soon became perplexed by the amount of semi-ambiguous buzz-words.&lt;/p&gt;
+
+&lt;p&gt;As far as I understood EC2 before reading the docs it was a cloud in which your virtual server/servers lived, with advanced options for storage and routing domains, and that's still my understanding having played with the service, but the Amazon docs served only to confuse me.&lt;/p&gt;
+
+&lt;p&gt;After reviewing the Wikipedia article in search of a higher-level explanation, the flow of information pulled me to this screen: &lt;a href="//open.eucalyptus.com/"&gt;http://open.eucalyptus.com/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here is the opening paragraph:&lt;/p&gt;
+&lt;blockquote&gt;Eucalyptus - Elastic Utility Computing Architecture for Linking Your Programs To Useful Systems - is an open-source software infrastructure for implementing "cloud computing" on clusters. The current interface to Eucalyptus is compatible with Amazon's EC2, S3, and EBS interfaces, but the infrastructure is designed to support multiple client-side interfaces. Eucalyptus is implemented using commonly available Linux tools and basic Web-service technologies making it easy to install and maintain.&lt;/blockquote&gt;
+
+&lt;p&gt;From that paragraph all I could glean was that it was called "Eucalyptus", which was an acronym, and that it is compatible with EC2. I've been using open-source tech for 10 years, I've been using virtual servers for 5 years, and I'd just set up an EC2 instance, but for the life of me I couldn't grok what Eucalyptus is. That's probably due to my poor grip of the terms they use than my understanding of the technologies they build upon or the techniques they employ.&lt;/p&gt;
+
+&lt;p&gt;I've seen it a lot with open-source projects; the very clever guys who design and build these libraries obviously have years on me and my peers in terms of development, and it shows in the descriptions they write for these projects. They're developers - they're used to writing terse copy to describe what they're doing for other developers. There's nothing wrong with that.&lt;/p&gt;
+
+&lt;p&gt;Except that they often forget not everyone who would like to be use their code is at their level.&lt;/p&gt;
+
+&lt;p&gt;The Eucalyptus website annoyed me as I couldn't at a glance grep whether the project was going to be useful to me. And what does any self-respecting geek do when they're annoyed?&lt;/p&gt;
+
+&lt;a href="//twitter.com/digitala/status/1835091159"&gt;&lt;img src="//static.digita.la/2009/05/19/Tweet.png" alt="Original Tweet: All opensource projects should treat visitors to their homepage as though they've never heard of the project, or even computers, before." style="border: 0"&gt;&lt;/a&gt;
+
+&lt;p&gt;Frustration satiated, I moved on to breaking my amazon instance via incorrectly formed iptable rules, and thought nothing more of the subject.&lt;/p&gt;
+
+&lt;p&gt;Twitter is a remarkable thing. You post a random thought and happy with it out in the world you forget that other people can see them. And respond.&lt;/p&gt;
+
+&lt;a href="//twitter.com/kamaelian/status/1835997226"&gt;&lt;img src="//static.digita.la/2009/05/19/TweetResponse.png" alt="Response tweet: @digitala Concrete suggestions as to how to apply that maxim to the kamaeila website very welcome :-)" style="border: 0"&gt;&lt;/a&gt;
+
+&lt;p&gt;The &lt;a href="//www.kamaelia.org/"&gt;kamaelia project&lt;/a&gt; is a great example of the &lt;em&gt;correct&lt;/em&gt; way to do it. The intro paragraph gives me a basic understanding of what it is, and the code examples help to illustrate the ease with which it can be used.&lt;/p&gt;
+
+&lt;p&gt;Sticking to the concept of my tweet, however, there could be some changes made:&lt;/p&gt;
+&lt;blockquote&gt;In Kamaelia you build systems from simple &lt;del&gt;components&lt;/del&gt; &lt;ins&gt;chunks of code&lt;/ins&gt; that talk to each other. This speeds development, massively aids maintenance and also means you build &lt;del&gt;naturally concurrent software&lt;/del&gt; &lt;ins&gt;software which naturally follows some of the more advanced programming techniques, such as concurrency (or running multiple tasks simultaneously)&lt;/ins&gt;. It's intended to be accessible by any developer, including novices. It also makes it fun!&lt;/blockquote&gt;
+
+&lt;p&gt;I'm not a copywriter, and I'm sure they'd be able to enhance it further, but I just want to illustrate the point - sometimes the words you use when describing a technology are just too ambiguous for the people reading it.&lt;/p&gt;
+
+&lt;p&gt;Thankfully the fix is simple: &lt;strong&gt;Imagine all your visitors are on the first day of a CS course, and that english is their second language.&lt;/strong&gt;&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="rant" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMABNFUwAAAAFwTAACRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMA
+AAARLy9tZWRpYXRlbXBsZS5jb21TAAAADG1lZGlhIHRlbXBsZVMAAAAFIGFuZCBFUwAAAAFhTAAA
+TQABUwAAAARocmVmUwAAABAvL2J5dGVtYXJrLmNvLnVrUwAAAAhieXRlbWFya1MAAAJlLiBIb3dl
+dmVyLCB0aGV5IHVzdWFsbHkgc3VmZmVyIGZyb20gdGhlIHNhbWUgcHJvYmxlbSBhcyBoYXJkd2Fy
+ZSBzZXJ2ZXJzIC0gdGhleSBoYXZlIG9uZSBsb2NhdGlvbiwgYW5kIHdoZW4gdGhlIGNvbm5lY3Rp
+dml0eSBnb2VzIGRvd24gZm9yIHRoYXQgbG9jYXRpb24sIHlvdXIgYm94IGlzIG5vdCBvbmx5IHZp
+cnR1YWwgYnV0IHZpcnR1YWxseSB1c2VsZXNzLiBUaGlzIGJpdCBoYXJkIHJlY2VudGx5IGF0IHRo
+ZSBvZmZpY2Ug4oCVIGFuZCB3b3JzZSBpdCBiaXQgdHdpY2UgaW4gdGhlIHNhbWUgbW9udGg7IHdp
+dGggb25lIHByb3ZpZGVyIHRoZSBsb2FkLWJhbGFuY2VyIHRvIHR3byBoYXJkd2FyZSBzZXJ2ZXJz
+IGhhZCBpdHMgcGx1ZyBwdWxsZWQsIGFuZCBhbm90aGVyIHByb3ZpZGVyIGxvc3QgY29ubmVjdGl2
+aXR5IHRvIHRoZWlyIGRhdGFjZW50ZXIgZHVlIHRvIHNvbWUgcm91dGluZyBpc3N1ZXMuIFRoZXNl
+IGFyZSBqdXN0IHR3byBvZiB0aGUgNiBkb3dudGltZSBldmVudHMgaW4gdGhlIGxhc3QgeWVhciwg
+YWxsIG91dCBvZiBvdXIgY29udHJvbCwgd2l0aCBwcm92aWRlcnMgd2hvIGFyZSBhc2tpbmcgYSBs
+b3Qgb2YgbW9uZXkgZm9yICJndWFyYW50ZWVkIiB1cC10aW1lLk0AAFMAAADUVmlydHVhbCBEZWRp
+Y2F0ZWQgU2VydmVycyBhcmUgd29uZGVyZnVsIHRoaW5nczsgdGhleSdyZSBjaGVhcCwgZmlsbCBh
+IGdhcCwgY2FuIGJlIHJlY3ljbGVkIG9yIHVwZ3JhZGVkLCBhbmQgd2hlbiBubyBsb25nZXIgbmVl
+ZGVkIGNhbiBiZSBjYW5jZWxsZWQuIEkndmUgYmVlbiB1c2luZyB0aGVtIGZvciB5ZWFycyB3aXRo
+IHZhcmlvdXMgcHJvdmlkZXJzIGluY2x1ZGluZyBTAAAAAyAKCkVTAAAAAXBMAABNAABTAAABQlRo
+ZSByZWNlbnQgYWR2YW5jZXMgaW4gY2xvdWQtY29tcHV0aW5nIGZyb20gQW1hem9uIHRvdXQgc29s
+dXRpb25zIHRvIHRoZSBwcm9ibGVtcyB3ZSd2ZSBleHBlcmllbmNlZCwgc28gSSBzcGVudCBhIGxp
+dHRsZSB0aW1lIGdldHRpbmctdG8tZ3JpcHMgd2l0aCBBbWF6b24ncyBFQzIuIEFzIHdpdGggYWxs
+IHRoZXNlIGV4Y3Vyc2lvbnMgaW50byB0aGUgdW5mYW1pbGlhciBwYXJ0cyBvZiB0aGUgaW50ZXJu
+ZXQgYW5kIGl0J3MgdGVjaG5vbG9naWVzIEkgc29vbiBiZWNhbWUgcGVycGxleGVkIGJ5IHRoZSBh
+bW91bnQgb2Ygc2VtaS1hbWJpZ3VvdXMgYnV6ei13b3Jkcy5TAAAAAgoKRVMAAAABcEwAAE0AAFMA
+AAEVQXMgZmFyIGFzIEkgdW5kZXJzdG9vZCBFQzIgYmVmb3JlIHJlYWRpbmcgdGhlIGRvY3MgaXQg
+d2FzIGEgY2xvdWQgaW4gd2hpY2ggeW91ciB2aXJ0dWFsIHNlcnZlci9zZXJ2ZXJzIGxpdmVkLCB3
+aXRoIGFkdmFuY2VkIG9wdGlvbnMgZm9yIHN0b3JhZ2UgYW5kIHJvdXRpbmcgZG9tYWlucywgYW5k
+IHRoYXQncyBzdGlsbCBteSB1bmRlcnN0YW5kaW5nIGhhdmluZyBwbGF5ZWQgd2l0aCB0aGUgc2Vy
+dmljZSwgYnV0IHRoZSBBbWF6b24gZG9jcyBzZXJ2ZWQgb25seSB0byBjb25mdXNlIG1lLlMAAAAC
+CgpFUwAAAAFwTAABRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMAAAAWLy9vcGVuLmV1Y2FseXB0dXMu
+Y29tL1MAAAAbaHR0cDovL29wZW4uZXVjYWx5cHR1cy5jb20vUwAAAABNAABTAAAAgUFmdGVyIHJl
+dmlld2luZyB0aGUgV2lraXBlZGlhIGFydGljbGUgaW4gc2VhcmNoIG9mIGEgaGlnaGVyLWxldmVs
+IGV4cGxhbmF0aW9uLCB0aGUgZmxvdyBvZiBpbmZvcm1hdGlvbiBwdWxsZWQgbWUgdG8gdGhpcyBz
+Y3JlZW46IFMAAAACCgpFUwAAAAFwTAAATQAAUwAAAB5IZXJlIGlzIHRoZSBvcGVuaW5nIHBhcmFn
+cmFwaDpTAAAAAQpFUwAAAApibG9ja3F1b3RlTAAATQAAUwAAAfFFdWNhbHlwdHVzIC0gRWxhc3Rp
+YyBVdGlsaXR5IENvbXB1dGluZyBBcmNoaXRlY3R1cmUgZm9yIExpbmtpbmcgWW91ciBQcm9ncmFt
+cyBUbyBVc2VmdWwgU3lzdGVtcyAtIGlzIGFuIG9wZW4tc291cmNlIHNvZnR3YXJlIGluZnJhc3Ry
+dWN0dXJlIGZvciBpbXBsZW1lbnRpbmcgImNsb3VkIGNvbXB1dGluZyIgb24gY2x1c3RlcnMuIFRo
+ZSBjdXJyZW50IGludGVyZmFjZSB0byBFdWNhbHlwdHVzIGlzIGNvbXBhdGlibGUgd2l0aCBBbWF6
+b24ncyBFQzIsIFMzLCBhbmQgRUJTIGludGVyZmFjZXMsIGJ1dCB0aGUgaW5mcmFzdHJ1Y3R1cmUg
+aXMgZGVzaWduZWQgdG8gc3VwcG9ydCBtdWx0aXBsZSBjbGllbnQtc2lkZSBpbnRlcmZhY2VzLiBF
+dWNhbHlwdHVzIGlzIGltcGxlbWVudGVkIHVzaW5nIGNvbW1vbmx5IGF2YWlsYWJsZSBMaW51eCB0
+b29scyBhbmQgYmFzaWMgV2ViLXNlcnZpY2UgdGVjaG5vbG9naWVzIG1ha2luZyBpdCBlYXN5IHRv
+IGluc3RhbGwgYW5kIG1haW50YWluLlMAAAACCgpFUwAAAAFwTAAATQAAUwAAAdNGcm9tIHRoYXQg
+cGFyYWdyYXBoIGFsbCBJIGNvdWxkIGdsZWFuIHdhcyB0aGF0IGl0IHdhcyBjYWxsZWQgIkV1Y2Fs
+eXB0dXMiLCB3aGljaCB3YXMgYW4gYWNyb255bSwgYW5kIHRoYXQgaXQgaXMgY29tcGF0aWJsZSB3
+aXRoIEVDMi4gSSd2ZSBiZWVuIHVzaW5nIG9wZW4tc291cmNlIHRlY2ggZm9yIDEwIHllYXJzLCBJ
+J3ZlIGJlZW4gdXNpbmcgdmlydHVhbCBzZXJ2ZXJzIGZvciA1IHllYXJzLCBhbmQgSSdkIGp1c3Qg
+c2V0IHVwIGFuIEVDMiBpbnN0YW5jZSwgYnV0IGZvciB0aGUgbGlmZSBvZiBtZSBJIGNvdWxkbid0
+IGdyb2sgd2hhdCBFdWNhbHlwdHVzIGlzLiBUaGF0J3MgcHJvYmFibHkgZHVlIHRvIG15IHBvb3Ig
+Z3JpcCBvZiB0aGUgdGVybXMgdGhleSB1c2UgdGhhbiBteSB1bmRlcnN0YW5kaW5nIG9mIHRoZSB0
+ZWNobm9sb2dpZXMgdGhleSBidWlsZCB1cG9uIG9yIHRoZSB0ZWNobmlxdWVzIHRoZXkgZW1wbG95
+LlMAAAACCgpFUwAAAAFwTAAATQAAUwAAAXZJJ3ZlIHNlZW4gaXQgYSBsb3Qgd2l0aCBvcGVuLXNv
+dXJjZSBwcm9qZWN0czsgdGhlIHZlcnkgY2xldmVyIGd1eXMgd2hvIGRlc2lnbiBhbmQgYnVpbGQg
+dGhlc2UgbGlicmFyaWVzIG9idmlvdXNseSBoYXZlIHllYXJzIG9uIG1lIGFuZCBteSBwZWVycyBp
+biB0ZXJtcyBvZiBkZXZlbG9wbWVudCwgYW5kIGl0IHNob3dzIGluIHRoZSBkZXNjcmlwdGlvbnMg
+dGhleSB3cml0ZSBmb3IgdGhlc2UgcHJvamVjdHMuIFRoZXkncmUgZGV2ZWxvcGVycyAtIHRoZXkn
+cmUgdXNlZCB0byB3cml0aW5nIHRlcnNlIGNvcHkgdG8gZGVzY3JpYmUgd2hhdCB0aGV5J3JlIGRv
+aW5nIGZvciBvdGhlciBkZXZlbG9wZXJzLiBUaGVyZSdzIG5vdGhpbmcgd3Jvbmcgd2l0aCB0aGF0
+LlMAAAACCgpFUwAAAAFwTAAATQAAUwAAAGFFeGNlcHQgdGhhdCB0aGV5IG9mdGVuIGZvcmdldCBu
+b3QgZXZlcnlvbmUgd2hvIHdvdWxkIGxpa2UgdG8gYmUgdXNlIHRoZWlyIGNvZGUgaXMgYXQgdGhl
+aXIgbGV2ZWwuUwAAAAIKCkVTAAAAAXBMAABNAABTAAAAslRoZSBFdWNhbHlwdHVzIHdlYnNpdGUg
+YW5ub3llZCBtZSBhcyBJIGNvdWxkbid0IGF0IGEgZ2xhbmNlIGdyZXAgd2hldGhlciB0aGUgcHJv
+amVjdCB3YXMgZ29pbmcgdG8gYmUgdXNlZnVsIHRvIG1lLiBBbmQgd2hhdCBkb2VzIGFueSBzZWxm
+LXJlc3BlY3RpbmcgZ2VlayBkbyB3aGVuIHRoZXkncmUgYW5ub3llZD9TAAAAAgoKRVMAAAABYUwA
+AUVTAAAAA2ltZ0wAAE0AA1MAAAADc3JjUwAAACcvL3N0YXRpYy5kaWdpdGEubGEvMjAwOS8wNS8x
+OS9Ud2VldC5wbmdTAAAAA2FsdFMAAACYT3JpZ2luYWwgVHdlZXQ6IEFsbCBvcGVuc291cmNlIHBy
+b2plY3RzIHNob3VsZCB0cmVhdCB2aXNpdG9ycyB0byB0aGVpciBob21lcGFnZSBhcyB0aG91Z2gg
+dGhleSd2ZSBuZXZlciBoZWFyZCBvZiB0aGUgcHJvamVjdCwgb3IgZXZlbiBjb21wdXRlcnMsIGJl
+Zm9yZS5TAAAABXN0eWxlUwAAAAlib3JkZXI6IDBTAAAAAFMAAAAATQABUwAAAARocmVmUwAAACgv
+L3R3aXR0ZXIuY29tL2RpZ2l0YWxhL3N0YXR1cy8xODM1MDkxMTU5UwAAAABTAAAAAgoKRVMAAAAB
+cEwAAE0AAFMAAACORnJ1c3RyYXRpb24gc2F0aWF0ZWQsIEkgbW92ZWQgb24gdG8gYnJlYWtpbmcg
+bXkgYW1hem9uIGluc3RhbmNlIHZpYSBpbmNvcnJlY3RseSBmb3JtZWQgaXB0YWJsZSBydWxlcywg
+YW5kIHRob3VnaHQgbm90aGluZyBtb3JlIG9mIHRoZSBzdWJqZWN0LlMAAAACCgpFUwAAAAFwTAAA
+TQAAUwAAAJNUd2l0dGVyIGlzIGEgcmVtYXJrYWJsZSB0aGluZy4gWW91IHBvc3QgYSByYW5kb20g
+dGhvdWdodCBhbmQgaGFwcHkgd2l0aCBpdCBvdXQgaW4gdGhlIHdvcmxkIHlvdSBmb3JnZXQgdGhh
+dCBvdGhlciBwZW9wbGUgY2FuIHNlZSB0aGVtLiBBbmQgcmVzcG9uZC5TAAAAAgoKRVMAAAABYUwA
+AUVTAAAAA2ltZ0wAAE0AA1MAAAADc3JjUwAAAC8vL3N0YXRpYy5kaWdpdGEubGEvMjAwOS8wNS8x
+OS9Ud2VldFJlc3BvbnNlLnBuZ1MAAAADYWx0UwAAAHVSZXNwb25zZSB0d2VldDogQGRpZ2l0YWxh
+IENvbmNyZXRlIHN1Z2dlc3Rpb25zIGFzIHRvIGhvdyB0byBhcHBseSB0aGF0IG1heGltIHRvIHRo
+ZSBrYW1hZWlsYSB3ZWJzaXRlIHZlcnkgd2VsY29tZSA6LSlTAAAABXN0eWxlUwAAAAlib3JkZXI6
+IDBTAAAAAFMAAAAATQABUwAAAARocmVmUwAAACkvL3R3aXR0ZXIuY29tL2thbWFlbGlhbi9zdGF0
+dXMvMTgzNTk5NzIyNlMAAAAAUwAAAAIKCkVTAAAAAXBMAAJFUwAAAAFhTAAATQABUwAAAARocmVm
+UwAAABMvL3d3dy5rYW1hZWxpYS5vcmcvUwAAABBrYW1hZWxpYSBwcm9qZWN0UwAAABsgaXMgYSBn
+cmVhdCBleGFtcGxlIG9mIHRoZSBFUwAAAAJlbUwAAE0AAFMAAAAHY29ycmVjdFMAAACdIHdheSB0
+byBkbyBpdC4gVGhlIGludHJvIHBhcmFncmFwaCBnaXZlcyBtZSBhIGJhc2ljIHVuZGVyc3RhbmRp
+bmcgb2Ygd2hhdCBpdCBpcywgYW5kIHRoZSBjb2RlIGV4YW1wbGVzIGhlbHAgdG8gaWxsdXN0cmF0
+ZSB0aGUgZWFzZSB3aXRoIHdoaWNoIGl0IGNhbiBiZSB1c2VkLk0AAFMAAAAEVGhlIFMAAAACCgpF
+UwAAAAFwTAAATQAAUwAAAE9TdGlja2luZyB0byB0aGUgY29uY2VwdCBvZiBteSB0d2VldCwgaG93
+ZXZlciwgdGhlcmUgY291bGQgYmUgc29tZSBjaGFuZ2VzIG1hZGU6UwAAAAEKRVMAAAAKYmxvY2tx
+dW90ZUwABEVTAAAAA2RlbEwAAE0AAFMAAAAKY29tcG9uZW50c1MAAAABIEVTAAAAA2luc0wAAE0A
+AFMAAAAOY2h1bmtzIG9mIGNvZGVTAAAAZyB0aGF0IHRhbGsgdG8gZWFjaCBvdGhlci4gVGhpcyBz
+cGVlZHMgZGV2ZWxvcG1lbnQsIG1hc3NpdmVseSBhaWRzIG1haW50ZW5hbmNlIGFuZCBhbHNvIG1l
+YW5zIHlvdSBidWlsZCBFUwAAAANkZWxMAABNAABTAAAAHW5hdHVyYWxseSBjb25jdXJyZW50IHNv
+ZnR3YXJlUwAAAAEgRVMAAAADaW5zTAAATQAAUwAAAJFzb2Z0d2FyZSB3aGljaCBuYXR1cmFsbHkg
+Zm9sbG93cyBzb21lIG9mIHRoZSBtb3JlIGFkdmFuY2VkIHByb2dyYW1taW5nIHRlY2huaXF1ZXMs
+IHN1Y2ggYXMgY29uY3VycmVuY3kgKG9yIHJ1bm5pbmcgbXVsdGlwbGUgdGFza3Mgc2ltdWx0YW5l
+b3VzbHkpUwAAAFsuIEl0J3MgaW50ZW5kZWQgdG8gYmUgYWNjZXNzaWJsZSBieSBhbnkgZGV2ZWxv
+cGVyLCBpbmNsdWRpbmcgbm92aWNlcy4gSXQgYWxzbyBtYWtlcyBpdCBmdW4hTQAAUwAAACpJbiBL
+YW1hZWxpYSB5b3UgYnVpbGQgc3lzdGVtcyBmcm9tIHNpbXBsZSBTAAAAAgoKRVMAAAABcEwAAE0A
+AFMAAADdSSdtIG5vdCBhIGNvcHl3cml0ZXIsIGFuZCBJJ20gc3VyZSB0aGV5J2QgYmUgYWJsZSB0
+byBlbmhhbmNlIGl0IGZ1cnRoZXIsIGJ1dCBJIGp1c3Qgd2FudCB0byBpbGx1c3RyYXRlIHRoZSBw
+b2ludCAtIHNvbWV0aW1lcyB0aGUgd29yZHMgeW91IHVzZSB3aGVuIGRlc2NyaWJpbmcgYSB0ZWNo
+bm9sb2d5IGFyZSBqdXN0IHRvbyBhbWJpZ3VvdXMgZm9yIHRoZSBwZW9wbGUgcmVhZGluZyBpdC5T
+AAAAAgoKRVMAAAABcEwAAUVTAAAABnN0cm9uZ0wAAE0AAFMAAABpSW1hZ2luZSBhbGwgeW91ciB2
+aXNpdG9ycyBhcmUgb24gdGhlIGZpcnN0IGRheSBvZiBhIENTIGNvdXJzZSwgYW5kIHRoYXQgZW5n
+bGlzaCBpcyB0aGVpciBzZWNvbmQgbGFuZ3VhZ2UuUwAAAABNAABTAAAAHlRoYW5rZnVsbHkgdGhl
+IGZpeCBpcyBzaW1wbGU6IFMAAAAAUwAAAAZwYXJzZXJTAAAABGh0bWxTAAAABWludHJvUlMAAAAA
+TAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/29/self-signed-ca-certs-on-centos"><title type="text">Self-signed CA &amp; Certs on CentOS</title><id>tag:digita.la,2009-04-29:/entry;2009/4/29/self-signed-ca-certs-on-centos</id><updated>2009-04-29T22:24:27Z</updated><published>2009-04-29T22:24:27Z</published><link href="http://digita.la/2009/4/29/self-signed-ca-certs-on-centos"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/29/self-signed-ca-certs-on-centos</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text">install openssl-perl to obtain CA.pl&#13;
+&#13;
+</content><content type="html">&lt;p&gt;install openssl-perl to obtain CA.pl
+&lt;/p&gt;</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAFFUwAAAAFwTAAATQAAUwAAACVpbnN0YWxsIG9wZW5zc2wt
+cGVybCB0byBvYnRhaW4gQ0EucGwKUwAAAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAABWlu
+dHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/8/staying-up-to-date"><title type="text">Staying up-to-date on linux.</title><id>tag:digita.la,2009-04-08:/entry;2009/4/8/staying-up-to-date</id><updated>2009-04-14T01:22:30Z</updated><published>2009-03-08T12:01:00Z</published><link href="http://digita.la/2009/4/8/staying-up-to-date"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/8/staying-up-to-date</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">We noticed that our servers' clocks were slightly off. Adding the following to our /etc/rc.local file keeps our servers updated whenever it boots:&#13;
+&#13;
+    set -- `nc time.nist.gov 13`&#13;
+    date -u --set="$2 $3"&#13;
+&#13;
+I've also added it to our cron.daily so there's no slip while the servers are running.</content><content type="html">&lt;p&gt;We noticed that our servers' clocks were slightly off. Adding the following to our /etc/rc.local file keeps our servers updated whenever it boots:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;set -- `nc time.nist.gov 13`
+date -u --set="$2 $3"
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;I've also added it to our cron.daily so there's no slip while the servers are running.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="linux-servers" scheme="http://zine.pocoo.org/#tag-scheme" label="linux servers"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAANFUwAAAAFwTAAATQAAUwAAAJNXZSBub3RpY2VkIHRoYXQg
+b3VyIHNlcnZlcnMnIGNsb2NrcyB3ZXJlIHNsaWdodGx5IG9mZi4gQWRkaW5nIHRoZSBmb2xsb3dp
+bmcgdG8gb3VyIC9ldGMvcmMubG9jYWwgZmlsZSBrZWVwcyBvdXIgc2VydmVycyB1cGRhdGVkIHdo
+ZW5ldmVyIGl0IGJvb3RzOgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAADNz
+ZXQgLS0gYG5jIHRpbWUubmlzdC5nb3YgMTNgCmRhdGUgLXUgLS1zZXQ9IiQyICQzIgpTAAAAAE0A
+AFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAAFdJJ3ZlIGFsc28gYWRkZWQgaXQgdG8gb3VyIGNy
+b24uZGFpbHkgc28gdGhlcmUncyBubyBzbGlwIHdoaWxlIHRoZSBzZXJ2ZXJzIGFyZSBydW5uaW5n
+LgpTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/8/fixing-timezones-in-php"><title type="text">Fixing timezones in PHP</title><id>tag:digita.la,2009-04-08:/entry;2009/4/8/fixing-timezones-in-php</id><updated>2009-04-14T01:21:10Z</updated><published>2009-04-08T15:37:00Z</published><link href="http://digita.la/2009/4/8/fixing-timezones-in-php"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/8/fixing-timezones-in-php</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Had a little problem recently with PHP on one of our servers. I threw the following script onto the server to see what was going on:&#13;
+&#13;
+    &lt;?php echo date('Y-m-d H:i:s'), "\n", `date`;&#13;
+&#13;
+It was registering the time an hour out, even though the server was set to the correct date/time (which I wrote about recently).&#13;
+&#13;
+Delving deeper, I checked the php.ini file was set to "GMT" which is an exact timezone. It was early, and the ol' brain wasn't running at full capacity, so I hit Google and came across [this article](http://www.electrictoolbox.com/correct-php-timezone/) which explains a very long-winded solution to the problem. Even with it being early the solution didn't sit well with me. &#13;
+&#13;
+Then I remembered: the correct way to set the timezone is to use the location of the server. So, I set it to "Europe/London", restarted the PHP processes (we're using FastCGI), and all was well.</content><content type="html">&lt;p&gt;Had a little problem recently with PHP on one of our servers. I threw the following script onto the server to see what was going on:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;?php echo date('Y-m-d H:i:s'), "\n", `date`;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It was registering the time an hour out, even though the server was set to the correct date/time (which I wrote about recently).
+&lt;/p&gt;
+&lt;p&gt;Delving deeper, I checked the php.ini file was set to "GMT" which is an exact timezone. It was early, and the ol' brain wasn't running at full capacity, so I hit Google and came across &lt;a href="http://www.electrictoolbox.com/correct-php-timezone/"&gt;this article&lt;/a&gt; which explains a very long-winded solution to the problem. Even with it being early the solution didn't sit well with me. 
+&lt;/p&gt;
+&lt;p&gt;Then I remembered: the correct way to set the timezone is to use the location of the server. So, I set it to "Europe/London", restarted the PHP processes (we're using FastCGI), and all was well.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="php-linux" scheme="http://zine.pocoo.org/#tag-scheme" label="php linux"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAVFUwAAAAFwTAAATQAAUwAAAIVIYWQgYSBsaXR0bGUgcHJv
+YmxlbSByZWNlbnRseSB3aXRoIFBIUCBvbiBvbmUgb2Ygb3VyIHNlcnZlcnMuIEkgdGhyZXcgdGhl
+IGZvbGxvd2luZyBzY3JpcHQgb250byB0aGUgc2VydmVyIHRvIHNlZSB3aGF0IHdhcyBnb2luZyBv
+bjoKUwAAAAEKRVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAAAuPD9waHAgZWNobyBkYXRl
+KCdZLW0tZCBIOmk6cycpLCAiXG4iLCBgZGF0ZWA7ClMAAAAATQAAUwAAAABTAAAAAEVTAAAAAXBM
+AABNAABTAAAAgUl0IHdhcyByZWdpc3RlcmluZyB0aGUgdGltZSBhbiBob3VyIG91dCwgZXZlbiB0
+aG91Z2ggdGhlIHNlcnZlciB3YXMgc2V0IHRvIHRoZSBjb3JyZWN0IGRhdGUvdGltZSAod2hpY2gg
+SSB3cm90ZSBhYm91dCByZWNlbnRseSkuClMAAAABCkVTAAAAAXBMAAFFUwAAAAFhTAAATQABUwAA
+AARocmVmUwAAADRodHRwOi8vd3d3LmVsZWN0cmljdG9vbGJveC5jb20vY29ycmVjdC1waHAtdGlt
+ZXpvbmUvUwAAAAx0aGlzIGFydGljbGVTAAAAfCB3aGljaCBleHBsYWlucyBhIHZlcnkgbG9uZy13
+aW5kZWQgc29sdXRpb24gdG8gdGhlIHByb2JsZW0uIEV2ZW4gd2l0aCBpdCBiZWluZyBlYXJseSB0
+aGUgc29sdXRpb24gZGlkbid0IHNpdCB3ZWxsIHdpdGggbWUuIApNAABTAAAAuURlbHZpbmcgZGVl
+cGVyLCBJIGNoZWNrZWQgdGhlIHBocC5pbmkgZmlsZSB3YXMgc2V0IHRvICJHTVQiIHdoaWNoIGlz
+IGFuIGV4YWN0IHRpbWV6b25lLiBJdCB3YXMgZWFybHksIGFuZCB0aGUgb2wnIGJyYWluIHdhc24n
+dCBydW5uaW5nIGF0IGZ1bGwgY2FwYWNpdHksIHNvIEkgaGl0IEdvb2dsZSBhbmQgY2FtZSBhY3Jv
+c3MgUwAAAAEKRVMAAAABcEwAAE0AAFMAAADDVGhlbiBJIHJlbWVtYmVyZWQ6IHRoZSBjb3JyZWN0
+IHdheSB0byBzZXQgdGhlIHRpbWV6b25lIGlzIHRvIHVzZSB0aGUgbG9jYXRpb24gb2YgdGhlIHNl
+cnZlci4gU28sIEkgc2V0IGl0IHRvICJFdXJvcGUvTG9uZG9uIiwgcmVzdGFydGVkIHRoZSBQSFAg
+cHJvY2Vzc2VzICh3ZSdyZSB1c2luZyBGYXN0Q0dJKSwgYW5kIGFsbCB3YXMgd2VsbC4KUwAAAABT
+AAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/2/20/subversion-and-svn-vcc-default-errors"><title type="text">Subversion and "/!svn/vcc/default" errors</title><id>tag:digita.la,2009-02-20:/entry;2009/2/20/subversion-and-svn-vcc-default-errors</id><updated>2009-04-14T01:06:26Z</updated><published>2009-02-20T03:14:00Z</published><link href="http://digita.la/2009/2/20/subversion-and-svn-vcc-default-errors"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/2/20/subversion-and-svn-vcc-default-errors</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Once again, I come across an odd subversion error which is questioned on various forums but remains unanswered. And again, I find the fault to be with nginx.&#13;
+&#13;
+A member of our team came to me today after battling with svn for a few hours trying to push some new files to the server. He couldn't push because his working copy was out of date, and updates failed with the following error:&#13;
+&#13;
+    svn: REPORT request failed on '/repo/!svn/vcc/default'&#13;
+    svn: REPORT of '/repo/!svn/vcc/default': 200 OK (http://our.reposerver.tld)&#13;
+&#13;
+Only a handful of pages came up when attempted some cunning google-fu. I checked out the repository on the server (which completed), and a number of clients on remote boxes (all fails). &#13;
+&#13;
+Thinking a little more about the error &amp;#8212; a "200 OK" error _isn't_ an error! &amp;#8212; I thought maybe nginx was misbehaving again, and unblocked the port apache was listening on before attempting a check-out through that. &#13;
+&#13;
+Success!&#13;
+&#13;
+The nginx error log, which was empty when checked earlier in the day, now had notices similar to the following:&#13;
+&#13;
+    open() "/etc/nginx/proxy_temp/0/00/0000000000" failed &#13;
+    (13: Permission denied) while reading upstream&#13;
+&#13;
+Nginx hadn't created the /0/00/ directory. A quick "rm -rf /etc/nginx/proxy_temp/*" and nginx restart brought things back into line; nginx started creating the directories normally.</content><content type="html">&lt;p&gt;Once again, I come across an odd subversion error which is questioned on various forums but remains unanswered. And again, I find the fault to be with nginx.
+&lt;/p&gt;
+&lt;p&gt;A member of our team came to me today after battling with svn for a few hours trying to push some new files to the server. He couldn't push because his working copy was out of date, and updates failed with the following error:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;svn: REPORT request failed on '/repo/!svn/vcc/default'
+svn: REPORT of '/repo/!svn/vcc/default': 200 OK (http://our.reposerver.tld)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Only a handful of pages came up when attempted some cunning google-fu. I checked out the repository on the server (which completed), and a number of clients on remote boxes (all fails). 
+&lt;/p&gt;
+&lt;p&gt;Thinking a little more about the error — a "200 OK" error &lt;em&gt;isn't&lt;/em&gt; an error! — I thought maybe nginx was misbehaving again, and unblocked the port apache was listening on before attempting a check-out through that. 
+&lt;/p&gt;
+&lt;p&gt;Success!
+&lt;/p&gt;
+&lt;p&gt;The nginx error log, which was empty when checked earlier in the day, now had notices similar to the following:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;open() "/etc/nginx/proxy_temp/0/00/0000000000" failed 
+(13: Permission denied) while reading upstream
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Nginx hadn't created the /0/00/ directory. A quick "rm -rf /etc/nginx/proxy_temp/*" and nginx restart brought things back into line; nginx started creating the directories normally.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="nginx" scheme="http://zine.pocoo.org/#tag-scheme"/><category term="svn" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAlFUwAAAAFwTAAATQAAUwAAAJ5PbmNlIGFnYWluLCBJIGNv
+bWUgYWNyb3NzIGFuIG9kZCBzdWJ2ZXJzaW9uIGVycm9yIHdoaWNoIGlzIHF1ZXN0aW9uZWQgb24g
+dmFyaW91cyBmb3J1bXMgYnV0IHJlbWFpbnMgdW5hbnN3ZXJlZC4gQW5kIGFnYWluLCBJIGZpbmQg
+dGhlIGZhdWx0IHRvIGJlIHdpdGggbmdpbnguClMAAAABCkVTAAAAAXBMAABNAABTAAAA40EgbWVt
+YmVyIG9mIG91ciB0ZWFtIGNhbWUgdG8gbWUgdG9kYXkgYWZ0ZXIgYmF0dGxpbmcgd2l0aCBzdm4g
+Zm9yIGEgZmV3IGhvdXJzIHRyeWluZyB0byBwdXNoIHNvbWUgbmV3IGZpbGVzIHRvIHRoZSBzZXJ2
+ZXIuIEhlIGNvdWxkbid0IHB1c2ggYmVjYXVzZSBoaXMgd29ya2luZyBjb3B5IHdhcyBvdXQgb2Yg
+ZGF0ZSwgYW5kIHVwZGF0ZXMgZmFpbGVkIHdpdGggdGhlIGZvbGxvd2luZyBlcnJvcjoKUwAAAAEK
+RVMAAAADcHJlTAABRVMAAAAEY29kZUwAAE0AAFMAAACDc3ZuOiBSRVBPUlQgcmVxdWVzdCBmYWls
+ZWQgb24gJy9yZXBvLyFzdm4vdmNjL2RlZmF1bHQnCnN2bjogUkVQT1JUIG9mICcvcmVwby8hc3Zu
+L3ZjYy9kZWZhdWx0JzogMjAwIE9LIChodHRwOi8vb3VyLnJlcG9zZXJ2ZXIudGxkKQpTAAAAAE0A
+AFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAALtPbmx5IGEgaGFuZGZ1bCBvZiBwYWdlcyBjYW1l
+IHVwIHdoZW4gYXR0ZW1wdGVkIHNvbWUgY3VubmluZyBnb29nbGUtZnUuIEkgY2hlY2tlZCBvdXQg
+dGhlIHJlcG9zaXRvcnkgb24gdGhlIHNlcnZlciAod2hpY2ggY29tcGxldGVkKSwgYW5kIGEgbnVt
+YmVyIG9mIGNsaWVudHMgb24gcmVtb3RlIGJveGVzIChhbGwgZmFpbHMpLiAKUwAAAAEKRVMAAAAB
+cEwAAUVTAAAAAmVtTAAATQAAUwAAAAVpc24ndFMAAACYIGFuIGVycm9yISDigJQgSSB0aG91Z2h0
+IG1heWJlIG5naW54IHdhcyBtaXNiZWhhdmluZyBhZ2FpbiwgYW5kIHVuYmxvY2tlZCB0aGUgcG9y
+dCBhcGFjaGUgd2FzIGxpc3RlbmluZyBvbiBiZWZvcmUgYXR0ZW1wdGluZyBhIGNoZWNrLW91dCB0
+aHJvdWdoIHRoYXQuIApNAABTAAAAPFRoaW5raW5nIGEgbGl0dGxlIG1vcmUgYWJvdXQgdGhlIGVy
+cm9yIOKAlCBhICIyMDAgT0siIGVycm9yIFMAAAABCkVTAAAAAXBMAABNAABTAAAACVN1Y2Nlc3Mh
+ClMAAAABCkVTAAAAAXBMAABNAABTAAAAcFRoZSBuZ2lueCBlcnJvciBsb2csIHdoaWNoIHdhcyBl
+bXB0eSB3aGVuIGNoZWNrZWQgZWFybGllciBpbiB0aGUgZGF5LCBub3cgaGFkIG5vdGljZXMgc2lt
+aWxhciB0byB0aGUgZm9sbG93aW5nOgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAA
+UwAAAGZvcGVuKCkgIi9ldGMvbmdpbngvcHJveHlfdGVtcC8wLzAwLzAwMDAwMDAwMDAiIGZhaWxl
+ZCAKKDEzOiBQZXJtaXNzaW9uIGRlbmllZCkgd2hpbGUgcmVhZGluZyB1cHN0cmVhbQpTAAAAAE0A
+AFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAALZOZ2lueCBoYWRuJ3QgY3JlYXRlZCB0aGUgLzAv
+MDAvIGRpcmVjdG9yeS4gQSBxdWljayAicm0gLXJmIC9ldGMvbmdpbngvcHJveHlfdGVtcC8qIiBh
+bmQgbmdpbnggcmVzdGFydCBicm91Z2h0IHRoaW5ncyBiYWNrIGludG8gbGluZTsgbmdpbnggc3Rh
+cnRlZCBjcmVhdGluZyB0aGUgZGlyZWN0b3JpZXMgbm9ybWFsbHkuClMAAAAAUwAAAAZwYXJzZXJT
+AAAACG1hcmtkb3duUwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/7/from-php-to-python;-x-for-y"><title type="text">From PHP to Python; x for y.</title><id>tag:digita.la,2009-04-07:/entry;2009/4/7/from-php-to-python%3B-x-for-y</id><updated>2009-04-09T00:48:13Z</updated><published>2009-04-07T23:19:00Z</published><link href="http://digita.la/2009/4/7/from-php-to-python;-x-for-y"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/7/from-php-to-python;-x-for-y</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Recently I've been using Python more and more for programming tasks, but there are still some areas where I find myself thinking "how the heck to I do _x_ in Python? In PHP its just one little function!" This probably stems from the fact that I learned programming from the PHP manual, and one of the reasons PHP has become so prevalent in the programming world is that it has lots of little "short-cut" functions which just do that something you've been looking for in one concise bit of code.&#13;
+&#13;
+### file_get_contents() in Python&#13;
+&#13;
+This one always gets me. Python has no exact swap-in method for this. Sure, if you were to do it the correct way in PHP you'd open a file handle, read from it until there was nothing left to read, and close it. Its the same in Python. The problem is that once you learn about file_get_contents() in PHP you start to rely on it for most file operations -- which, when you think about it, are generally "get everything in this file and put it into this variable."&#13;
+&#13;
+The simplest way of doing this in Python is:&#13;
+&#13;
+    f = file('/path/to/file').read()&#13;
+&#13;
+You can also mimic the PHP file() function with:&#13;
+&#13;
+    f = file('/path/to/file').readlines()&#13;
+&#13;
+And to mimic file_put_contents():&#13;
+&#13;
+    file('/path/to/file', 'w').write(contents)&#13;
+&#13;
+Keep in mind, however, that this solution doesn't have stream support built-in like PHP has. I'm hoping there is something as ubiquitous as PHP's stream support in Python3.0, but a quick flick through the docs hasn't brought anything up.&#13;
+&#13;
+### parse_ini_file() in Python&#13;
+&#13;
+Again, no exact swap-in method, but this time I'm not too fussed; Python has a more powerful module called [ConfigParser](http://docs.python.org/library/configparser.html). Don't bother rolling your own, just use this. It works, its better, and you can extend it however you want.&#13;
+&#13;
+### SimpleXML in Python&#13;
+&#13;
+Python has a plethora of modules for working with XML. SimpleXML is designed to be the simplest and fastest interface for working with XML in PHP. For Python it seems the fastest and simplest module for working with XML is cElementTree, which is bundled by default with Python2.5 and later.&#13;
+&#13;
+When you're looking for a more complete system akin to DomDocument then lxml seems a good fit.&#13;
+&#13;
+Now, before those of you knowledgeable in Python-Fu start throwing kicks, keep in mind: I'm not _that_ familiar with Python yet. I don't yet know its idiosyncrasies, foibles, best-practices, and tricks. If I'm missing something then please, __please__ let me know. I love Python's concise syntax, and if I can trim even more lines from my code I'll be happy to take your suggestions!</content><content type="html">&lt;p&gt;Recently I've been using Python more and more for programming tasks, but there are still some areas where I find myself thinking "how the heck to I do &lt;em&gt;x&lt;/em&gt; in Python? In PHP its just one little function!" This probably stems from the fact that I learned programming from the PHP manual, and one of the reasons PHP has become so prevalent in the programming world is that it has lots of little "short-cut" functions which just do that something you've been looking for in one concise bit of code.
+&lt;/p&gt;
+
+&lt;h3&gt;file_get_contents() in Python&lt;/h3&gt;
+&lt;p&gt;This one always gets me. Python has no exact swap-in method for this. Sure, if you were to do it the correct way in PHP you'd open a file handle, read from it until there was nothing left to read, and close it. Its the same in Python. The problem is that once you learn about file_get_contents() in PHP you start to rely on it for most file operations -- which, when you think about it, are generally "get everything in this file and put it into this variable."
+&lt;/p&gt;
+&lt;p&gt;The simplest way of doing this in Python is:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;f = file('/path/to/file').read()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can also mimic the PHP file() function with:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;f = file('/path/to/file').readlines()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;And to mimic file_put_contents():
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;file('/path/to/file', 'w').write(contents)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Keep in mind, however, that this solution doesn't have stream support built-in like PHP has. I'm hoping there is something as ubiquitous as PHP's stream support in Python3.0, but a quick flick through the docs hasn't brought anything up.
+&lt;/p&gt;
+
+&lt;h3&gt;parse_ini_file() in Python&lt;/h3&gt;
+&lt;p&gt;Again, no exact swap-in method, but this time I'm not too fussed; Python has a more powerful module called &lt;a href="http://docs.python.org/library/configparser.html"&gt;ConfigParser&lt;/a&gt;. Don't bother rolling your own, just use this. It works, its better, and you can extend it however you want.
+&lt;/p&gt;
+
+&lt;h3&gt;SimpleXML in Python&lt;/h3&gt;
+&lt;p&gt;Python has a plethora of modules for working with XML. SimpleXML is designed to be the simplest and fastest interface for working with XML in PHP. For Python it seems the fastest and simplest module for working with XML is cElementTree, which is bundled by default with Python2.5 and later.
+&lt;/p&gt;
+&lt;p&gt;When you're looking for a more complete system akin to DomDocument then lxml seems a good fit.
+&lt;/p&gt;
+&lt;p&gt;Now, before those of you knowledgeable in Python-Fu start throwing kicks, keep in mind: I'm not &lt;em&gt;that&lt;/em&gt; familiar with Python yet. I don't yet know its idiosyncrasies, foibles, best-practices, and tricks. If I'm missing something then please, &lt;strong&gt;please&lt;/strong&gt; let me know. I love Python's concise syntax, and if I can trim even more lines from my code I'll be happy to take your suggestions!
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="php" scheme="http://zine.pocoo.org/#tag-scheme"/><category term="python" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMABBFUwAAAAFwTAABRVMAAAACZW1MAABNAABTAAAAAXhTAAAB
+VSBpbiBQeXRob24/IEluIFBIUCBpdHMganVzdCBvbmUgbGl0dGxlIGZ1bmN0aW9uISIgVGhpcyBw
+cm9iYWJseSBzdGVtcyBmcm9tIHRoZSBmYWN0IHRoYXQgSSBsZWFybmVkIHByb2dyYW1taW5nIGZy
+b20gdGhlIFBIUCBtYW51YWwsIGFuZCBvbmUgb2YgdGhlIHJlYXNvbnMgUEhQIGhhcyBiZWNvbWUg
+c28gcHJldmFsZW50IGluIHRoZSBwcm9ncmFtbWluZyB3b3JsZCBpcyB0aGF0IGl0IGhhcyBsb3Rz
+IG9mIGxpdHRsZSAic2hvcnQtY3V0IiBmdW5jdGlvbnMgd2hpY2gganVzdCBkbyB0aGF0IHNvbWV0
+aGluZyB5b3UndmUgYmVlbiBsb29raW5nIGZvciBpbiBvbmUgY29uY2lzZSBiaXQgb2YgY29kZS4K
+TQAAUwAAAJdSZWNlbnRseSBJJ3ZlIGJlZW4gdXNpbmcgUHl0aG9uIG1vcmUgYW5kIG1vcmUgZm9y
+IHByb2dyYW1taW5nIHRhc2tzLCBidXQgdGhlcmUgYXJlIHN0aWxsIHNvbWUgYXJlYXMgd2hlcmUg
+SSBmaW5kIG15c2VsZiB0aGlua2luZyAiaG93IHRoZSBoZWNrIHRvIEkgZG8gUwAAAAIKCkVTAAAA
+AmgzTAAATQAAUwAAAB1maWxlX2dldF9jb250ZW50cygpIGluIFB5dGhvblMAAAABCkVTAAAAAXBM
+AABNAABTAAABzlRoaXMgb25lIGFsd2F5cyBnZXRzIG1lLiBQeXRob24gaGFzIG5vIGV4YWN0IHN3
+YXAtaW4gbWV0aG9kIGZvciB0aGlzLiBTdXJlLCBpZiB5b3Ugd2VyZSB0byBkbyBpdCB0aGUgY29y
+cmVjdCB3YXkgaW4gUEhQIHlvdSdkIG9wZW4gYSBmaWxlIGhhbmRsZSwgcmVhZCBmcm9tIGl0IHVu
+dGlsIHRoZXJlIHdhcyBub3RoaW5nIGxlZnQgdG8gcmVhZCwgYW5kIGNsb3NlIGl0LiBJdHMgdGhl
+IHNhbWUgaW4gUHl0aG9uLiBUaGUgcHJvYmxlbSBpcyB0aGF0IG9uY2UgeW91IGxlYXJuIGFib3V0
+IGZpbGVfZ2V0X2NvbnRlbnRzKCkgaW4gUEhQIHlvdSBzdGFydCB0byByZWx5IG9uIGl0IGZvciBt
+b3N0IGZpbGUgb3BlcmF0aW9ucyAtLSB3aGljaCwgd2hlbiB5b3UgdGhpbmsgYWJvdXQgaXQsIGFy
+ZSBnZW5lcmFsbHkgImdldCBldmVyeXRoaW5nIGluIHRoaXMgZmlsZSBhbmQgcHV0IGl0IGludG8g
+dGhpcyB2YXJpYWJsZS4iClMAAAABCkVTAAAAAXBMAABNAABTAAAALVRoZSBzaW1wbGVzdCB3YXkg
+b2YgZG9pbmcgdGhpcyBpbiBQeXRob24gaXM6ClMAAAABCkVTAAAAA3ByZUwAAUVTAAAABGNvZGVM
+AABNAABTAAAAIWYgPSBmaWxlKCcvcGF0aC90by9maWxlJykucmVhZCgpClMAAAAATQAAUwAAAABT
+AAAAAEVTAAAAAXBMAABNAABTAAAAMVlvdSBjYW4gYWxzbyBtaW1pYyB0aGUgUEhQIGZpbGUoKSBm
+dW5jdGlvbiB3aXRoOgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAACZmID0g
+ZmlsZSgnL3BhdGgvdG8vZmlsZScpLnJlYWRsaW5lcygpClMAAAAATQAAUwAAAABTAAAAAEVTAAAA
+AXBMAABNAABTAAAAIkFuZCB0byBtaW1pYyBmaWxlX3B1dF9jb250ZW50cygpOgpTAAAAAQpFUwAA
+AANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAACtmaWxlKCcvcGF0aC90by9maWxlJywgJ3cnKS53
+cml0ZShjb250ZW50cykKUwAAAABNAABTAAAAAFMAAAAARVMAAAABcEwAAE0AAFMAAADuS2VlcCBp
+biBtaW5kLCBob3dldmVyLCB0aGF0IHRoaXMgc29sdXRpb24gZG9lc24ndCBoYXZlIHN0cmVhbSBz
+dXBwb3J0IGJ1aWx0LWluIGxpa2UgUEhQIGhhcy4gSSdtIGhvcGluZyB0aGVyZSBpcyBzb21ldGhp
+bmcgYXMgdWJpcXVpdG91cyBhcyBQSFAncyBzdHJlYW0gc3VwcG9ydCBpbiBQeXRob24zLjAsIGJ1
+dCBhIHF1aWNrIGZsaWNrIHRocm91Z2ggdGhlIGRvY3MgaGFzbid0IGJyb3VnaHQgYW55dGhpbmcg
+dXAuClMAAAACCgpFUwAAAAJoM0wAAE0AAFMAAAAacGFyc2VfaW5pX2ZpbGUoKSBpbiBQeXRob25T
+AAAAAQpFUwAAAAFwTAABRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMAAAAwaHR0cDovL2RvY3MucHl0
+aG9uLm9yZy9saWJyYXJ5L2NvbmZpZ3BhcnNlci5odG1sUwAAAAxDb25maWdQYXJzZXJTAAAAbi4g
+RG9uJ3QgYm90aGVyIHJvbGxpbmcgeW91ciBvd24sIGp1c3QgdXNlIHRoaXMuIEl0IHdvcmtzLCBp
+dHMgYmV0dGVyLCBhbmQgeW91IGNhbiBleHRlbmQgaXQgaG93ZXZlciB5b3Ugd2FudC4KTQAAUwAA
+AGtBZ2Fpbiwgbm8gZXhhY3Qgc3dhcC1pbiBtZXRob2QsIGJ1dCB0aGlzIHRpbWUgSSdtIG5vdCB0
+b28gZnVzc2VkOyBQeXRob24gaGFzIGEgbW9yZSBwb3dlcmZ1bCBtb2R1bGUgY2FsbGVkIFMAAAAC
+CgpFUwAAAAJoM0wAAE0AAFMAAAATU2ltcGxlWE1MIGluIFB5dGhvblMAAAABCkVTAAAAAXBMAABN
+AABTAAABI1B5dGhvbiBoYXMgYSBwbGV0aG9yYSBvZiBtb2R1bGVzIGZvciB3b3JraW5nIHdpdGgg
+WE1MLiBTaW1wbGVYTUwgaXMgZGVzaWduZWQgdG8gYmUgdGhlIHNpbXBsZXN0IGFuZCBmYXN0ZXN0
+IGludGVyZmFjZSBmb3Igd29ya2luZyB3aXRoIFhNTCBpbiBQSFAuIEZvciBQeXRob24gaXQgc2Vl
+bXMgdGhlIGZhc3Rlc3QgYW5kIHNpbXBsZXN0IG1vZHVsZSBmb3Igd29ya2luZyB3aXRoIFhNTCBp
+cyBjRWxlbWVudFRyZWUsIHdoaWNoIGlzIGJ1bmRsZWQgYnkgZGVmYXVsdCB3aXRoIFB5dGhvbjIu
+NSBhbmQgbGF0ZXIuClMAAAABCkVTAAAAAXBMAABNAABTAAAAX1doZW4geW91J3JlIGxvb2tpbmcg
+Zm9yIGEgbW9yZSBjb21wbGV0ZSBzeXN0ZW0gYWtpbiB0byBEb21Eb2N1bWVudCB0aGVuIGx4bWwg
+c2VlbXMgYSBnb29kIGZpdC4KUwAAAAEKRVMAAAABcEwAAkVTAAAAAmVtTAAATQAAUwAAAAR0aGF0
+UwAAAIsgZmFtaWxpYXIgd2l0aCBQeXRob24geWV0LiBJIGRvbid0IHlldCBrbm93IGl0cyBpZGlv
+c3luY3Jhc2llcywgZm9pYmxlcywgYmVzdC1wcmFjdGljZXMsIGFuZCB0cmlja3MuIElmIEknbSBt
+aXNzaW5nIHNvbWV0aGluZyB0aGVuIHBsZWFzZSwgRVMAAAAGc3Ryb25nTAAATQAAUwAAAAZwbGVh
+c2VTAAAAhSBsZXQgbWUga25vdy4gSSBsb3ZlIFB5dGhvbidzIGNvbmNpc2Ugc3ludGF4LCBhbmQg
+aWYgSSBjYW4gdHJpbSBldmVuIG1vcmUgbGluZXMgZnJvbSBteSBjb2RlIEknbGwgYmUgaGFwcHkg
+dG8gdGFrZSB5b3VyIHN1Z2dlc3Rpb25zIQpNAABTAAAAYE5vdywgYmVmb3JlIHRob3NlIG9mIHlv
+dSBrbm93bGVkZ2VhYmxlIGluIFB5dGhvbi1GdSBzdGFydCB0aHJvd2luZyBraWNrcywga2VlcCBp
+biBtaW5kOiBJJ20gbm90IFMAAAAAUwAAAAZwYXJzZXJTAAAACG1hcmtkb3duUwAAAAVpbnRyb1JT
+AAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/8/continuous-integration;-step-2:-svn"><title type="text">Continuous Integration; Step 2: SVN</title><id>tag:digita.la,2009-04-08:/entry;2009/4/8/continuous-integration%3B-step-2:-svn</id><updated>2009-04-08T15:42:59Z</updated><published>2009-04-08T15:42:59Z</published><link href="http://digita.la/2009/4/8/continuous-integration;-step-2:-svn"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/8/continuous-integration;-step-2:-svn</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text"></content><content type="html"></content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAABWludHJv
+UlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/4/8/continuous-integration;-step-1:-lint"><title type="text">Continuous Integration; Step 1: Lint</title><id>tag:digita.la,2009-04-08:/entry;2009/4/8/continuous-integration%3B-step-1:-lint</id><updated>2009-04-08T15:42:30Z</updated><published>2009-04-08T15:42:30Z</published><link href="http://digita.la/2009/4/8/continuous-integration;-step-1:-lint"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/4/8/continuous-integration;-step-1:-lint</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text"></content><content type="html"></content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25TAAAABWludHJv
+UlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/3/20/why-37signals-webapps-suck"><title type="text">Why 37signals webapps suck.</title><id>tag:digita.la,2009-03-20:/entry;2009/3/20/why-37signals-webapps-suck</id><updated>2009-04-07T23:26:08Z</updated><published>2009-03-20T12:24:00Z</published><link href="http://digita.la/2009/3/20/why-37signals-webapps-suck"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/3/20/why-37signals-webapps-suck</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>1</zine:status><zine:content_type>entry</zine:content_type><content type="text">Disclaimer: I'm a fan of 37signals. They do have some great advice, and they do provide some useful apps. But they're only useful to a point. Here's why...&#13;
+&#13;
+### Ta-Da list&#13;
+&#13;
+While looking for a cross-platform todo list app (iPhone, Mac Dashboard, Firefox plugin, web-based) I came across tada list. Sure, no FF plugin, but the other bases are covered. I'd tried it before when it first came out, but opening a web-page &amp; log in to type maybe 2 words seemed a little bit of a pain and gave up, and since now it has iPhone integration I thought I'd give it another shot.&#13;
+&#13;
+I went to the sign-up page and entered my details. Upon submit I was presented with an error message:&#13;
+&#13;
+    1 error prohibited this new account from being saved&#13;
+    There were problems with the following fields:&#13;
+        * Email address has already been taken&#13;
+&#13;
+My thought process was thus: &#13;
+&#13;
+&gt; Ok, so I already have an account somewhere... I'll just use that. Now, where's the "forgotten password" link... er... hey, there's no way to recover my account on this page! Right, must be on the home page then... er... hey, there's no way to get back to the home page!&#13;
+&#13;
+There's also no openid integration like there is with basecamp and highrise.</content><content type="html">&lt;p&gt;Disclaimer: I'm a fan of 37signals. They do have some great advice, and they do provide some useful apps. But they're only useful to a point. Here's why...
+&lt;/p&gt;
+
+&lt;h3&gt;Ta-Da list&lt;/h3&gt;
+&lt;p&gt;While looking for a cross-platform todo list app (iPhone, Mac Dashboard, Firefox plugin, web-based) I came across tada list. Sure, no FF plugin, but the other bases are covered. I'd tried it before when it first came out, but opening a web-page &amp;amp; log in to type maybe 2 words seemed a little bit of a pain and gave up, and since now it has iPhone integration I thought I'd give it another shot.
+&lt;/p&gt;
+&lt;p&gt;I went to the sign-up page and entered my details. Upon submit I was presented with an error message:
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;1 error prohibited this new account from being saved
+There were problems with the following fields:
+    * Email address has already been taken
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;My thought process was thus: 
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Ok, so I already have an account somewhere... I'll just use that. Now, where's the "forgotten password" link... er... hey, there's no way to recover my account on this page! Right, must be on the home page then... er... hey, there's no way to get back to the home page!
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;There's also no openid integration like there is with basecamp and highrise.
+&lt;/p&gt;</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAhFUwAAAAFwTAAATQAAUwAAAJxEaXNjbGFpbWVyOiBJJ20g
+YSBmYW4gb2YgMzdzaWduYWxzLiBUaGV5IGRvIGhhdmUgc29tZSBncmVhdCBhZHZpY2UsIGFuZCB0
+aGV5IGRvIHByb3ZpZGUgc29tZSB1c2VmdWwgYXBwcy4gQnV0IHRoZXkncmUgb25seSB1c2VmdWwg
+dG8gYSBwb2ludC4gSGVyZSdzIHdoeS4uLgpTAAAAAgoKRVMAAAACaDNMAABNAABTAAAAClRhLURh
+IGxpc3RTAAAAAQpFUwAAAAFwTAAATQAAUwAAAYtXaGlsZSBsb29raW5nIGZvciBhIGNyb3NzLXBs
+YXRmb3JtIHRvZG8gbGlzdCBhcHAgKGlQaG9uZSwgTWFjIERhc2hib2FyZCwgRmlyZWZveCBwbHVn
+aW4sIHdlYi1iYXNlZCkgSSBjYW1lIGFjcm9zcyB0YWRhIGxpc3QuIFN1cmUsIG5vIEZGIHBsdWdp
+biwgYnV0IHRoZSBvdGhlciBiYXNlcyBhcmUgY292ZXJlZC4gSSdkIHRyaWVkIGl0IGJlZm9yZSB3
+aGVuIGl0IGZpcnN0IGNhbWUgb3V0LCBidXQgb3BlbmluZyBhIHdlYi1wYWdlICYgbG9nIGluIHRv
+IHR5cGUgbWF5YmUgMiB3b3JkcyBzZWVtZWQgYSBsaXR0bGUgYml0IG9mIGEgcGFpbiBhbmQgZ2F2
+ZSB1cCwgYW5kIHNpbmNlIG5vdyBpdCBoYXMgaVBob25lIGludGVncmF0aW9uIEkgdGhvdWdodCBJ
+J2QgZ2l2ZSBpdCBhbm90aGVyIHNob3QuClMAAAABCkVTAAAAAXBMAABNAABTAAAAZkkgd2VudCB0
+byB0aGUgc2lnbi11cCBwYWdlIGFuZCBlbnRlcmVkIG15IGRldGFpbHMuIFVwb24gc3VibWl0IEkg
+d2FzIHByZXNlbnRlZCB3aXRoIGFuIGVycm9yIG1lc3NhZ2U6ClMAAAABCkVTAAAAA3ByZUwAAUVT
+AAAABGNvZGVMAABNAABTAAAAjzEgZXJyb3IgcHJvaGliaXRlZCB0aGlzIG5ldyBhY2NvdW50IGZy
+b20gYmVpbmcgc2F2ZWQKVGhlcmUgd2VyZSBwcm9ibGVtcyB3aXRoIHRoZSBmb2xsb3dpbmcgZmll
+bGRzOgogICAgKiBFbWFpbCBhZGRyZXNzIGhhcyBhbHJlYWR5IGJlZW4gdGFrZW4KUwAAAABNAABT
+AAAAAFMAAAAARVMAAAABcEwAAE0AAFMAAAAeTXkgdGhvdWdodCBwcm9jZXNzIHdhcyB0aHVzOiAK
+UwAAAAEKRVMAAAAKYmxvY2txdW90ZUwAAUVTAAAAAXBMAABNAABTAAABDk9rLCBzbyBJIGFscmVh
+ZHkgaGF2ZSBhbiBhY2NvdW50IHNvbWV3aGVyZS4uLiBJJ2xsIGp1c3QgdXNlIHRoYXQuIE5vdywg
+d2hlcmUncyB0aGUgImZvcmdvdHRlbiBwYXNzd29yZCIgbGluay4uLiBlci4uLiBoZXksIHRoZXJl
+J3Mgbm8gd2F5IHRvIHJlY292ZXIgbXkgYWNjb3VudCBvbiB0aGlzIHBhZ2UhIFJpZ2h0LCBtdXN0
+IGJlIG9uIHRoZSBob21lIHBhZ2UgdGhlbi4uLiBlci4uLiBoZXksIHRoZXJlJ3Mgbm8gd2F5IHRv
+IGdldCBiYWNrIHRvIHRoZSBob21lIHBhZ2UhClMAAAABCk0AAFMAAAAAUwAAAABFUwAAAAFwTAAA
+TQAAUwAAAE1UaGVyZSdzIGFsc28gbm8gb3BlbmlkIGludGVncmF0aW9uIGxpa2UgdGhlcmUgaXMg
+d2l0aCBiYXNlY2FtcCBhbmQgaGlnaHJpc2UuClMAAAAAUwAAAAZwYXJzZXJTAAAACG1hcmtkb3du
+UwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/2/27/installing-thrift"><title type="text">Installing thrift</title><id>tag:digita.la,2009-02-27:/entry;2009/2/27/installing-thrift</id><updated>2009-04-07T23:23:59Z</updated><published>2009-02-27T19:50:00Z</published><link href="http://digita.la/2009/2/27/installing-thrift"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/2/27/installing-thrift</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">I've always found thrift to be a pain to install, since there are some undocumented dependencies. The following should get thrift installed and working on CentOS5 with the minimum of fuss.&#13;
+&#13;
+    ~# yum install build-essential gcc-c++ bison flex automake libtool \&#13;
+    boost-devel libevent-devel zlib-devel&#13;
+    ~# svn co http://svn.apache.org/repos/asf/incubator/thrift/trunk thrift&#13;
+    ~# cd thrift&#13;
+    ~# ./bootstrap.sh&#13;
+    ~# ./configure&#13;
+    ~# make&#13;
+    ~# make install&#13;
+&#13;
+This assumes thrift can find the python and javac binaries. If you're getting errors regarding java you're probably running the JRE rather than the JDK; install the latter and thrift should continue without fault.</content><content type="html">&lt;p&gt;I've always found thrift to be a pain to install, since there are some undocumented dependencies. The following should get thrift installed and working on CentOS5 with the minimum of fuss.
+&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;~# yum install build-essential gcc-c++ bison flex automake libtool \
+boost-devel libevent-devel zlib-devel
+~# svn co http://svn.apache.org/repos/asf/incubator/thrift/trunk thrift
+~# cd thrift
+~# ./bootstrap.sh
+~# ./configure
+~# make
+~# make install
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This assumes thrift can find the python and javac binaries. If you're getting errors regarding java you're probably running the JRE rather than the JDK; install the latter and thrift should continue without fault.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="thrift" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAANFUwAAAAFwTAAATQAAUwAAAL1JJ3ZlIGFsd2F5cyBmb3Vu
+ZCB0aHJpZnQgdG8gYmUgYSBwYWluIHRvIGluc3RhbGwsIHNpbmNlIHRoZXJlIGFyZSBzb21lIHVu
+ZG9jdW1lbnRlZCBkZXBlbmRlbmNpZXMuIFRoZSBmb2xsb3dpbmcgc2hvdWxkIGdldCB0aHJpZnQg
+aW5zdGFsbGVkIGFuZCB3b3JraW5nIG9uIENlbnRPUzUgd2l0aCB0aGUgbWluaW11bSBvZiBmdXNz
+LgpTAAAAAQpFUwAAAANwcmVMAAFFUwAAAARjb2RlTAAATQAAUwAAAPl+IyB5dW0gaW5zdGFsbCBi
+dWlsZC1lc3NlbnRpYWwgZ2NjLWMrKyBiaXNvbiBmbGV4IGF1dG9tYWtlIGxpYnRvb2wgXApib29z
+dC1kZXZlbCBsaWJldmVudC1kZXZlbCB6bGliLWRldmVsCn4jIHN2biBjbyBodHRwOi8vc3ZuLmFw
+YWNoZS5vcmcvcmVwb3MvYXNmL2luY3ViYXRvci90aHJpZnQvdHJ1bmsgdGhyaWZ0Cn4jIGNkIHRo
+cmlmdAp+IyAuL2Jvb3RzdHJhcC5zaAp+IyAuL2NvbmZpZ3VyZQp+IyBtYWtlCn4jIG1ha2UgaW5z
+dGFsbApTAAAAAE0AAFMAAAAAUwAAAABFUwAAAAFwTAAATQAAUwAAANZUaGlzIGFzc3VtZXMgdGhy
+aWZ0IGNhbiBmaW5kIHRoZSBweXRob24gYW5kIGphdmFjIGJpbmFyaWVzLiBJZiB5b3UncmUgZ2V0
+dGluZyBlcnJvcnMgcmVnYXJkaW5nIGphdmEgeW91J3JlIHByb2JhYmx5IHJ1bm5pbmcgdGhlIEpS
+RSByYXRoZXIgdGhhbiB0aGUgSkRLOyBpbnN0YWxsIHRoZSBsYXR0ZXIgYW5kIHRocmlmdCBzaG91
+bGQgY29udGludWUgd2l0aG91dCBmYXVsdC4KUwAAAABTAAAABnBhcnNlclMAAAAIbWFya2Rvd25T
+AAAABWludHJvUlMAAAAATAAA
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/colophon"><title type="text">Colophon</title><id>tag:digita.la,2009-02-16:/page;colophon</id><updated>2009-02-16T04:19:49Z</updated><published>2009-02-16T03:41:00Z</published><link href="http://digita.la/colophon"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>colophon</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>page</zine:content_type><content type="text">You're currently visiting the personal weblog of Phillip Oldham. It is powered by the [Python](http://python.org) blog engine [Zine](http://zine.pocoo.org) with the [SQLite](http://www.sqlite.org) database engine and is served by the [nginx](http://nginx.net) web-server. This setup runs atop a [CentOS5](http://centos.org) [virtual server](http://www.bytemark.co.uk/page/Live/hosting/virtualmachine/) provided by [Bytemark](http://www.bytemark.co.uk).&#13;
+&#13;
+Phillip is a web developer from Manchester (UK) currently living in Leeds and working in Harrogate as Lead Developer for a [leading](http://goballistic.co.uk) [activities](http://theactivitypeople.co.uk) and [events](http://stagzilla.co.uk) company.&#13;
+&#13;
+When Phill isn't glued to his PC at the office, or his Mac at home, he can be found taunting gravity by rock-climbing or weight-lifting, causing noise pollution practicing the guitar, or looking utterly ridiculous playing the ukulele.</content><content type="html">&lt;p&gt;You're currently visiting the personal weblog of Phillip Oldham. It is powered by the &lt;a href="http://python.org"&gt;Python&lt;/a&gt; blog engine &lt;a href="http://zine.pocoo.org"&gt;Zine&lt;/a&gt; with the &lt;a href="http://www.sqlite.org"&gt;SQLite&lt;/a&gt; database engine and is served by the &lt;a href="http://nginx.net"&gt;nginx&lt;/a&gt; web-server. This setup runs atop a &lt;a href="http://centos.org"&gt;CentOS5&lt;/a&gt; &lt;a href="http://www.bytemark.co.uk/page/Live/hosting/virtualmachine/"&gt;virtual server&lt;/a&gt; provided by &lt;a href="http://www.bytemark.co.uk"&gt;Bytemark&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;Phillip is a web developer from Manchester (UK) currently living in Leeds and working in Harrogate as Lead Developer for a &lt;a href="http://goballistic.co.uk"&gt;leading&lt;/a&gt; &lt;a href="http://theactivitypeople.co.uk"&gt;activities&lt;/a&gt; and &lt;a href="http://stagzilla.co.uk"&gt;events&lt;/a&gt; company.
+&lt;/p&gt;
+&lt;p&gt;When Phill isn't glued to his PC at the office, or his Mac at home, he can be found taunting gravity by rock-climbing or weight-lifting, causing noise pollution practicing the guitar, or looking utterly ridiculous playing the ukulele.
+&lt;/p&gt;</content><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAANFUwAAAAFwTAAHRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMA
+AAARaHR0cDovL3B5dGhvbi5vcmdTAAAABlB5dGhvblMAAAANIGJsb2cgZW5naW5lIEVTAAAAAWFM
+AABNAAFTAAAABGhyZWZTAAAAFWh0dHA6Ly96aW5lLnBvY29vLm9yZ1MAAAAEWmluZVMAAAAKIHdp
+dGggdGhlIEVTAAAAAWFMAABNAAFTAAAABGhyZWZTAAAAFWh0dHA6Ly93d3cuc3FsaXRlLm9yZ1MA
+AAAGU1FMaXRlUwAAACYgZGF0YWJhc2UgZW5naW5lIGFuZCBpcyBzZXJ2ZWQgYnkgdGhlIEVTAAAA
+AWFMAABNAAFTAAAABGhyZWZTAAAAEGh0dHA6Ly9uZ2lueC5uZXRTAAAABW5naW54UwAAACQgd2Vi
+LXNlcnZlci4gVGhpcyBzZXR1cCBydW5zIGF0b3AgYSBFUwAAAAFhTAAATQABUwAAAARocmVmUwAA
+ABFodHRwOi8vY2VudG9zLm9yZ1MAAAAHQ2VudE9TNVMAAAABIEVTAAAAAWFMAABNAAFTAAAABGhy
+ZWZTAAAAO2h0dHA6Ly93d3cuYnl0ZW1hcmsuY28udWsvcGFnZS9MaXZlL2hvc3RpbmcvdmlydHVh
+bG1hY2hpbmUvUwAAAA52aXJ0dWFsIHNlcnZlclMAAAANIHByb3ZpZGVkIGJ5IEVTAAAAAWFMAABN
+AAFTAAAABGhyZWZTAAAAGWh0dHA6Ly93d3cuYnl0ZW1hcmsuY28udWtTAAAACEJ5dGVtYXJrUwAA
+AAIuCk0AAFMAAABWWW91J3JlIGN1cnJlbnRseSB2aXNpdGluZyB0aGUgcGVyc29uYWwgd2VibG9n
+IG9mIFBoaWxsaXAgT2xkaGFtLiBJdCBpcyBwb3dlcmVkIGJ5IHRoZSBTAAAAAQpFUwAAAAFwTAAD
+RVMAAAABYUwAAE0AAVMAAAAEaHJlZlMAAAAYaHR0cDovL2dvYmFsbGlzdGljLmNvLnVrUwAAAAds
+ZWFkaW5nUwAAAAEgRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMAAAAeaHR0cDovL3RoZWFjdGl2aXR5
+cGVvcGxlLmNvLnVrUwAAAAphY3Rpdml0aWVzUwAAAAUgYW5kIEVTAAAAAWFMAABNAAFTAAAABGhy
+ZWZTAAAAFmh0dHA6Ly9zdGFnemlsbGEuY28udWtTAAAABmV2ZW50c1MAAAAKIGNvbXBhbnkuCk0A
+AFMAAAB7UGhpbGxpcCBpcyBhIHdlYiBkZXZlbG9wZXIgZnJvbSBNYW5jaGVzdGVyIChVSykgY3Vy
+cmVudGx5IGxpdmluZyBpbiBMZWVkcyBhbmQgd29ya2luZyBpbiBIYXJyb2dhdGUgYXMgTGVhZCBE
+ZXZlbG9wZXIgZm9yIGEgUwAAAAEKRVMAAAABcEwAAE0AAFMAAADrV2hlbiBQaGlsbCBpc24ndCBn
+bHVlZCB0byBoaXMgUEMgYXQgdGhlIG9mZmljZSwgb3IgaGlzIE1hYyBhdCBob21lLCBoZSBjYW4g
+YmUgZm91bmQgdGF1bnRpbmcgZ3Jhdml0eSBieSByb2NrLWNsaW1iaW5nIG9yIHdlaWdodC1saWZ0
+aW5nLCBjYXVzaW5nIG5vaXNlIHBvbGx1dGlvbiBwcmFjdGljaW5nIHRoZSBndWl0YXIsIG9yIGxv
+b2tpbmcgdXR0ZXJseSByaWRpY3Vsb3VzIHBsYXlpbmcgdGhlIHVrdWxlbGUuClMAAAAAUwAAAAZw
+YXJzZXJTAAAACG1hcmtkb3duUwAAAAVpbnRyb1JTAAAAAEwAAA==
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/2/13/thrift-python-2-6"><title type="text">Thrift &amp; Python 2.6</title><id>tag:digita.la,2009-02-13:/entry;2009/2/13/thrift-python-2-6</id><updated>2009-02-13T01:58:06Z</updated><published>2009-02-13T01:50:00Z</published><link href="http://digita.la/2009/2/13/thrift-python-2-6"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/2/13/thrift-python-2-6</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">Had a little trouble trying to install [Thrift](http://incubator.apache.org/thrift/) on CentOS5 with Python 2.6. Setting the PY_PREFIX environment variable doesn't work; the compile process just ignores it and picks the first python it can find -- usually 2.4.&#13;
+&#13;
+Quickest way I've found to get things back on track is to rename the /usr/bin/python binary to python2.4, symlink the python2.6 binary in its place, and proceed with the thrift build. Once done, replace the symlink to 2.6 with one to 2.4.&#13;
+&#13;
+Hopefully the thrift developers will fix this in coming releases.  </content><content type="html">&lt;p&gt;Had a little trouble trying to install &lt;a href="http://incubator.apache.org/thrift/"&gt;Thrift&lt;/a&gt; on CentOS5 with Python 2.6. Setting the PY_PREFIX environment variable doesn't work; the compile process just ignores it and picks the first python it can find -- usually 2.4.
+&lt;/p&gt;
+&lt;p&gt;Quickest way I've found to get things back on track is to rename the /usr/bin/python binary to python2.4, symlink the python2.6 binary in its place, and proceed with the thrift build. Once done, replace the symlink to 2.6 with one to 2.4.
+&lt;/p&gt;
+&lt;p&gt;Hopefully the thrift developers will fix this in coming releases.&lt;br&gt;
+
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="python" scheme="http://zine.pocoo.org/#tag-scheme"/><category term="thrift" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAANFUwAAAAFwTAABRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMA
+AAAjaHR0cDovL2luY3ViYXRvci5hcGFjaGUub3JnL3RocmlmdC9TAAAABlRocmlmdFMAAACxIG9u
+IENlbnRPUzUgd2l0aCBQeXRob24gMi42LiBTZXR0aW5nIHRoZSBQWV9QUkVGSVggZW52aXJvbm1l
+bnQgdmFyaWFibGUgZG9lc24ndCB3b3JrOyB0aGUgY29tcGlsZSBwcm9jZXNzIGp1c3QgaWdub3Jl
+cyBpdCBhbmQgcGlja3MgdGhlIGZpcnN0IHB5dGhvbiBpdCBjYW4gZmluZCAtLSB1c3VhbGx5IDIu
+NC4KTQAAUwAAACdIYWQgYSBsaXR0bGUgdHJvdWJsZSB0cnlpbmcgdG8gaW5zdGFsbCBTAAAAAQpF
+UwAAAAFwTAAATQAAUwAAAO9RdWlja2VzdCB3YXkgSSd2ZSBmb3VuZCB0byBnZXQgdGhpbmdzIGJh
+Y2sgb24gdHJhY2sgaXMgdG8gcmVuYW1lIHRoZSAvdXNyL2Jpbi9weXRob24gYmluYXJ5IHRvIHB5
+dGhvbjIuNCwgc3ltbGluayB0aGUgcHl0aG9uMi42IGJpbmFyeSBpbiBpdHMgcGxhY2UsIGFuZCBw
+cm9jZWVkIHdpdGggdGhlIHRocmlmdCBidWlsZC4gT25jZSBkb25lLCByZXBsYWNlIHRoZSBzeW1s
+aW5rIHRvIDIuNiB3aXRoIG9uZSB0byAyLjQuClMAAAABCkVTAAAAAXBMAAFFUwAAAAJickwAAE0A
+AFMAAAAAUwAAAAIKCk0AAFMAAABBSG9wZWZ1bGx5IHRoZSB0aHJpZnQgZGV2ZWxvcGVycyB3aWxs
+IGZpeCB0aGlzIGluIGNvbWluZyByZWxlYXNlcy5TAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93
+blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><entry xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" xml:base="http://digita.la/2009/2/12/nginx-subversion-and-413-s"><title type="text">Nginx, Subversion, and 413's</title><id>tag:digita.la,2009-02-12:/entry;2009/2/12/nginx-subversion-and-413-s</id><updated>2009-02-13T01:57:33Z</updated><published>2009-02-12T16:51:00Z</published><link href="http://digita.la/2009/2/12/nginx-subversion-and-413-s"/><author zine:dependency="1"><name>Phill</name><email>phillip.oldham@gmail.com</email></author><zine:slug>2009/2/12/nginx-subversion-and-413-s</zine:slug><zine:comments_enabled>no</zine:comments_enabled><zine:pings_enabled>no</zine:pings_enabled><zine:status>2</zine:status><zine:content_type>entry</zine:content_type><content type="text">At work I spent some time migrating our subversion repository off-site. I also took the opportunity to tidy up some of the setup, install [trac](http://trac.edgewall.org/) and create some repos for unversioned projects.&#13;
+&#13;
+While pushing one of these unversioned projects, I started seeing "413 - Request entity too large" errors which would then kill the commit at that point. The setup was the same as any other nginx+svn install; nginx proxies to apache+mod_svn. I checked the SVN docs without success, however some google-fu revealed that this was an error with the "LimitRequestBody" option in apache.&#13;
+&#13;
+The problem was, I hadn't set that option. It wasn't anywhere in the config files. Thinking there might be a very low default value I set it manually to 2Gb and tried again. &#13;
+&#13;
+413... Fail. &#13;
+&#13;
+More google-fu... Fail.&#13;
+&#13;
+A few days later I was setting up a new CentOS server with nginx, php, mysql, et al. Since there was a new version of nginx released I spent a few moments reviewing the wiki to see what the changes were, and that's when I came across the **client_max_body_size** directive. From the docs:&#13;
+&#13;
+&gt; Directive assigns the maximum accepted body size of client request, indicated by the line "Content-Length" in the header of request.&#13;
+&gt; &#13;
+&gt; If size is greater the given one, then the client gets the error "Request Entity Too Large" (413).&#13;
+&gt; &#13;
+&gt; It is necessary to keep in mind that the browsers do not know how to correctly show this error. &#13;
+&#13;
+It hadn't occurred to me that nginx would be the issue. The default is a measly 1Mb. Fine if you're being sent simple http requests, rubbish for large uploads like the kind the svn client sends.&#13;
+&#13;
+Setting "client_max_body_size 1024m;" in the vhost fixed it.</content><content type="html">&lt;p&gt;At work I spent some time migrating our subversion repository off-site. I also took the opportunity to tidy up some of the setup, install &lt;a href="http://trac.edgewall.org/"&gt;trac&lt;/a&gt; and create some repos for unversioned projects.
+&lt;/p&gt;
+&lt;p&gt;While pushing one of these unversioned projects, I started seeing "413 - Request entity too large" errors which would then kill the commit at that point. The setup was the same as any other nginx+svn install; nginx proxies to apache+mod_svn. I checked the SVN docs without success, however some google-fu revealed that this was an error with the "LimitRequestBody" option in apache.
+&lt;/p&gt;
+&lt;p&gt;The problem was, I hadn't set that option. It wasn't anywhere in the config files. Thinking there might be a very low default value I set it manually to 2Gb and tried again. 
+&lt;/p&gt;
+&lt;p&gt;413... Fail. 
+&lt;/p&gt;
+&lt;p&gt;More google-fu... Fail.
+&lt;/p&gt;
+&lt;p&gt;A few days later I was setting up a new CentOS server with nginx, php, mysql, et al. Since there was a new version of nginx released I spent a few moments reviewing the wiki to see what the changes were, and that's when I came across the &lt;strong&gt;client_max_body_size&lt;/strong&gt; directive. From the docs:
+&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;Directive assigns the maximum accepted body size of client request, indicated by the line "Content-Length" in the header of request.
+&lt;/p&gt;
+&lt;p&gt;If size is greater the given one, then the client gets the error "Request Entity Too Large" (413).
+&lt;/p&gt;
+&lt;p&gt;It is necessary to keep in mind that the browsers do not know how to correctly show this error. 
+&lt;/p&gt;
+&lt;/blockquote&gt;&lt;p&gt;It hadn't occurred to me that nginx would be the issue. The default is a measly 1Mb. Fine if you're being sent simple http requests, rubbish for large uploads like the kind the svn client sends.
+&lt;/p&gt;
+&lt;p&gt;Setting "client_max_body_size 1024m;" in the vhost fixed it.
+&lt;/p&gt;</content><category term="development" scheme="http://zine.pocoo.org/#category-scheme" label="Development"/><category term="nginx" scheme="http://zine.pocoo.org/#tag-scheme"/><category term="svn" scheme="http://zine.pocoo.org/#tag-scheme"/><zine:parser_data>SQAAAANTAAAABGJvZHlSUwAAAABMAAlFUwAAAAFwTAABRVMAAAABYUwAAE0AAVMAAAAEaHJlZlMA
+AAAZaHR0cDovL3RyYWMuZWRnZXdhbGwub3JnL1MAAAAEdHJhY1MAAAAxIGFuZCBjcmVhdGUgc29t
+ZSByZXBvcyBmb3IgdW52ZXJzaW9uZWQgcHJvamVjdHMuCk0AAFMAAACKQXQgd29yayBJIHNwZW50
+IHNvbWUgdGltZSBtaWdyYXRpbmcgb3VyIHN1YnZlcnNpb24gcmVwb3NpdG9yeSBvZmYtc2l0ZS4g
+SSBhbHNvIHRvb2sgdGhlIG9wcG9ydHVuaXR5IHRvIHRpZHkgdXAgc29tZSBvZiB0aGUgc2V0dXAs
+IGluc3RhbGwgUwAAAAEKRVMAAAABcEwAAE0AAFMAAAF/V2hpbGUgcHVzaGluZyBvbmUgb2YgdGhl
+c2UgdW52ZXJzaW9uZWQgcHJvamVjdHMsIEkgc3RhcnRlZCBzZWVpbmcgIjQxMyAtIFJlcXVlc3Qg
+ZW50aXR5IHRvbyBsYXJnZSIgZXJyb3JzIHdoaWNoIHdvdWxkIHRoZW4ga2lsbCB0aGUgY29tbWl0
+IGF0IHRoYXQgcG9pbnQuIFRoZSBzZXR1cCB3YXMgdGhlIHNhbWUgYXMgYW55IG90aGVyIG5naW54
+K3N2biBpbnN0YWxsOyBuZ2lueCBwcm94aWVzIHRvIGFwYWNoZSttb2Rfc3ZuLiBJIGNoZWNrZWQg
+dGhlIFNWTiBkb2NzIHdpdGhvdXQgc3VjY2VzcywgaG93ZXZlciBzb21lIGdvb2dsZS1mdSByZXZl
+YWxlZCB0aGF0IHRoaXMgd2FzIGFuIGVycm9yIHdpdGggdGhlICJMaW1pdFJlcXVlc3RCb2R5IiBv
+cHRpb24gaW4gYXBhY2hlLgpTAAAAAQpFUwAAAAFwTAAATQAAUwAAAK9UaGUgcHJvYmxlbSB3YXMs
+IEkgaGFkbid0IHNldCB0aGF0IG9wdGlvbi4gSXQgd2Fzbid0IGFueXdoZXJlIGluIHRoZSBjb25m
+aWcgZmlsZXMuIFRoaW5raW5nIHRoZXJlIG1pZ2h0IGJlIGEgdmVyeSBsb3cgZGVmYXVsdCB2YWx1
+ZSBJIHNldCBpdCBtYW51YWxseSB0byAyR2IgYW5kIHRyaWVkIGFnYWluLiAKUwAAAAEKRVMAAAAB
+cEwAAE0AAFMAAAAONDEzLi4uIEZhaWwuIApTAAAAAQpFUwAAAAFwTAAATQAAUwAAABhNb3JlIGdv
+b2dsZS1mdS4uLiBGYWlsLgpTAAAAAQpFUwAAAAFwTAABRVMAAAAGc3Ryb25nTAAATQAAUwAAABRj
+bGllbnRfbWF4X2JvZHlfc2l6ZVMAAAAbIGRpcmVjdGl2ZS4gRnJvbSB0aGUgZG9jczoKTQAAUwAA
+AO5BIGZldyBkYXlzIGxhdGVyIEkgd2FzIHNldHRpbmcgdXAgYSBuZXcgQ2VudE9TIHNlcnZlciB3
+aXRoIG5naW54LCBwaHAsIG15c3FsLCBldCBhbC4gU2luY2UgdGhlcmUgd2FzIGEgbmV3IHZlcnNp
+b24gb2YgbmdpbnggcmVsZWFzZWQgSSBzcGVudCBhIGZldyBtb21lbnRzIHJldmlld2luZyB0aGUg
+d2lraSB0byBzZWUgd2hhdCB0aGUgY2hhbmdlcyB3ZXJlLCBhbmQgdGhhdCdzIHdoZW4gSSBjYW1l
+IGFjcm9zcyB0aGUgUwAAAAEKRVMAAAAKYmxvY2txdW90ZUwAA0VTAAAAAXBMAABNAABTAAAAhURp
+cmVjdGl2ZSBhc3NpZ25zIHRoZSBtYXhpbXVtIGFjY2VwdGVkIGJvZHkgc2l6ZSBvZiBjbGllbnQg
+cmVxdWVzdCwgaW5kaWNhdGVkIGJ5IHRoZSBsaW5lICJDb250ZW50LUxlbmd0aCIgaW4gdGhlIGhl
+YWRlciBvZiByZXF1ZXN0LgpTAAAAAQpFUwAAAAFwTAAATQAAUwAAAGNJZiBzaXplIGlzIGdyZWF0
+ZXIgdGhlIGdpdmVuIG9uZSwgdGhlbiB0aGUgY2xpZW50IGdldHMgdGhlIGVycm9yICJSZXF1ZXN0
+IEVudGl0eSBUb28gTGFyZ2UiICg0MTMpLgpTAAAAAQpFUwAAAAFwTAAATQAAUwAAAGFJdCBpcyBu
+ZWNlc3NhcnkgdG8ga2VlcCBpbiBtaW5kIHRoYXQgdGhlIGJyb3dzZXJzIGRvIG5vdCBrbm93IGhv
+dyB0byBjb3JyZWN0bHkgc2hvdyB0aGlzIGVycm9yLiAKUwAAAAEKTQAAUwAAAABTAAAAAEVTAAAA
+AXBMAABNAABTAAAAw0l0IGhhZG4ndCBvY2N1cnJlZCB0byBtZSB0aGF0IG5naW54IHdvdWxkIGJl
+IHRoZSBpc3N1ZS4gVGhlIGRlZmF1bHQgaXMgYSBtZWFzbHkgMU1iLiBGaW5lIGlmIHlvdSdyZSBi
+ZWluZyBzZW50IHNpbXBsZSBodHRwIHJlcXVlc3RzLCBydWJiaXNoIGZvciBsYXJnZSB1cGxvYWRz
+IGxpa2UgdGhlIGtpbmQgdGhlIHN2biBjbGllbnQgc2VuZHMuClMAAAABCkVTAAAAAXBMAABNAABT
+AAAAPVNldHRpbmcgImNsaWVudF9tYXhfYm9keV9zaXplIDEwMjRtOyIgaW4gdGhlIHZob3N0IGZp
+eGVkIGl0LgpTAAAAAFMAAAAGcGFyc2VyUwAAAAhtYXJrZG93blMAAAAFaW50cm9SUwAAAABMAAA=
+</zine:parser_data></entry><zine:dependencies><zine:user xmlns:zine="http://zine.pocoo.org/" xmlns="http://www.w3.org/2005/Atom" dependency="1"><zine:username>digitala</zine:username><zine:email>phillip.oldham@gmail.com</zine:email><zine:pw_hash>c2hhJGpyY2kxbiQ2YzUwOWFkZGU1MTk4NGJjMjE2ZDYwNDZhMWEwZWY0YjI3MTQ4NzI1
+</zine:pw_hash><zine:display_name>$real_name</zine:display_name><zine:real_name>Phill</zine:real_name><zine:description></zine:description><zine:www>http://digita.la</zine:www><zine:is_author>yes</zine:is_author><zine:privileges><zine:privilege>BLOG_ADMIN</zine:privilege></zine:privileges></zine:user></zine:dependencies></feed>

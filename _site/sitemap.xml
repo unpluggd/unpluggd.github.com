@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title type="text" xml:lang="en">unpluggd</title>
+    <link type="application/atom+xml" href="http://unplug.gd/feed/" rel="self"/>
+    <link type="text" href="http://unplug.gd" rel="alternate"/>
+    <updated>2011-11-10T17:58:09+00:00</updated>
+    <id>http://unplug.gd</id>
+    <author>
+        <name>Phillip B Oldham</name>
+    </author>
+    <rights>Copyright (c) 2010-2011 Phillip B Oldham</rights>
+    
+    <entry>
+        <title>Installing PyYAML for Jython</title>
+        <link href="http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/"/>
+        <updated>2011-01-27T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>User Agent String for iPad's Media Player app</title>
+        <link href="http://unplug.gd/2010/06/23/user-agent-string-for-ipad-s-media-player-app.html/"/>
+        <updated>2010-06-23T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2010/06/23/user-agent-string-for-ipad-s-media-player-app.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Compiling lxml/libxml2/libxslt for a virtualenv</title>
+        <link href="http://unplug.gd/2010/06/02/compiling-lxml-libxml2-libxslt-for-a-virtualenv.html/"/>
+        <updated>2010-06-02T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2010/06/02/compiling-lxml-libxml2-libxslt-for-a-virtualenv.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>MySQL &amp; the libtoolT error on x86_64</title>
+        <link href="http://unplug.gd/2010/04/30/mysql-the-libtoolt-error-on-x86-64.html/"/>
+        <updated>2010-04-30T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2010/04/30/mysql-the-libtoolt-error-on-x86-64.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Installing Thrift on OpenSolaris</title>
+        <link href="http://unplug.gd/2010/03/25/installing-thrift-on-opensolaris.html/"/>
+        <updated>2010-03-25T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2010/03/25/installing-thrift-on-opensolaris.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Google Local Business Center, bulk feed uploads, and OpenOffice</title>
+        <link href="http://unplug.gd/2010/02/17/openoffice-feeds-and-google-local-business-center.html/"/>
+        <updated>2010-02-17T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2010/02/17/openoffice-feeds-and-google-local-business-center.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>EC2, Elasticfox, Get Administrator Password, and “Invalid EC2 private key” errors</title>
+        <link href="http://unplug.gd/2010/02/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors.html/"/>
+        <updated>2010-02-16T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2010/02/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Changing MySQL’s datadir on OpenSolaris</title>
+        <link href="http://unplug.gd/2010/02/11/changing-mysqls-datadir-on-opensolaris.html/"/>
+        <updated>2010-02-11T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2010/02/11/changing-mysqls-datadir-on-opensolaris.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>OpenSolaris Cheat Sheet</title>
+        <link href="http://unplug.gd/2010/02/10/opensolaris.html/"/>
+        <updated>2010-02-10T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2010/02/10/opensolaris.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Wordpress Pretty-URL Rewriting in IIS</title>
+        <link href="http://unplug.gd/2009/09/11/wordpress-pretty-url-rewriting-in-iis.html/"/>
+        <updated>2009-09-11T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/09/11/wordpress-pretty-url-rewriting-in-iis.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Fixing &quot;InnoDB is in the future!&quot; errors</title>
+        <link href="http://unplug.gd/2009/09/08/fixing-innodb-is-in-the-future-errors.html/"/>
+        <updated>2009-09-08T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/09/08/fixing-innodb-is-in-the-future-errors.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Log4j errors with thrift+java</title>
+        <link href="http://unplug.gd/2009/07/06/log4j-errors-with-thrift%2Bjava.html/"/>
+        <updated>2009-07-06T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/07/06/log4j-errors-with-thrift%2Bjava.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Running with Jython</title>
+        <link href="http://unplug.gd/2009/07/01/running-with-jython.html/"/>
+        <updated>2009-07-01T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/07/01/running-with-jython.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Response to a grumble regarding FOSS</title>
+        <link href="http://unplug.gd/2009/05/19/grrr-at-foss.html/"/>
+        <updated>2009-05-19T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/05/19/grrr-at-foss.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Fixing timezones in PHP</title>
+        <link href="http://unplug.gd/2009/04/08/fixing-timezones-in-php.html/"/>
+        <updated>2009-04-08T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/04/08/fixing-timezones-in-php.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>From PHP to Python; x for y.</title>
+        <link href="http://unplug.gd/2009/04/07/from-php-to-python%3B-x-for-y.html/"/>
+        <updated>2009-04-07T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2009/04/07/from-php-to-python%3B-x-for-y.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Staying up-to-date on linux.</title>
+        <link href="http://unplug.gd/2009/03/08/staying-up-to-date.html/"/>
+        <updated>2009-03-08T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/03/08/staying-up-to-date.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Installing thrift</title>
+        <link href="http://unplug.gd/2009/02/27/installing-thrift.html/"/>
+        <updated>2009-02-27T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/02/27/installing-thrift.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Subversion and &quot;/!svn/vcc/default&quot; errors</title>
+        <link href="http://unplug.gd/2009/02/20/subversion-and-svn-vcc-default-errors.html/"/>
+        <updated>2009-02-20T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/02/20/subversion-and-svn-vcc-default-errors.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Increasing a VirtualBox hard-disk</title>
+        <link href="http://unplug.gd/2009/02/16/increasing-a-virtualbox-hard-disk.html/"/>
+        <updated>2009-02-16T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/02/16/increasing-a-virtualbox-hard-disk.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Colophon</title>
+        <link href="http://unplug.gd/2009/02/16/colophon.html/"/>
+        <updated>2009-02-16T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/02/16/colophon.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Thrift &amp; Python 2.6</title>
+        <link href="http://unplug.gd/2009/02/13/thrift-python-2-6.html/"/>
+        <updated>2009-02-13T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/02/13/thrift-python-2-6.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+    <entry>
+        <title>Nginx, Subversion, and 413's</title>
+        <link href="http://unplug.gd/2009/02/12/nginx-subversion-and-413-s.html/"/>
+        <updated>2009-02-12T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2009/02/12/nginx-subversion-and-413-s.html/</id>
+        <summary type="html"></summary>
+    </entry>
+    
+</feed>

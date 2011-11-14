@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <!--link rel="stylesheet" href="/fonts/junction-regular-fontfacekit/stylesheet.css" />
+    <link rel="stylesheet" href="/fonts/League-Gothic-fontfacekit/stylesheet.css" />
+    <link rel="stylesheet" href="/fonts/M-1m-fontfacekit/stylesheet.css" / -->
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pygments-native.css" />
+    <!-- link rel="stylesheet/less" type="text/css" href="/less/main.less" /-->
+    <!-- script src="/js/less-1.1.3.min.js" type="text/javascript"></script -->
+
+  </head>
+  <body>
+    <header>
+      <h1>unpluggd</h1> is the personal blog of Phillip Oldham, 
+      a Python developer living in Leeds, UK.
+    </header>
+    <article id="main">
+      <h2>Thrift & Python 2.6</h2>
+      <p>Had a little trouble trying to install <a href="http://incubator.apache.org/thrift/">Thrift</a> on CentOS5 with Python 2.6. Setting the PY_PREFIX environment variable doesn't work; the compile process just ignores it and picks the first python it can find -- usually 2.4.</p>
+
+<p>Quickest way I've found to get things back on track is to rename the /usr/bin/python binary to python2.4, symlink the python2.6 binary in its place, and proceed with the thrift build. Once done, replace the symlink to 2.6 with one to 2.4.</p>
+
+<p>Hopefully the thrift developers will fix this in coming releases.</p>
+
+    </article>
+    <footer>
+            <div id="posts">
+        <h3>Recent Posts</h3>
+        <div>
+          
+          <h4><a href="/2010/06/23/user-agent-string-for-ipad-s-media-player-app.html">User Agent String for iPad's Media Player app</a></h4>
+          <p></p>
+          
+          <h4><a href="/2010/06/02/compiling-lxml-libxml2-libxslt-for-a-virtualenv.html">Compiling lxml/libxml2/libxslt for a virtualenv</a></h4>
+          <p></p>
+          
+          <h4><a href="/2010/04/30/mysql-the-libtoolt-error-on-x86-64.html">MySQL & the libtoolT error on x86_64</a></h4>
+          <p></p>
+          
+        </div>
+        <p>View more <a href="/archive.html">posts</a>.</p>
+      </div>
+
+            <div id="projects">
+        <h3>Projects</h3>
+        <div>
+          <h4>FWRD</h4>
+          <p>FWRD is a Python Micro-Framework designed to GetOutOfTheWay.</p>
+          <p>
+            <a href="//github.com/unpluggd/FWRD">View this project on GitHub</a>
+            <a href="/FWRD">Documentation</a>
+          </p>
+        </div>
+        <div>
+          <h4>PySO8601</h4>
+          <p>A better ISO8601 module for Python.</p>
+          <p>
+            <a href="//github.com/unpluggd/PySO8601">View this project on GitHub</a>
+            <a href="/PySO8601">Documentation</a>
+          </p>
+        </div>
+        <div>
+          <h4>exemelopy</h4>
+          <p>A module for encoding Python data types as XML.</p>
+          <p>
+            <a href="//github.com/unpluggd/exemelopy">View this project on GitHub</a>
+            <a href="/exemelopy">Documentation</a>
+          </p>
+        </div>
+        <p>View my other <a href="//github.com/unpluggd" target="_blank">GitHub projects</a>.</p>
+      </div>
+
+    </footer>
+  </body>
+</html>
