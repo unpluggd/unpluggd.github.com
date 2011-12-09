@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Response to a grumble regarding FOSS"
-excerpt: ""
-tags: development,rant
+excerpt: "Virtual Dedicated Servers are wonderful things; th"
+tags: 
+- development
+- rant
 published: true
 ---
 

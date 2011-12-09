@@ -1,5 +1,6 @@
 import codecs
 from datetime import datetime
+from HTMLParser import HTMLParser
 from lxml import etree
 
 ns = {
@@ -11,6 +12,20 @@ tree = etree.parse('digitala.zxa')
 
 results = tree.xpath('/n:feed/n:entry', namespaces=ns)
 
+class MLStripper(HTMLParser):
+    def __init__(self):
+        self.reset()
+        self.fed = []
+    def handle_data(self, d):
+        self.fed.append(d)
+    def get_data(self):
+        return ''.join(self.fed)
+
+def strip_tags(html):
+    s = MLStripper()
+    s.feed(html)
+    return s.get_data()
+
 for result in results:
     layout = u'post'
     title = unicode(result.xpath('n:title/text()', namespaces=ns)[0])
@@ -21,7 +36,10 @@ for result in results:
     except IndexError:
         content = u''
 
-    tags = [unicode(tag) for tag in result.xpath('n:category/@term', namespaces=ns)]
+    tags = [u"\n- %s" % unicode(tag) for tag in result.xpath('n:category/@term', namespaces=ns)]
+
+    if not tags:
+        tags = [u"\n- general"]
 
     slug = result.xpath('zine:slug/text()', namespaces=ns)[0].split('/')[-1:][0]
 
@@ -35,7 +53,7 @@ for result in results:
         f.write(u"""---
 layout: %s
 title: "%s"
-excerpt: ""
+excerpt: "%s"
 tags: %s
 published: %s
 ---
@@ -43,7 +61,8 @@ published: %s
 %s
 """ % (layout,
        title.replace('"', r'\"'),
-       ','.join(tags),
+       strip_tags(content.replace("\r\n", " ").replace("  ", ""))[:50],
+       ''.join(tags),
        unicode(ispublished).lower(),
        content.replace("\r\n", "\n")
        ))

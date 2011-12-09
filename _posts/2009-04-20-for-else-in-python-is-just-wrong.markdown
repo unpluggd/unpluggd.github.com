@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "for...else in Python is wrong"
-excerpt: ""
-tags: development,python
+excerpt: "Big statement: The else keyword which comes after "
+tags: 
+- development
+- python
 published: false
 ---
 

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Installing thrift"
-excerpt: ""
-tags: development,thrift
+excerpt: "I've always found thrift to be a pain to install, "
+tags: 
+- development
+- thrift
 published: true
 ---
 

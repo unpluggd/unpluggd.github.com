@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Google Local Business Center, bulk feed uploads, and OpenOffice"
-excerpt: ""
-tags: google
+excerpt: "Google Local Business Center is a great tool but t"
+tags: 
+- google
 published: true
 ---
 

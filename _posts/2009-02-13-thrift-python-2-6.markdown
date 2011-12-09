@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Thrift & Python 2.6"
-excerpt: ""
-tags: development,python,thrift
+excerpt: "Had a little trouble trying to install [Thrift](ht"
+tags: 
+- development
+- python
+- thrift
 published: true
 ---
 

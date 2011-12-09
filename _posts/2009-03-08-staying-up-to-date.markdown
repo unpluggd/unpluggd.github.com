@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Staying up-to-date on linux."
-excerpt: ""
-tags: development,linux-servers
+excerpt: "We noticed that our servers' clocks were slightly "
+tags: 
+- development
+- linux-servers
 published: true
 ---
 

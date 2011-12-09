@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Colophon"
-excerpt: ""
+excerpt: "You're currently visiting the personal weblog of P"
 tags: 
+- general
 published: true
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Résumé"
-excerpt: ""
+excerpt: "Throughout my career I have demonstrated a thoroug"
 tags: 
+- general
 published: false
 ---
 

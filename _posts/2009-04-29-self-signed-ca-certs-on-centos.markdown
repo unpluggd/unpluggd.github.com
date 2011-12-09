@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Self-signed CA & Certs on CentOS"
-excerpt: ""
+excerpt: "install openssl-perl to obtain CA.pl"
 tags: 
+- general
 published: false
 ---
 

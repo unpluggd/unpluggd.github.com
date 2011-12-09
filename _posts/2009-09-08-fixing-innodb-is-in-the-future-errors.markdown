@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Fixing \"InnoDB is in the future!\" errors"
-excerpt: ""
-tags: development,mysql
+excerpt: "Often, when the MySQL server crashes, the InnoDB l"
+tags: 
+- development
+- mysql
 published: true
 ---
 

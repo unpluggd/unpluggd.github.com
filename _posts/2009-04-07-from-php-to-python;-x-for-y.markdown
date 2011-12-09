@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "From PHP to Python; x for y."
-excerpt: ""
-tags: development,php,python
+excerpt: "Recently I've been using Python more and more for "
+tags: 
+- development
+- php
+- python
 published: true
 ---
 

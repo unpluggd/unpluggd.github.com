@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Firefox, Safari, Chrome are broken."
-excerpt: ""
+excerpt: "They don't send the authenticate header when crede"
 tags: 
+- general
 published: false
 ---
 

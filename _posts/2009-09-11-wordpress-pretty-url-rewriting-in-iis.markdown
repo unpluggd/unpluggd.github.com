@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Wordpress Pretty-URL Rewriting in IIS"
-excerpt: ""
-tags: development,iis
+excerpt: "The quickest, and in my opinion the safest, way to"
+tags: 
+- development
+- iis
 published: true
 ---
 

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "User Agent String for iPad's Media Player app"
-excerpt: ""
-tags: development,ipad
+excerpt: "Just in case you were wondering what the user-agen"
+tags: 
+- development
+- ipad
 published: true
 ---
 

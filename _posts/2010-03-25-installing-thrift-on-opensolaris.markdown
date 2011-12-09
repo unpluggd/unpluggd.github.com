@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Installing Thrift on OpenSolaris"
-excerpt: ""
-tags: server,open-solaris,thrift
+excerpt: "...is truly a nightmare. Following the standard in"
+tags: 
+- server
+- open-solaris
+- thrift
 published: true
 ---
 

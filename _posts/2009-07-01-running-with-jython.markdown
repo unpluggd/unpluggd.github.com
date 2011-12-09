@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Running with Jython"
-excerpt: ""
-tags: development,jython-python-java
+excerpt: "We've started using Jython for a project at the of"
+tags: 
+- development
+- jython-python-java
 published: true
 ---
 

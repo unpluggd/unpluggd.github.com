@@ -1,4 +1,0 @@
-unpluggd
-
-This is the personal site of Phillip Oldham, a <python/node> developer 
-living in Leeds, UK.

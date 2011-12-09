@@ -1,10 +1,10 @@
-      <div id="posts">
-        <h3>Recent Posts</h3>
-        <div>
-          {% for post in site.posts offset:1 limit:3 %}
-          <h4><a href="{{ post.url }}">{{ post.title }}</a></h4>
-          <p>{{ post.excerpt }}</p>
-          {% endfor %}
-        </div>
-        <p>View more <a href="/archive.html">posts</a>.</p>
-      </div>
+<section id="posts" class="container">
+  <h3 class="span16">Recent Posts</h3>
+  {% for post in site.posts offset:1 limit:3 %}
+  <div class="row">
+    <h4 class="span5"><a href="{{ post.url }}">{{ post.title }}</a></h4>
+    <p class="span11">{{ post.excerpt }}... <a href="{{ post.url }}">read more</a></p>
+  </div>
+  {% endfor %}
+  <p class="span16">View more <a href="/archive.html">posts</a>.</p>
+</section>

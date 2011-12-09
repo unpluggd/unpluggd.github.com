@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "OpenSolaris Cheat Sheet"
-excerpt: ""
-tags: server,opensolaris
+excerpt: "Some very useful commands for working with OpenSol"
+tags: 
+- server
+- opensolaris
 published: true
 ---
 

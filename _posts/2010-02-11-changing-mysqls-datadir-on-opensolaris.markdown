@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Changing MySQL’s datadir on OpenSolaris"
-excerpt: ""
-tags: server,opensolaris
+excerpt: "Create the new data dir, and change ownership to t"
+tags: 
+- server
+- opensolaris
 published: true
 ---
 

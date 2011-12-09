@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Log4j errors with thrift+java"
-excerpt: ""
-tags: development,java-thrift
+excerpt: "Updated thrift recently, and found that afterwards"
+tags: 
+- development
+- java-thrift
 published: true
 ---
 

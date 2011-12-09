@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Subversion and \"/!svn/vcc/default\" errors"
-excerpt: ""
-tags: development,nginx,svn
+excerpt: "Once again, I come across an odd subversion error "
+tags: 
+- development
+- nginx
+- svn
 published: true
 ---
 

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "VirtualBox on OS X: Networking"
-excerpt: ""
+excerpt: "Remember: "Host-only" networking is not designed f"
 tags: 
+- general
 published: false
 ---
 

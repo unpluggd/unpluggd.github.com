@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "MySQL & the libtoolT error on x86_64"
-excerpt: ""
-tags: server,mysql
+excerpt: "Quick fix for the `cannot remove 'libtoolT': No su"
+tags: 
+- server
+- mysql
 published: true
 ---
 

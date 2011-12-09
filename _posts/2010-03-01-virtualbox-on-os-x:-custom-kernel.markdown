@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "VirtualBox on OS X: Custom kernel"
-excerpt: ""
+excerpt: "yum install -y gcc rpm-build ncurses-devel cd /usr"
 tags: 
+- general
 published: false
 ---
 

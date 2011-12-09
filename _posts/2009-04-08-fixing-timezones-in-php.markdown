@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Fixing timezones in PHP"
-excerpt: ""
-tags: development,php-linux
+excerpt: "Had a little problem recently with PHP on one of o"
+tags: 
+- development
+- php-linux
 published: true
 ---
 

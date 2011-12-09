@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Why 37signals webapps suck."
-excerpt: ""
+excerpt: "Disclaimer: I'm a fan of 37signals. They do have s"
 tags: 
+- general
 published: false
 ---
 

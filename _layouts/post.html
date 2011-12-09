@@ -4,17 +4,15 @@
     {% include _head.html %}
   </head>
   <body>
-    <header>
-      <h1>unpluggd</h1> is the personal blog of Phillip Oldham, 
-      a Python developer living in Leeds, UK.
-    </header>
-    <article id="main">
+    {% include _intro.html %}
+    <article id="main" class="container">
       <h2>{{ page.title }}</h2>
       {{ content }}
     </article>
-    <footer>
+    <footer class="container">
       {% include _posts.html %}
       {% include _projects.html %}
+      {% include _terms.html %}
     </footer>
   </body>
 </html>

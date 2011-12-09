@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Increasing a VirtualBox hard-disk"
-excerpt: ""
-tags: development,virtualbox,linux
+excerpt: "Use slax, don't forget to create an iso with gpart"
+tags: 
+- development
+- virtualbox
+- linux
 published: true
 ---
 

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Installing PyYAML for Jython"
-excerpt: ""
-tags: server,jython
+excerpt: "PyYAML by default tries to create a C module again"
+tags: 
+- server
+- jython
 published: true
 ---
 
@@ -10,9 +12,7 @@ PyYAML by default tries to create a C module against the libyaml library, and si
 
 ...unless you disable the C module install, like this:
 
-{% highlight bash %}
-~# wget http://pyyaml.org/download/pyyaml/PyYAML-3.09.tar.gz
-~# tar zxf PyYAML-3.09.tar.gz
-~# cd PyYAML-3.09
-~# jython setup.py --without-libyaml install
-{% endhighlight %}
+    ~# wget http://pyyaml.org/download/pyyaml/PyYAML-3.09.tar.gz
+    ~# tar zxf PyYAML-3.09.tar.gz
+    ~# cd PyYAML-3.09
+    ~# jython setup.py --without-libyaml install

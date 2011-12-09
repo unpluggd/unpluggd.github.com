@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Nginx, Subversion, and 413's"
-excerpt: ""
-tags: development,nginx,svn
+excerpt: "At work I spent some time migrating our subversion"
+tags: 
+- development
+- nginx
+- svn
 published: true
 ---
 

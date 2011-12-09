@@ -3,7 +3,7 @@
     <title type="text" xml:lang="en">unpluggd</title>
     <link type="application/atom+xml" href="http://unplug.gd/feed/" rel="self"/>
     <link type="text" href="http://unplug.gd" rel="alternate"/>
-    <updated>2011-11-10T17:58:09+00:00</updated>
+    <updated>2011-12-09T08:37:29+00:00</updated>
     <id>http://unplug.gd</id>
     <author>
         <name>Phillip B Oldham</name>
@@ -15,7 +15,7 @@
         <link href="http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/"/>
         <updated>2011-01-27T00:00:00+00:00</updated>
         <id>http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">PyYAML by default tries to create a C module again</summary>
     </entry>
     
     <entry>
@@ -23,7 +23,7 @@
         <link href="http://unplug.gd/2010/06/23/user-agent-string-for-ipad-s-media-player-app.html/"/>
         <updated>2010-06-23T00:00:00+01:00</updated>
         <id>http://unplug.gd/2010/06/23/user-agent-string-for-ipad-s-media-player-app.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Just in case you were wondering what the user-agen</summary>
     </entry>
     
     <entry>
@@ -31,7 +31,7 @@
         <link href="http://unplug.gd/2010/06/02/compiling-lxml-libxml2-libxslt-for-a-virtualenv.html/"/>
         <updated>2010-06-02T00:00:00+01:00</updated>
         <id>http://unplug.gd/2010/06/02/compiling-lxml-libxml2-libxslt-for-a-virtualenv.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Sometimes you need to ensure `lxml` is using the l</summary>
     </entry>
     
     <entry>
@@ -39,7 +39,7 @@
         <link href="http://unplug.gd/2010/04/30/mysql-the-libtoolt-error-on-x86-64.html/"/>
         <updated>2010-04-30T00:00:00+01:00</updated>
         <id>http://unplug.gd/2010/04/30/mysql-the-libtoolt-error-on-x86-64.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Quick fix for the `cannot remove 'libtoolT': No su</summary>
     </entry>
     
     <entry>
@@ -47,7 +47,15 @@
         <link href="http://unplug.gd/2010/03/25/installing-thrift-on-opensolaris.html/"/>
         <updated>2010-03-25T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/03/25/installing-thrift-on-opensolaris.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">...is truly a nightmare. Following the standard in</summary>
+    </entry>
+    
+    <entry>
+        <title>Virtualbox On Os X: Networking</title>
+        <link href="http://unplug.gd/2010/03/01/virtualbox-on-os-x%3A-networking.html/"/>
+        <updated>2010-03-01T00:00:00+00:00</updated>
+        <id>http://unplug.gd/2010/03/01/virtualbox-on-os-x%3A-networking.html/</id>
+        <summary type="html">Liquid error: private method `gsub' called for nil:NilClass</summary>
     </entry>
     
     <entry>
@@ -55,7 +63,7 @@
         <link href="http://unplug.gd/2010/02/17/openoffice-feeds-and-google-local-business-center.html/"/>
         <updated>2010-02-17T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/02/17/openoffice-feeds-and-google-local-business-center.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Google Local Business Center is a great tool but t</summary>
     </entry>
     
     <entry>
@@ -63,7 +71,7 @@
         <link href="http://unplug.gd/2010/02/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors.html/"/>
         <updated>2010-02-16T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/02/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">If you're using Elasticfox to manage your instance</summary>
     </entry>
     
     <entry>
@@ -71,7 +79,7 @@
         <link href="http://unplug.gd/2010/02/11/changing-mysqls-datadir-on-opensolaris.html/"/>
         <updated>2010-02-11T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/02/11/changing-mysqls-datadir-on-opensolaris.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Create the new data dir, and change ownership to t</summary>
     </entry>
     
     <entry>
@@ -79,7 +87,7 @@
         <link href="http://unplug.gd/2010/02/10/opensolaris.html/"/>
         <updated>2010-02-10T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/02/10/opensolaris.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Some very useful commands for working with OpenSol</summary>
     </entry>
     
     <entry>
@@ -87,7 +95,7 @@
         <link href="http://unplug.gd/2009/09/11/wordpress-pretty-url-rewriting-in-iis.html/"/>
         <updated>2009-09-11T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/09/11/wordpress-pretty-url-rewriting-in-iis.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">The quickest, and in my opinion the safest, way to</summary>
     </entry>
     
     <entry>
@@ -95,7 +103,7 @@
         <link href="http://unplug.gd/2009/09/08/fixing-innodb-is-in-the-future-errors.html/"/>
         <updated>2009-09-08T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/09/08/fixing-innodb-is-in-the-future-errors.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Often, when the MySQL server crashes, the InnoDB l</summary>
     </entry>
     
     <entry>
@@ -103,7 +111,7 @@
         <link href="http://unplug.gd/2009/07/06/log4j-errors-with-thrift%2Bjava.html/"/>
         <updated>2009-07-06T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/07/06/log4j-errors-with-thrift%2Bjava.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Updated thrift recently, and found that afterwards</summary>
     </entry>
     
     <entry>
@@ -111,7 +119,7 @@
         <link href="http://unplug.gd/2009/07/01/running-with-jython.html/"/>
         <updated>2009-07-01T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/07/01/running-with-jython.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">We've started using Jython for a project at the of</summary>
     </entry>
     
     <entry>
@@ -119,7 +127,7 @@
         <link href="http://unplug.gd/2009/05/19/grrr-at-foss.html/"/>
         <updated>2009-05-19T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/05/19/grrr-at-foss.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Virtual Dedicated Servers are wonderful things; th</summary>
     </entry>
     
     <entry>
@@ -127,7 +135,7 @@
         <link href="http://unplug.gd/2009/04/08/fixing-timezones-in-php.html/"/>
         <updated>2009-04-08T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/04/08/fixing-timezones-in-php.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Had a little problem recently with PHP on one of o</summary>
     </entry>
     
     <entry>
@@ -135,7 +143,7 @@
         <link href="http://unplug.gd/2009/04/07/from-php-to-python%3B-x-for-y.html/"/>
         <updated>2009-04-07T00:00:00+01:00</updated>
         <id>http://unplug.gd/2009/04/07/from-php-to-python%3B-x-for-y.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Recently I've been using Python more and more for </summary>
     </entry>
     
     <entry>
@@ -143,7 +151,7 @@
         <link href="http://unplug.gd/2009/03/08/staying-up-to-date.html/"/>
         <updated>2009-03-08T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/03/08/staying-up-to-date.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">We noticed that our servers' clocks were slightly </summary>
     </entry>
     
     <entry>
@@ -151,7 +159,7 @@
         <link href="http://unplug.gd/2009/02/27/installing-thrift.html/"/>
         <updated>2009-02-27T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/27/installing-thrift.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">I've always found thrift to be a pain to install, </summary>
     </entry>
     
     <entry>
@@ -159,7 +167,7 @@
         <link href="http://unplug.gd/2009/02/20/subversion-and-svn-vcc-default-errors.html/"/>
         <updated>2009-02-20T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/20/subversion-and-svn-vcc-default-errors.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Once again, I come across an odd subversion error </summary>
     </entry>
     
     <entry>
@@ -167,7 +175,7 @@
         <link href="http://unplug.gd/2009/02/16/increasing-a-virtualbox-hard-disk.html/"/>
         <updated>2009-02-16T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/16/increasing-a-virtualbox-hard-disk.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Use slax, don't forget to create an iso with gpart</summary>
     </entry>
     
     <entry>
@@ -175,7 +183,7 @@
         <link href="http://unplug.gd/2009/02/16/colophon.html/"/>
         <updated>2009-02-16T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/16/colophon.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">You're currently visiting the personal weblog of P</summary>
     </entry>
     
     <entry>
@@ -183,7 +191,7 @@
         <link href="http://unplug.gd/2009/02/13/thrift-python-2-6.html/"/>
         <updated>2009-02-13T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/13/thrift-python-2-6.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">Had a little trouble trying to install [Thrift](ht</summary>
     </entry>
     
     <entry>
@@ -191,7 +199,7 @@
         <link href="http://unplug.gd/2009/02/12/nginx-subversion-and-413-s.html/"/>
         <updated>2009-02-12T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/12/nginx-subversion-and-413-s.html/</id>
-        <summary type="html"></summary>
+        <summary type="html">At work I spent some time migrating our subversion</summary>
     </entry>
     
 </feed>
