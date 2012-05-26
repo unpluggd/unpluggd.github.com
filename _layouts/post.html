@@ -6,8 +6,12 @@
   <body>
     {% include _intro.html %}
     <article id="main" class="container">
-      <h2>{{ page.title }}</h2>
+      <h1>{{ page.title }}</h1>
       {{ content }}
+      <footer>
+        <a href="/">Back to the homepage</a>
+        <a href="/archive.html">View the archives</a>
+      </footer>
     </article>
     <footer class="container">
       {% include _posts.html %}

@@ -3,7 +3,7 @@
     <title type="text" xml:lang="en">unpluggd</title>
     <link type="application/atom+xml" href="http://unplug.gd/feed/" rel="self"/>
     <link type="text" href="http://unplug.gd" rel="alternate"/>
-    <updated>2012-05-26T06:43:40+01:00</updated>
+    <updated>2012-05-26T20:31:01+01:00</updated>
     <id>http://unplug.gd</id>
     <author>
         <name>Phillip B Oldham</name>
@@ -20,9 +20,9 @@
     
     <entry>
         <title>Installing PyYAML for Jython</title>
-        <link href="http://unplug.gd/2011/01/27/installing-pyyaml-for-jython+copy.html/"/>
+        <link href="http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/"/>
         <updated>2011-01-27T00:00:00+00:00</updated>
-        <id>http://unplug.gd/2011/01/27/installing-pyyaml-for-jython+copy.html/</id>
+        <id>http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/</id>
         <summary type="html">PyYAML by default tries to create a C module again</summary>
     </entry>
     
@@ -67,7 +67,7 @@
     </entry>
     
     <entry>
-        <title>EC2, Elasticfox, Get Administrator Password, and “Invalid EC2 private key” errors</title>
+        <title>EC2, Elasticfox, Get Administrator Password, and &quot;Invalid EC2 private key&quot; errors</title>
         <link href="http://unplug.gd/2010/02/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors.html/"/>
         <updated>2010-02-16T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/02/16/ec2-elasticfox-get-administrator-password-and-invalid-ec2-private-key-errors.html/</id>
@@ -75,7 +75,7 @@
     </entry>
     
     <entry>
-        <title>Changing MySQL’s datadir on OpenSolaris</title>
+        <title>Changing MySQL's datadir on OpenSolaris</title>
         <link href="http://unplug.gd/2010/02/11/changing-mysqls-datadir-on-opensolaris.html/"/>
         <updated>2010-02-11T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/02/11/changing-mysqls-datadir-on-opensolaris.html/</id>
@@ -176,14 +176,6 @@
         <updated>2009-02-16T00:00:00+00:00</updated>
         <id>http://unplug.gd/2009/02/16/increasing-a-virtualbox-hard-disk.html/</id>
         <summary type="html">Use slax, don't forget to create an iso with gpart</summary>
-    </entry>
-    
-    <entry>
-        <title>Colophon</title>
-        <link href="http://unplug.gd/2009/02/16/colophon.html/"/>
-        <updated>2009-02-16T00:00:00+00:00</updated>
-        <id>http://unplug.gd/2009/02/16/colophon.html/</id>
-        <summary type="html">You're currently visiting the personal weblog of P</summary>
     </entry>
     
     <entry>

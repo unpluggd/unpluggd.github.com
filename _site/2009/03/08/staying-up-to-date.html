@@ -15,13 +15,14 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="//twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pygments-autumn.css" />
     <title>unpluggd, the personal blog of Phillip B Oldham</title>
 
   </head>
   <body>
         <header class="container">
       <div class="row">
-        <h1 class="span11"><span>unpluggd</span></h1> 
+        <h1 class="span11"><a href="/"><span>unpluggd</span></a></h1>
         <p class="span5">
           <span class="hidden">unpluggd is</span> the personal 
           blog of <span class="nowrap">Phillip Oldham</span>, 
@@ -31,7 +32,7 @@
     </header>
 
     <article id="main" class="container">
-      <h2>Staying up-to-date on linux.</h2>
+      <h1>Staying up-to-date on linux.</h1>
       <p>We noticed that our servers' clocks were slightly off. Adding the following to our /etc/rc.local file keeps our servers updated whenever it boots:</p>
 
 <pre><code>set -- `nc time.nist.gov 13`
@@ -40,6 +41,10 @@ date -u --set="$2 $3"
 
 <p>I've also added it to our cron.daily so there's no slip while the servers are running.</p>
 
+      <footer>
+        <a href="/">Back to the homepage</a>
+        <a href="/archive.html">View the archives</a>
+      </footer>
     </article>
     <footer class="container">
       <section id="posts" class="container">
@@ -47,8 +52,8 @@ date -u --set="$2 $3"
   
   <div class="rowwrapper">
   <div class="row">
-    <h4 class="span5"><a href="/2011/01/27/installing-pyyaml-for-jython+copy.html">Installing PyYAML for Jython</a></h4>
-    <p class="span11">PyYAML by default tries to create a C module again... <a href="/2011/01/27/installing-pyyaml-for-jython+copy.html">read more</a></p>
+    <h4 class="span5"><a href="/2011/01/27/installing-pyyaml-for-jython.html">Installing PyYAML for Jython</a></h4>
+    <p class="span11">PyYAML by default tries to create a C module again... <a href="/2011/01/27/installing-pyyaml-for-jython.html">read more</a></p>
   </div>
   </div>
   
@@ -104,7 +109,9 @@ date -u --set="$2 $3"
         </div>
         </div>
         <div class="row">
-          <p class="span11 offset5 more"><a href="//github.com/unpluggd" target="_blank">View my other GitHub projects</a></p>
+          <p class="span11 offset5 more">
+            <a href="//github.com/unpluggd" target="_blank">View my other projects on GitHub</a>
+          </p>
         </div>
       </section>
 

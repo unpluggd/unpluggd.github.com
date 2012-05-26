@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "EC2, Elasticfox, Get Administrator Password, and “Invalid EC2 private key” errors"
+title: "EC2, Elasticfox, Get Administrator Password, and \"Invalid EC2 private key\" errors"
 excerpt: "If you're using Elasticfox to manage your instance"
 tags: 
 - server

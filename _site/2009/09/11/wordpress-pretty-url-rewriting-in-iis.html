@@ -15,13 +15,14 @@
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <link rel="stylesheet" href="//twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/pygments-autumn.css" />
     <title>unpluggd, the personal blog of Phillip B Oldham</title>
 
   </head>
   <body>
         <header class="container">
       <div class="row">
-        <h1 class="span11"><span>unpluggd</span></h1> 
+        <h1 class="span11"><a href="/"><span>unpluggd</span></a></h1>
         <p class="span5">
           <span class="hidden">unpluggd is</span> the personal 
           blog of <span class="nowrap">Phillip Oldham</span>, 
@@ -31,7 +32,7 @@
     </header>
 
     <article id="main" class="container">
-      <h2>Wordpress Pretty-URL Rewriting in IIS</h2>
+      <h1>Wordpress Pretty-URL Rewriting in IIS</h1>
       <p>The quickest, and in my opinion the safest<sup><a href="#footnote-1" style="text-decoration: none; font-weight: bold;">&#8224;</a></sup>, way to get pretty-URLs working in IIS is to create a custom 404 handler. This "<code>wp-404-handler.php</code>" file is here:</p>
 
 
@@ -63,6 +64,10 @@ include('index.php');
 <p style="font-size: .7em;" id="footnote-2"><strong>&#8225;</strong> &#8213; IIS should've had rewrites bundled as-of IIS4. AFAIK they're still not available even in IIS7!</p>
 
 
+      <footer>
+        <a href="/">Back to the homepage</a>
+        <a href="/archive.html">View the archives</a>
+      </footer>
     </article>
     <footer class="container">
       <section id="posts" class="container">
@@ -70,8 +75,8 @@ include('index.php');
   
   <div class="rowwrapper">
   <div class="row">
-    <h4 class="span5"><a href="/2011/01/27/installing-pyyaml-for-jython+copy.html">Installing PyYAML for Jython</a></h4>
-    <p class="span11">PyYAML by default tries to create a C module again... <a href="/2011/01/27/installing-pyyaml-for-jython+copy.html">read more</a></p>
+    <h4 class="span5"><a href="/2011/01/27/installing-pyyaml-for-jython.html">Installing PyYAML for Jython</a></h4>
+    <p class="span11">PyYAML by default tries to create a C module again... <a href="/2011/01/27/installing-pyyaml-for-jython.html">read more</a></p>
   </div>
   </div>
   
@@ -127,7 +132,9 @@ include('index.php');
         </div>
         </div>
         <div class="row">
-          <p class="span11 offset5 more"><a href="//github.com/unpluggd" target="_blank">View my other GitHub projects</a></p>
+          <p class="span11 offset5 more">
+            <a href="//github.com/unpluggd" target="_blank">View my other projects on GitHub</a>
+          </p>
         </div>
       </section>
 
