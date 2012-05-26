@@ -3,7 +3,7 @@
     <title type="text" xml:lang="en">unpluggd</title>
     <link type="application/atom+xml" href="http://unplug.gd/feed/" rel="self"/>
     <link type="text" href="http://unplug.gd" rel="alternate"/>
-    <updated>2011-12-09T08:37:29+00:00</updated>
+    <updated>2012-05-26T06:43:40+01:00</updated>
     <id>http://unplug.gd</id>
     <author>
         <name>Phillip B Oldham</name>
@@ -11,10 +11,18 @@
     <rights>Copyright (c) 2010-2011 Phillip B Oldham</rights>
     
     <entry>
+        <title>Using Travis-CI with submodules</title>
+        <link href="http://unplug.gd/2012/05/24/using-travis-ci-with-submodules.html/"/>
+        <updated>2012-05-24T00:00:00+01:00</updated>
+        <id>http://unplug.gd/2012/05/24/using-travis-ci-with-submodules.html/</id>
+        <summary type="html">How to fix &quot;Permission denied&quot; errors</summary>
+    </entry>
+    
+    <entry>
         <title>Installing PyYAML for Jython</title>
-        <link href="http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/"/>
+        <link href="http://unplug.gd/2011/01/27/installing-pyyaml-for-jython+copy.html/"/>
         <updated>2011-01-27T00:00:00+00:00</updated>
-        <id>http://unplug.gd/2011/01/27/installing-pyyaml-for-jython.html/</id>
+        <id>http://unplug.gd/2011/01/27/installing-pyyaml-for-jython+copy.html/</id>
         <summary type="html">PyYAML by default tries to create a C module again</summary>
     </entry>
     
@@ -48,14 +56,6 @@
         <updated>2010-03-25T00:00:00+00:00</updated>
         <id>http://unplug.gd/2010/03/25/installing-thrift-on-opensolaris.html/</id>
         <summary type="html">...is truly a nightmare. Following the standard in</summary>
-    </entry>
-    
-    <entry>
-        <title>Virtualbox On Os X: Networking</title>
-        <link href="http://unplug.gd/2010/03/01/virtualbox-on-os-x%3A-networking.html/"/>
-        <updated>2010-03-01T00:00:00+00:00</updated>
-        <id>http://unplug.gd/2010/03/01/virtualbox-on-os-x%3A-networking.html/</id>
-        <summary type="html">Liquid error: private method `gsub' called for nil:NilClass</summary>
     </entry>
     
     <entry>
