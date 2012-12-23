@@ -1,0 +1,7 @@
+archive_layout: archive.html
+archives_url: /archives/
+base_url: http://unplug.gd/
+date_format: '%A, %B %-1d, %Y'
+posts_url: /<year>/<month>/<day>/<title>/
+tag_layout: tag.html
+tags_url: /tags/
